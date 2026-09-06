@@ -1,96 +1,50 @@
-# AGENTS.md
+# AGENTS.md — Aptinery
 
-> Collective workspace rules live in [`../AGENTS.md`](../AGENTS.md). This file is the project-specific guideline for **Aptinery**, read by all agent runtimes (Claude Code, Codex, Gemini, Cursor, etc.).
+> 继承 [`../AGENTS.md`](../AGENTS.md) 与 [`../Docs/dev_guide.md`](../Docs/dev_guide.md)；勿假定自动加载。这里只写项目合同。
 
-## What this repo is
+## 分发与权威
 
-Aptinery — A curated foundry for Agent Skills. It is a public marketplace containing 20 independently installable plugins, combining first-party skills with curated, cross-client adaptations of non-standard upstream skills. [GitHub `ShanireZ/Aptinery`](https://github.com/ShanireZ/Aptinery) is authoritative; [CNB `Round1/Aptinery`](https://cnb.cool/Round1/Aptinery) is its mirror, synced by [`../sync-github-cnb.ps1`](../sync-github-cnb.ps1). ★ 名字已于 2026-08-31 收敛：本地目录、两个远端仓、两个本地 remote URL 全是 `Aptinery`，不再靠 GitHub 的改名重定向工作。
+Aptinery 是公开 Agent Skills 市场；机器标识 `aptinery`、显示名/目录/仓库名 `Aptinery`。GitHub `ShanireZ/Aptinery` 是权威，CNB `Round1/Aptinery` 由 [`../sync-github-cnb.ps1`](../sync-github-cnb.ps1) 镜像同步。
 
-The marketplace machine identifier is `aptinery`; the user-facing name is `Aptinery`. Each plugin contains exactly one same-named Agent Skill:
+- 每插件恰含一个同名 skill；名单以 `.claude-plugin/marketplace.json` 与各 `plugin.json` 为准，不在此维护数量快照。
+- `plugins/*/plugin.json` 是 Agent Plugins v1；`plugins/*/.codex-plugin/plugin.json` 与 `.agents/plugins/marketplace.json` 面向 Codex/ChatGPT；`plugins/*/skills/` 供 skills CLI/直接发现。
+- Claude 适配在 `plugins/*/.claude-plugin/plugin.json`、`.claude-plugins/*/.claude-plugin/plugin.json` 和 `.claude-plugin/marketplace.json`。`.claude-plugins/{pick-ui-library,prototype,review-animations}/` 是适配源镜像，不是额外产品。
+- 版本在所有插件与 marketplace/客户端 manifest 间同步；路径、名称及 skill 入口也须一致。
 
-布局与许可归属（权威是 `.claude-plugin/marketplace.json` 与各 `plugin.json`，用 `ls plugins/` 现查，不在此维护清单）：
+## 来源、许可与不可变边界
 
-- `plugins/shanirez-style/` — 一方，GPL-3.0。
-- `plugins/k12-*/`（4 个）— vendored，Apache-2.0。
-- `plugins/punk-cover/`、`plugins/punk-avatar/` — vendored，**上游未声明许可**。
-- `plugins/punk-poster-layout/` — 文章改编，GPL-3.0。
-- 其余 12 个 Emil Kowalski 技能 — vendored，MIT。
-- `.claude-plugins/{pick-ui-library,prototype,review-animations}/` — Claude 专用源镜像，是打包适配器**不是额外产品**：市场只有 20 个名字，不是 23。
+| 内容 | 来源与必须保留的约束 |
+|---|---|
+| `plugins/shanirez-style/` | 一方 GPL-3.0；SKILL 的统计依据为 [`../OJCode`](../OJCode)，未复算不得新增、削弱或强化断言。方法见 [`docs/style-corpus-method.md`](docs/style-corpus-method.md) |
+| 四个 `k12-*` skill | `anthropics/k12-teacher-skills` commit `281eb8d41fe2837d911541c9bbb870b58add804c`，Apache-2.0，逐字保留；目录为 lesson-plan-creation、lesson-differentiation、lesson-prep、check-for-understanding |
+| Emil Kowalski skill | `emilkowalski/skills` commit `d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7`，MIT；除下述调用适配外保持上游相同 |
+| punk-cover / punk-avatar | `adrianpunk/Punk-Skill` commit `a52e4456b8a4ccd4312069d6bc3755e2894dbc93`，上游未声明许可，转分发许可未确立；不得推断、补发许可或恢复已移除的 GPLv3 文件/声明 |
+| punk-poster-layout | 改编自 AdrianPunk 的两篇 Punk Space 文章，不是上述 commit 的原样树；来源与署名在 `NOTICE`，本改编 GPL-3.0 |
 
-Distribution adapters live at:
+- K-12 保留各目录 LICENSE、SPDX、引用 NOTICE 与根 NOTICE 署名；本地修改须有 Apache 要求的醒目修改说明并记 NOTICE。不引入上游可选 `.mcp.json`，保留无 connector 回退。
+- Emil 保留根 NOTICE 及插件/skill 两层 MIT LICENSE；任何适配记 NOTICE。K-12 的 license frontmatter、Emil 的原 frontmatter 均保留，只有已记录的三处调用翻译例外。
+- `pick-ui-library` / `prototype` / `review-animations` 的 `agents/openai.yaml` 必须 `policy.allow_implicit_invocation: false`；Markdown body 保持上游一致，仅翻译调用 frontmatter，并给 review-animations description 加 explicit-only 句。
+- 三份 `.claude-plugins/` 源镜像由 Claude marketplace 使用，保留 `disable-model-invocation: true`，须与固定上游树逐字节一致。
+- Punk 保留 SKILL、openai.yaml、references、选定 style atoms 原文；有意适配记 NOTICE。恢复/新增许可须有权利人独立可验证证据，不从历史/缓存恢复无依据声明。
+- punk-cover 只带 30 个封面 atoms；punk-avatar 带 7 个头像 atoms，包括 surreal-pop-up-paper-landscape 的两个 mode references。`../../styles/{style-id}` 依赖插件根 styles，不能当附件删除。上游截图/仓级验证脚本有意不 vendored。
+- punk-poster-layout 保留 32 个具名构图系统、image-prompt 与 HTML/CSS 表达、评审标准；只负责结构与焦点/层级/栅格/密度，不接管 punk-cover 的风格 atoms。原 MHTML 是包外资料，不引入不完整网页存档或远端懒加载图。
 
-- `plugins/*/plugin.json` — Agent Plugins v1 manifests.
-- `plugins/*/.codex-plugin/plugin.json` and `.agents/plugins/marketplace.json` — Codex/ChatGPT.
-- `plugins/*/.claude-plugin/plugin.json`, `.claude-plugins/*/.claude-plugin/plugin.json`, and `.claude-plugin/marketplace.json` — Claude Code and compatible marketplace clients.
-- `plugins/*/skills/` — skills CLI and direct Agent Skills discovery.
+## 命令与验收
 
-Keep `0.2.0`-style versions synchronized across all plugin and marketplace manifests.
+从仓库根执行；本仓是分发包，没有应用级 build/test 入口。下表为定义与验收要求，不代表本轮已跑过。
 
-## First-party style source of truth
+| 何时 | 命令 / 前置 | 能证明什么 / 边界 |
+|---|---|---|
+| skill/分发变更 | `npx skills add . --list`；skills CLI 可用 | 发现入口；npx 可能获取工具，不当作离线静态检查，也不证明各客户端行为 |
+| Claude 适配变更 | `claude plugin validate . --strict`；Claude CLI 可用 | 严格 manifest 验证；不代替其他客户端或 vendor 一致性 |
+| 任意文档/分发变更 | `git diff --check` | 空白诊断；不证明语义或许可合规 |
+| C++ 模板变更 | `g++ -std=c++14 -O2 -Wall -m64 -static-libgcc <模板.cpp> -o <临时输出>`；g++ 可用 | 编译后还须手算输入运行核对，产物不入包 |
 
-`plugins/shanirez-style/skills/shanirez-style/SKILL.md` 里的每一条统计都是对 [`../OJCode`](../OJCode) 语料实测出来的——**不重新跑一遍计数，就不要新增、削弱或强化任何一条断言**。复算方法与四个易错点见 [`docs/style-corpus-method.md`](docs/style-corpus-method.md)。
+此外必须解析所有 JSON manifests；对照各客户端名称/版本/路径/入口，检查上述显式调用策略、LICENSE/NOTICE 和必需 styles/references。未有意修改的 vendor 与固定上游 commit 比对；本地缺上游对象时明确未验，不以 JSON 可解析替代。记录实际命令、退出码及未覆盖客户端。
 
-## Vendored K-12 skills
+## 格式与记录
 
-The four skill trees under `plugins/k12-{lesson-plan-creation,lesson-differentiation,lesson-prep,check-for-understanding}/skills/` are copied verbatim from `anthropics/k12-teacher-skills` commit `281eb8d41fe2837d911541c9bbb870b58add804c`.
-
-- Preserve each directory's Apache-2.0 `LICENSE`, SPDX header, and reference `NOTICE` files.
-- Preserve the root `NOTICE` attribution when redistributing any K-12 skill.
-- Do not silently edit vendored files. If a local change is necessary, add the prominent modification notice required by Apache-2.0 and record it in `NOTICE`.
-- The optional upstream `.mcp.json` is intentionally not vendored; skills that can use the Learning Commons connector document their no-connector fallback.
-- `.gitattributes` disables whitespace diagnostics only for these four directories so `git diff --check` can pass without changing upstream blobs.
-
-## Vendored Emil Kowalski skills
-
-The 12 skill directories imported from `emilkowalski/skills` are pinned to commit `d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7` and remain MIT-licensed. Preserve the root `NOTICE` attribution and the MIT `LICENSE` copies at both plugin and skill roots.
-
-- Nine primary skill trees are verbatim. Do not silently edit upstream files; record any adaptation in `NOTICE`.
-- `pick-ui-library`/`prototype`/`review-animations` carry `agents/openai.yaml` with `policy.allow_implicit_invocation: false` (Codex's invocation contract). Markdown bodies stay upstream-identical — only the invocation frontmatter is translated, plus one explicit-only sentence in `review-animations`'s description.
-- `.claude-plugins/{pick-ui-library,prototype,review-animations}/` are exact upstream source mirrors used only by `.claude-plugin/marketplace.json`. They retain Claude's `disable-model-invocation: true`; keep them byte-identical to the pinned upstream skill trees.
-
-## Vendored Punk skills without a declared upstream license
-
-`plugins/punk-cover/skills/punk-cover/`, `plugins/punk-avatar/skills/punk-avatar/`, and their required `styles/` subsets are copied from `adrianpunk/Punk-Skill` commit `a52e4456b8a4ccd4312069d6bc3755e2894dbc93`. That pinned upstream commit contains no license declaration, so Aptinery does not assign, infer, or supplement one; redistribution permission is not established.
-
-- Preserve the upstream `SKILL.md`, `agents/openai.yaml`, references, and selected style atoms verbatim. Record any intentional adaptation in `NOTICE`.
-- Do not restore the removed GPLv3 copies or claims from Git history, archives, caches, or prior records. A future license declaration requires explicit, independently verifiable evidence from the rights holder.
-- `punk-cover` carries only its 30 cover-capable style atoms; `punk-avatar` carries only its seven avatar-capable style atoms, including `surreal-pop-up-paper-landscape`, whose two mode files under `references/` are runtime deps, not extras. Their `../../styles/{style-id}` runtime paths depend on those plugin-root `styles/` directories.
-- Upstream screenshots and repo-level validation scripts are not runtime deps; intentionally not vendored.
-
-## Punk poster-layout skill
-
-`plugins/punk-poster-layout/skills/punk-poster-layout/` is an Agent Skill adaptation of two Punk Space articles by AdrianPunk, not a verbatim tree from the pinned `Punk-Skill` commit. The source URLs and attribution are recorded in `NOTICE`, and Aptinery distributes the adaptation under GPL-3.0.
-
-- Preserve all 32 named composition systems, their image-prompt and HTML/CSS expressions, and the review criteria when reorganizing the references.
-- Keep the skill's role structural: it selects and encodes focal flow, hierarchy, grids, image-text relationships, and density. It does not own the visual style atoms used by `punk-cover`.
-- The original MHTML snapshots are source material outside the plugin, not runtime assets. Do not add incomplete web archives or lazy-loaded remote images to the package.
-
-## Format constraints
-
-- `plugins/shanirez-style/skills/shanirez-style/SKILL.md` keeps only `name` and `description` in frontmatter. Its name must equal the directory name, and it stays under 500 lines.
-- The vendored K-12 skills retain their upstream `license` frontmatter field and Apache notices.
-- Vendored Emil Kowalski skills retain their upstream frontmatter except for the three documented cross-client invocation-policy translations above.
-- `.gitattributes` pins text files to LF.
-- The no-blank-lines/no-trailing-newline rule covers generated OJ `.cpp` and C++ samples only, not Markdown.
-- Templates are code: compile changed C++ templates with `g++ -std=c++14 -O2 -Wall -m64 -static-libgcc` and run a hand-checked input.
-
-## Validation
-
-After distribution or skill changes, run:
-
-```bash
-npx skills add . --list
-claude plugin validate . --strict
-```
-
-Also parse every JSON manifest, check vendored files against the recorded upstream commit when they were not intentionally modified, and finish with `git diff --check`.
-
-## Research records
-
-Do not create or restore `docs/research/` or standalone research/audit report files. Return ad hoc research in the conversation. When a verified licensing or provenance fact changes the distribution, record only the operative fact in the relevant source-of-truth file (`AGENTS.md`, `README.md`, or `NOTICE`); do not reconstruct removed reports from Git history, archives, caches, or prior records.
-
-## Agent skills
-
-- **Issue tracker：本仓 GitHub Issues。**
-- triage 标签、domain 文档布局、OKF 文档系统沿用工作区约定：[`docs/agents/index.md`](docs/agents/index.md)。
-- 进入工作区后必须读取根 [`../Docs/dev_guide.md`](../Docs/dev_guide.md) 的环节守则、完成判据与技能对照；Claude 由根 `CLAUDE.md` 显式导入，其他运行时不得假定自动加载。
+- shanirez-style SKILL frontmatter 仅 name/description，name 等于目录名，文件少于 500 行。
+- `.gitattributes` 固定 LF；只对四个 K-12 目录关闭 whitespace 诊断以保上游原文，不扩大例外。无空行/末尾不换行只约束生成 OJ .cpp 与 C++ 示例，不约束 Markdown。
+- 不创建或恢复 `docs/research/`、独立研究/审计报告；临时研究回对话。核实的许可/来源变更只回写 AGENTS、README 或 NOTICE 的有效事实，不从历史/存档/缓存重建已删除报告。
+- Issue tracker：本仓 GitHub Issues；triage、domain、OKF 沿用 [`docs/agents/index.md`](docs/agents/index.md)。
