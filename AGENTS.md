@@ -1,6 +1,6 @@
 # AGENTS.md — Aptinery
 
-> 继承 [`../AGENTS.md`](../AGENTS.md) 与 [`../Docs/dev_guide.md`](../Docs/dev_guide.md)；勿假定自动加载。这里只写项目合同。
+> 继承 [`../AGENTS.md`](../AGENTS.md)；勿假定自动加载。这里只写项目合同。
 
 ## 分发与权威
 
