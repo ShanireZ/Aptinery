@@ -2,11 +2,24 @@ punk-avatar
 
 This package includes material copied from:
 https://github.com/adrianpunk/Punk-Skill
-upstream commit a52e4456b8a4ccd4312069d6bc3755e2894dbc93
+upstream commit 3fe93635e8842ca4f77ae472b8bb1c5a35b4a7d8
+
+Earlier import pin (superseded): a52e4456b8a4ccd4312069d6bc3755e2894dbc93
 
 The upstream README credits AdrianPunk for prompt design and style direction
 and jinchenma94 for repository maintenance.
 
-The pinned upstream commit contains no license declaration. This notice records
-provenance only; it does not grant or infer a license for the imported skill or
-style atoms.
+The punk-avatar skill files and avatar style atoms are verbatim from the
+imported upstream commit apart from line-ending normalization. Matching
+modification notices for punk-cover live with that plugin.
+
+License facts from the current upstream tree (not a grant by Aptinery):
+upstream added MIT on 2026-09-06, then declared v2.0.0 dual-track on
+2026-09-10 (personal non-commercial under LICENSE-PERSONAL.md; commercial use
+requires prior written commercial license and fee). LICENSE-PERSONAL.md §5
+forbids publishing, distributing, sublicensing, selling, or otherwise
+providing the Work or a modified version to another person; §3 treats plugin
+integration and redistribution as Commercial Use. This distribution does not
+treat the material as MIT and does not establish redistribution permission.
+Commercial redistribution requires a written commercial license from the
+rights holder.

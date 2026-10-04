@@ -1,0 +1,39 @@
+{
+  "name": "mobile-native",
+  "version": "0.3.0",
+  "description": "Make a web app feel native on a phone through platform-layer CSS and meta fixes: hover, tap highlight, 100vh, input zoom, pull-to-refresh, safe areas, and more.",
+  "author": {
+    "name": "Emil Kowalski",
+    "url": "https://github.com/emilkowalski"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "mobile",
+    "pwa",
+    "css",
+    "ui"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Mobile Native",
+    "shortDescription": "Make web apps feel native on mobile",
+    "longDescription": "Fix the platform-layer tells that make a web app feel like a website in a browser rather than something installed.",
+    "developerName": "Emil Kowalski",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ShanireZ/Aptinery",
+    "defaultPrompt": [
+      "Make this web app feel native on mobile.",
+      "Fix the mobile platform-layer issues in this UI."
+    ],
+    "brandColor": "#7C3AED",
+    "screenshots": []
+  }
+}

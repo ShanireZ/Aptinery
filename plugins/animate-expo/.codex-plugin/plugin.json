@@ -1,6 +1,6 @@
 {
   "name": "animate-expo",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Build performant React Native and Expo animations, gestures, transitions, and haptics.",
   "author": {
     "name": "Emil Kowalski",

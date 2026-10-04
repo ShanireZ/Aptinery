@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "improve-animations",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Audit a codebase's motion and produce prioritized, implementation-ready improvement plans.",
   "author": {
     "name": "Emil Kowalski",

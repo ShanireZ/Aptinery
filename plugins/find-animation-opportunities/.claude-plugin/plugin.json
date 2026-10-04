@@ -1,6 +1,6 @@
 {
   "name": "find-animation-opportunities",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Find UI areas that genuinely benefit from motion and propose exact values without implementing.",
   "author": {
     "name": "Emil Kowalski",

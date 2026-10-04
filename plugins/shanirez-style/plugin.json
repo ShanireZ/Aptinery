@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "shanirez-style",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "ShanireZ's personal C++14 style for competitive-programming and online-judge solutions.",
   "author": {
     "name": "ShanireZ",

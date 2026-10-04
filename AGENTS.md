@@ -17,8 +17,8 @@ Aptinery 是公开 Agent Skills 市场；机器标识 `aptinery`、显示名/目
 |---|---|
 | `plugins/shanirez-style/` | 一方 GPL-3.0；SKILL 的统计依据为 [`../OJCode`](../OJCode)，未复算不得新增、削弱或强化断言。方法见 [`docs/style-corpus-method.md`](docs/style-corpus-method.md) |
 | 四个 `k12-*` skill | `anthropics/k12-teacher-skills` commit `281eb8d41fe2837d911541c9bbb870b58add804c`，Apache-2.0，逐字保留；目录为 lesson-plan-creation、lesson-differentiation、lesson-prep、check-for-understanding |
-| Emil Kowalski skill | `emilkowalski/skills` commit `d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7`，MIT；除下述调用适配外保持上游相同 |
-| punk-cover / punk-avatar | `adrianpunk/Punk-Skill` commit `a52e4456b8a4ccd4312069d6bc3755e2894dbc93`，上游未声明许可，转分发许可未确立；不得推断、补发许可或恢复已移除的 GPLv3 文件/声明 |
+| Emil Kowalski skill | `emilkowalski/skills` commit `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`，MIT；除下述调用适配外保持上游相同 |
+| punk-cover / punk-avatar | `adrianpunk/Punk-Skill` commit `3fe93635e8842ca4f77ae472b8bb1c5a35b4a7d8`（此前 pin `a52e4456b8a4ccd4312069d6bc3755e2894dbc93`）。上游 v2.0.0 双轨：个人非商用 LICENSE-PERSONAL，商业须书面授权付费；§5 禁止向他人分发。不得标为 MIT、不得推断转分发许可或恢复已移除的 GPLv3 文件/声明 |
 | punk-poster-layout | 改编自 AdrianPunk 的两篇 Punk Space 文章，不是上述 commit 的原样树；来源与署名在 `NOTICE`，本改编 GPL-3.0 |
 
 - K-12 保留各目录 LICENSE、SPDX、引用 NOTICE 与根 NOTICE 署名；本地修改须有 Apache 要求的醒目修改说明并记 NOTICE。不引入上游可选 `.mcp.json`，保留无 connector 回退。
@@ -26,7 +26,7 @@ Aptinery 是公开 Agent Skills 市场；机器标识 `aptinery`、显示名/目
 - `pick-ui-library` / `prototype` / `review-animations` 的 `agents/openai.yaml` 必须 `policy.allow_implicit_invocation: false`；Markdown body 保持上游一致，仅翻译调用 frontmatter，并给 review-animations description 加 explicit-only 句。
 - 三份 `.claude-plugins/` 源镜像由 Claude marketplace 使用，保留 `disable-model-invocation: true`，须与固定上游树逐字节一致。
 - Punk 保留 SKILL、openai.yaml、references、选定 style atoms 原文；有意适配记 NOTICE。恢复/新增许可须有权利人独立可验证证据，不从历史/缓存恢复无依据声明。
-- punk-cover 只带 30 个封面 atoms；punk-avatar 带 7 个头像 atoms，包括 surreal-pop-up-paper-landscape 的两个 mode references。`../../styles/{style-id}` 依赖插件根 styles，不能当附件删除。上游截图/仓级验证脚本有意不 vendored。
+- punk-cover 只带 33 个封面 atoms；punk-avatar 带 7 个头像 atoms，包括 surreal-pop-up-paper-landscape 的两个 mode references。`../../styles/{style-id}` 依赖插件根 styles，不能当附件删除。上游截图/仓级验证脚本有意不 vendored。
 - punk-poster-layout 保留 32 个具名构图系统、image-prompt 与 HTML/CSS 表达、评审标准；只负责结构与焦点/层级/栅格/密度，不接管 punk-cover 的风格 atoms。原 MHTML 是包外资料，不引入不完整网页存档或远端懒加载图。
 
 ## 命令与验收

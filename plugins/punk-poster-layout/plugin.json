@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "punk-poster-layout",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Structure standalone posters, flyers, key visuals, and single-canvas editorial sections with a 32-layout catalog only when explicit composition control is requested; not a default for ordinary websites/UI, generic heroes, or platform covers.",
   "author": {
     "name": "AdrianPunk; adapted by Aptinery contributors",

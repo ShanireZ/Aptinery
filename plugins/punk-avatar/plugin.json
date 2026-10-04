@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "punk-avatar",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Generate avatars and keepsake portraits from photos or descriptions using curated Punk visual styles.",
   "author": {
     "name": "AdrianPunk and contributors",

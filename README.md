@@ -9,7 +9,7 @@
 
 **Aptinery — A curated foundry for Agent Skills.**
 
-精选、改造并跨客户端发行 Agent Skills 的个人技能工坊与市场。仓库同时提供通用 Agent Skills、Agent Plugins、Codex/ChatGPT 插件和 Claude Code marketplace 入口，当前收录 20 个可独立安装的 skill；市场不把它们捆绑成一个聚合插件。
+精选、改造并跨客户端发行 Agent Skills 的个人技能工坊与市场。仓库同时提供通用 Agent Skills、Agent Plugins、Codex/ChatGPT 插件和 Claude Code marketplace 入口，当前收录 22 个可独立安装的 skill；市场不把它们捆绑成一个聚合插件。
 
 ## Skills
 
@@ -29,6 +29,8 @@
 | [`animation-vocabulary`](plugins/animation-vocabulary/skills/animation-vocabulary/SKILL.md) | 将模糊的动效描述定位到准确术语 | Emil Kowalski，MIT |
 | [`apple-design`](plugins/apple-design/skills/apple-design/SKILL.md) | 将 Apple 的界面与流畅动效原则应用到 Web | Emil Kowalski，MIT |
 | [`write-swift`](plugins/write-swift/skills/write-swift/SKILL.md) | 编写和审查现代 Swift、并发、性能与测试代码 | Emil Kowalski，MIT |
+| [`break-ui`](plugins/break-ui/skills/break-ui/SKILL.md) | 用真实感最坏数据压力测试 UI，报告断裂点并给出修复 | Emil Kowalski，MIT |
+| [`mobile-native`](plugins/mobile-native/skills/mobile-native/SKILL.md) | 用平台层 CSS/元数据修复让 Web App 在手机上更像原生 | Emil Kowalski，MIT |
 | [`pick-ui-library`](plugins/pick-ui-library/skills/pick-ui-library/SKILL.md) | 从精选清单中为前端任务选择合适的库 | Emil Kowalski，MIT |
 | [`prototype`](plugins/prototype/skills/prototype/SKILL.md) | 创建多个差异化 UI 方案并通过可视选择器比较 | Emil Kowalski，MIT |
 | [`ask-sonner`](plugins/ask-sonner/skills/ask-sonner/SKILL.md) | 安装、配置、样式化和排查 Sonner toast | Emil Kowalski，MIT |
@@ -90,7 +92,7 @@ copilot plugin install animate@aptinery
 第三方内容继续采用各自的 `LICENSE` 和归属声明：
 
 - Anthropic / Learning Commons 的四个 K-12 skill 使用 Apache-2.0，固定来源 commit 记录在 [`NOTICE`](NOTICE)。
-- Emil Kowalski 的 12 个设计与工程 skill 使用 MIT，固定来源 commit 记录在 [`NOTICE`](NOTICE)。
-- `punk-cover` 与 `punk-avatar` 的固定来源 commit 记录在 [`NOTICE`](NOTICE)，但该上游版本未声明许可证，Aptinery 不为其推定或补充许可；`punk-poster-layout` 是另行归属的 Aptinery 改编包，使用 GPL-3.0。
+- Emil Kowalski 的 14 个设计与工程 skill 使用 MIT，固定来源 commit 记录在 [`NOTICE`](NOTICE)。
+- `punk-cover` 与 `punk-avatar` 的固定来源 commit 记录在 [`NOTICE`](NOTICE)。当前上游为 Punk Skill v2.0.0 双轨授权：个人非商用免费，商业用途须事先书面授权并付费；其 `LICENSE-PERSONAL.md` §5 禁止向他人分发本体或修改版。Aptinery 不把该材料标为 MIT，也不推定或补充转分发许可。`punk-poster-layout` 是另行归属的 Aptinery 改编包，使用 GPL-3.0。
 
-已有明确许可的主插件根目录及其 skill 目录包含适用的许可证副本；`punk-cover` 与 `punk-avatar` 因上游未声明许可证，不附加或推定任何许可。Claude 专用镜像仅用于保留 3 个 skill 的 `disable-model-invocation: true` 语义，不增加新的市场条目或许可条件。
+已有明确许可的主插件根目录及其 skill 目录包含适用的许可证副本；`punk-cover` 与 `punk-avatar` 因上游 v2.0.0 禁止转分发且未取得商业授权，不附加或推定任何许可，也不宣称可公开再分发。Claude 专用镜像仅用于保留 3 个 skill 的 `disable-model-invocation: true` 语义，不增加新的市场条目或许可条件。

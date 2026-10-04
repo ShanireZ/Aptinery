@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "k12-lesson-differentiation",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Adapt an existing K-12 lesson for students at different proficiency levels and needs.",
   "author": {
     "name": "Anthropic / Learning Commons",

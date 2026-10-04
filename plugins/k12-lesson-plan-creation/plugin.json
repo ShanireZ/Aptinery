@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "k12-lesson-plan-creation",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Create standards-aligned K-12 lesson plans, student materials, assessments, and observation templates.",
   "author": {
     "name": "Anthropic / Learning Commons",
