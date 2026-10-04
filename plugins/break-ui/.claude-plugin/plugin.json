@@ -1,0 +1,20 @@
+{
+  "name": "break-ui",
+  "version": "0.3.0",
+  "description": "Stress-test a piece of UI with realistic worst-case data, report what breaks, and give the fix for each.",
+  "author": {
+    "name": "Emil Kowalski",
+    "url": "https://github.com/emilkowalski"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "ui",
+    "testing",
+    "stress-test",
+    "frontend"
+  ],
+  "skills": "./skills/"
+}

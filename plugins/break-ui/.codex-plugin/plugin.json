@@ -1,0 +1,39 @@
+{
+  "name": "break-ui",
+  "version": "0.3.0",
+  "description": "Stress-test a piece of UI with realistic worst-case data, report what breaks, and give the fix for each.",
+  "author": {
+    "name": "Emil Kowalski",
+    "url": "https://github.com/emilkowalski"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "ui",
+    "testing",
+    "stress-test",
+    "frontend"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Break UI",
+    "shortDescription": "Break UI with worst-case data",
+    "longDescription": "Feed a component or screen realistic worst-case data, render it behind a Demo data / Worst case toggle, and report every break with its fix.",
+    "developerName": "Emil Kowalski",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ShanireZ/Aptinery",
+    "defaultPrompt": [
+      "Break this UI with worst-case data.",
+      "Stress-test this component and tell me what snaps."
+    ],
+    "brandColor": "#7C3AED",
+    "screenshots": []
+  }
+}

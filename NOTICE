@@ -18,11 +18,11 @@ directories contain the applicable LICENSE and reference NOTICE files.
 
 This distribution also includes material copied from:
 https://github.com/emilkowalski/skills
-upstream commit d23d7f88a2e21c9e4b1418c7abe420f5c1052ba7
+upstream commit e8a175de22ae1e49370fc144c1f3bb9aeedf988d
 
 Copyright (c) 2026 Emil Kowalski
 
-The 12 imported design and engineering skills remain licensed under the MIT
+The 14 imported design and engineering skills remain licensed under the MIT
 License. Each plugin root and skill directory contains the applicable LICENSE.
 
 For cross-client compatibility, the primary copies of `pick-ui-library`,
@@ -35,15 +35,34 @@ the sources used by the Claude marketplace.
 
 This distribution also includes material copied from:
 https://github.com/adrianpunk/Punk-Skill
-upstream commit a52e4456b8a4ccd4312069d6bc3755e2894dbc93
+upstream commit 3fe93635e8842ca4f77ae472b8bb1c5a35b4a7d8
+
+Earlier import pin (superseded by the 2026-09-29 refresh):
+a52e4456b8a4ccd4312069d6bc3755e2894dbc93
 
 The upstream README credits AdrianPunk for prompt design and style direction
 and jinchenma94 for repository maintenance.
 
-The pinned upstream commit contains no license declaration for the imported
-`punk-cover` and `punk-avatar` skills or their required style atoms. Aptinery
-does not assign, infer, or supplement a license for that material. The locally
-added GPLv3 texts and claims were removed on 2026-08-30 as unsupported. This
+License status as declared by the current upstream tree (facts, not a grant):
+On 2026-09-06 the upstream repository added an MIT License. On 2026-09-10 it
+declared Punk Skill v2.0.0 dual-track: personal non-commercial use under
+Punk Skill Personal Use License 1.0 (`LICENSE-PERSONAL.md`), and commercial
+use only under a prior written commercial license and paid fee
+(`COMMERCIAL-LICENSE.md`). Legacy copies previously released under MIT remain
+under MIT (`LICENSE-MIT-LEGACY`; last legacy MIT release named `v1.0.0-mit`).
+The pinned import commit a52e4456 predated the MIT addition and itself
+contained no license declaration.
+
+LICENSE-PERSONAL.md §5 states that the recipient may not publish, distribute,
+sublicense, sell, or otherwise provide the Work or a modified version to
+another person, and may only share a link to the Licensor's official
+repository. §3 treats integration into a plugin, prompt library, or template
+library and redistribution as Commercial Use. Aptinery therefore does not
+treat the current Punk Skill material as MIT, does not assign or infer a
+redistribution license, and does not claim that marketplace redistribution is
+authorized. Commercial redistribution would require a written commercial
+license from the rights holder before use. The locally added GPLv3 texts and
+claims were removed on 2026-08-30 as unsupported and are not restored. This
 notice records provenance and local modifications only; it does not establish
 redistribution permission.
 
@@ -72,6 +91,13 @@ style atoms are verbatim at the new commit. The local `punk-cover` adaptation
 was re-merged onto the new upstream base: upstream's multi-size cover suite is
 preserved, and the local retry bound and generated-text status were reconciled
 with it so that both now apply per target image rather than per run.
+
+On 2026-09-29, the vendored Punk material was refreshed to upstream
+`3fe93635e8842ca4f77ae472b8bb1c5a35b4a7d8` and the same `punk-cover` local
+adaptation (copy provenance, approval gate, text-rendering path, generated-text
+status, bounded retries, poster-routing boundary) was re-merged onto that base.
+Upstream localization, platform catalog, ratio resolution, and three new cover
+style atoms are preserved. `punk-avatar` skill files remain verbatim.
 
 The `punk-poster-layout` skill adapts two articles authored by Punk Space /
 AdrianPunk, who remains the primary source attribution:

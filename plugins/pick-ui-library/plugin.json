@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pick-ui-library",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Choose a trusted frontend library for common UI, motion, charting, state, and styling tasks.",
   "author": {
     "name": "Emil Kowalski",
