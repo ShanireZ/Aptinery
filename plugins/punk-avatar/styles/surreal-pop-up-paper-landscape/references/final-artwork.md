@@ -1,4 +1,4 @@
-# 单张效果图模式
+# 單張效果圖模式
 
 Use this mode only when the user asks for `效果图`, `单张效果图`, `成品图`, `final artwork`, or `single image`.
 

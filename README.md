@@ -9,48 +9,48 @@
 
 **Aptinery — A curated foundry for Agent Skills.**
 
-精选、改造并跨客户端发行 Agent Skills 的个人技能工坊与市场。仓库同时提供通用 Agent Skills、Agent Plugins、Codex/ChatGPT 插件和 Claude Code marketplace 入口，当前收录 22 个可独立安装的 skill；市场不把它们捆绑成一个聚合插件。
+精選、改造並跨用戶端發行 Agent Skills 的個人技能工坊與市場。儲存庫同時提供通用 Agent Skills、Agent Plugins、Codex/ChatGPT 外掛和 Claude Code marketplace 入口，當前收錄 22 個可獨立安裝的 skill；市場不把它們捆綁成一個聚合外掛。
 
 ## Skills
 
-| Skill | 用途 | 来源与许可 |
+| Skill | 用途 | 來源與授權 |
 | --- | --- | --- |
-| [`shanirez-style`](plugins/shanirez-style/skills/shanirez-style/SKILL.md) | 结构清晰的算法竞赛 C++14 代码风格 | 原创，GPL-3.0 |
-| [`k12-lesson-plan-creation`](plugins/k12-lesson-plan-creation/skills/k12-lesson-plan-creation/SKILL.md) | 创建符合教学标准的 K-12 课程方案、课堂材料与评估 | Anthropic / Learning Commons，Apache-2.0 |
-| [`k12-lesson-differentiation`](plugins/k12-lesson-differentiation/skills/k12-lesson-differentiation/SKILL.md) | 将已有课程分层适配不同熟练度与学生需求 | Anthropic / Learning Commons，Apache-2.0 |
-| [`k12-lesson-prep`](plugins/k12-lesson-prep/skills/k12-lesson-prep/SKILL.md) | 帮助教师内化已有课程的关键任务并生成课前准备笔记 | Anthropic / Learning Commons，Apache-2.0 |
-| [`k12-check-for-understanding`](plugins/k12-check-for-understanding/skills/k12-check-for-understanding/SKILL.md) | 为数学主题创建基于常见误解的形成性理解检查 | Anthropic / Learning Commons，Apache-2.0 |
-| [`emil-design-eng`](plugins/emil-design-eng/skills/emil-design-eng/SKILL.md) | 打磨 UI、组件设计和动画决策 | Emil Kowalski，MIT |
-| [`animate`](plugins/animate/skills/animate/SKILL.md) | 从零实现有目的、可中断的 Web 动画 | Emil Kowalski，MIT |
-| [`animate-expo`](plugins/animate-expo/skills/animate-expo/SKILL.md) | 实现高性能 React Native / Expo 动画、手势与触觉反馈 | Emil Kowalski，MIT |
-| [`review-animations`](plugins/review-animations/skills/review-animations/SKILL.md) | 按严格工艺标准审查动画代码 | Emil Kowalski，MIT |
-| [`improve-animations`](plugins/improve-animations/skills/improve-animations/SKILL.md) | 审计代码库动效并生成可执行改进计划 | Emil Kowalski，MIT |
-| [`find-animation-opportunities`](plugins/find-animation-opportunities/skills/find-animation-opportunities/SKILL.md) | 找出真正值得加入动效的界面位置 | Emil Kowalski，MIT |
-| [`animation-vocabulary`](plugins/animation-vocabulary/skills/animation-vocabulary/SKILL.md) | 将模糊的动效描述定位到准确术语 | Emil Kowalski，MIT |
-| [`apple-design`](plugins/apple-design/skills/apple-design/SKILL.md) | 将 Apple 的界面与流畅动效原则应用到 Web | Emil Kowalski，MIT |
-| [`write-swift`](plugins/write-swift/skills/write-swift/SKILL.md) | 编写和审查现代 Swift、并发、性能与测试代码 | Emil Kowalski，MIT |
-| [`break-ui`](plugins/break-ui/skills/break-ui/SKILL.md) | 用真实感最坏数据压力测试 UI，报告断裂点并给出修复 | Emil Kowalski，MIT |
-| [`mobile-native`](plugins/mobile-native/skills/mobile-native/SKILL.md) | 用平台层 CSS/元数据修复让 Web App 在手机上更像原生 | Emil Kowalski，MIT |
-| [`pick-ui-library`](plugins/pick-ui-library/skills/pick-ui-library/SKILL.md) | 从精选清单中为前端任务选择合适的库 | Emil Kowalski，MIT |
-| [`prototype`](plugins/prototype/skills/prototype/SKILL.md) | 创建多个差异化 UI 方案并通过可视选择器比较 | Emil Kowalski，MIT |
-| [`ask-sonner`](plugins/ask-sonner/skills/ask-sonner/SKILL.md) | 安装、配置、样式化和排查 Sonner toast | Emil Kowalski，MIT |
-| [`punk-cover`](plugins/punk-cover/skills/punk-cover/SKILL.md) | 将文章、帖子和主题生成平台适配的封面图或复用提示词 | AdrianPunk 与贡献者；上游未声明许可证 |
-| [`punk-avatar`](plugins/punk-avatar/skills/punk-avatar/SKILL.md) | 将人物、宠物、物品照片或描述生成头像与纪念卡 | AdrianPunk 与贡献者；上游未声明许可证 |
-| [`punk-poster-layout`](plugins/punk-poster-layout/skills/punk-poster-layout/SKILL.md) | 仅在明确要求结构构图控制时，为独立海报、传单、主视觉或单画布编辑版块选择 32 种构图；普通网站/UI、通用 Hero 与未明确要求构图控制的平台封面不默认触发 | 原文 AdrianPunk；Agent Skill 由 Aptinery 贡献者改编与包装；GPL-3.0 |
+| [`shanirez-style`](plugins/shanirez-style/skills/shanirez-style/SKILL.md) | 結構清晰的演算法競賽 C++14 程式碼風格 | 原創，GPL-3.0 |
+| [`k12-lesson-plan-creation`](plugins/k12-lesson-plan-creation/skills/k12-lesson-plan-creation/SKILL.md) | 建立符合教學標準的 K-12 課程方案、課堂材料與評估 | Anthropic / Learning Commons，Apache-2.0 |
+| [`k12-lesson-differentiation`](plugins/k12-lesson-differentiation/skills/k12-lesson-differentiation/SKILL.md) | 將已有課程分層適配不同熟練度與學生需求 | Anthropic / Learning Commons，Apache-2.0 |
+| [`k12-lesson-prep`](plugins/k12-lesson-prep/skills/k12-lesson-prep/SKILL.md) | 幫助教師內化已有課程的關鍵任務並生成課前準備筆記 | Anthropic / Learning Commons，Apache-2.0 |
+| [`k12-check-for-understanding`](plugins/k12-check-for-understanding/skills/k12-check-for-understanding/SKILL.md) | 為數學主題建立基於常見誤解的形成性理解檢查 | Anthropic / Learning Commons，Apache-2.0 |
+| [`emil-design-eng`](plugins/emil-design-eng/skills/emil-design-eng/SKILL.md) | 打磨 UI、元件設計和動畫決策 | Emil Kowalski，MIT |
+| [`animate`](plugins/animate/skills/animate/SKILL.md) | 從零實作有目的、可中斷的 Web 動畫 | Emil Kowalski，MIT |
+| [`animate-expo`](plugins/animate-expo/skills/animate-expo/SKILL.md) | 實作高效能 React Native / Expo 動畫、手勢與觸覺回饋 | Emil Kowalski，MIT |
+| [`review-animations`](plugins/review-animations/skills/review-animations/SKILL.md) | 按嚴格工藝標準審查動畫程式碼 | Emil Kowalski，MIT |
+| [`improve-animations`](plugins/improve-animations/skills/improve-animations/SKILL.md) | 稽核程式碼庫動畫效果並生成可執行改進計畫 | Emil Kowalski，MIT |
+| [`find-animation-opportunities`](plugins/find-animation-opportunities/skills/find-animation-opportunities/SKILL.md) | 找出真正值得加入動畫效果的介面位置 | Emil Kowalski，MIT |
+| [`animation-vocabulary`](plugins/animation-vocabulary/skills/animation-vocabulary/SKILL.md) | 將模糊的動畫效果描述定位到準確術語 | Emil Kowalski，MIT |
+| [`apple-design`](plugins/apple-design/skills/apple-design/SKILL.md) | 將 Apple 的介面與流暢動畫效果原則應用到 Web | Emil Kowalski，MIT |
+| [`write-swift`](plugins/write-swift/skills/write-swift/SKILL.md) | 編寫和審查現代 Swift、並行、效能與測試程式碼 | Emil Kowalski，MIT |
+| [`break-ui`](plugins/break-ui/skills/break-ui/SKILL.md) | 用真實感最壞資料壓力測試 UI，報告斷裂點並給出修復 | Emil Kowalski，MIT |
+| [`mobile-native`](plugins/mobile-native/skills/mobile-native/SKILL.md) | 用平台層 CSS/中繼資料修復讓 Web App 在手機上更像原生 | Emil Kowalski，MIT |
+| [`pick-ui-library`](plugins/pick-ui-library/skills/pick-ui-library/SKILL.md) | 從精選清單中為前端任務選擇合適的庫 | Emil Kowalski，MIT |
+| [`prototype`](plugins/prototype/skills/prototype/SKILL.md) | 建立多個差異化 UI 方案並通過可視選擇器比較 | Emil Kowalski，MIT |
+| [`ask-sonner`](plugins/ask-sonner/skills/ask-sonner/SKILL.md) | 安裝、設定、樣式化和排查 Sonner toast | Emil Kowalski，MIT |
+| [`punk-cover`](plugins/punk-cover/skills/punk-cover/SKILL.md) | 將文章、帖子和主題生成平台適配的封面圖或重複使用提示詞 | AdrianPunk 與貢獻者；上游未聲明授權條款 |
+| [`punk-avatar`](plugins/punk-avatar/skills/punk-avatar/SKILL.md) | 將人物、寵物、物品照片或描述生成頭像與紀念卡 | AdrianPunk 與貢獻者；上游未聲明授權條款 |
+| [`punk-poster-layout`](plugins/punk-poster-layout/skills/punk-poster-layout/SKILL.md) | 僅在明確要求結構構圖控制時，為獨立海報、傳單、主視覺或單畫布編輯版塊選擇 32 種構圖；普通網站/UI、通用 Hero 與未明確要求構圖控制的平台封面不預設觸發 | 原文 AdrianPunk；Agent Skill 由 Aptinery 貢獻者改編與包裝；GPL-3.0 |
 
-## 安装
+## 安裝
 
-以下单项安装命令均以 `animate` 为例，可替换为上表中的任一 skill 名称。
+以下單項安裝命令均以 `animate` 為例，可替換為上表中的任一 skill 名稱。
 
 ### skills CLI：Codex、Claude Code、Cursor、OpenCode 等
 
-全局安装全部 skill：
+全域安裝全部 skill：
 
 ```bash
 npx skills add ShanireZ/Aptinery -g
 ```
 
-单独安装表格中的任一 skill：
+單獨安裝表格中的任一 skill：
 
 ```bash
 npx skills add ShanireZ/Aptinery -g --skill animate
@@ -63,7 +63,7 @@ claude plugin marketplace add ShanireZ/Aptinery
 claude plugin install animate@aptinery
 ```
 
-`pick-ui-library`、`prototype` 和 `review-animations` 保留上游的 Claude 显式调用契约；安装后分别通过 `/pick-ui-library:pick-ui-library`、`/prototype:prototype` 和 `/review-animations:review-animations` 调用。
+`pick-ui-library`、`prototype` 和 `review-animations` 保留上游的 Claude 顯式呼叫契約；安裝後分別通過 `/pick-ui-library:pick-ui-library`、`/prototype:prototype` 和 `/review-animations:review-animations` 呼叫。
 
 ### Codex / ChatGPT marketplace
 
@@ -72,7 +72,7 @@ codex plugin marketplace add ShanireZ/Aptinery
 codex plugin add animate@aptinery
 ```
 
-上述 3 个显式调用 skill 在 Codex 中通过各自的 `agents/openai.yaml` 禁止隐式调用，可用 `$pick-ui-library`、`$prototype` 和 `$review-animations` 显式调用。
+上述 3 個顯式呼叫 skill 在 Codex 中通過各自的 `agents/openai.yaml` 禁止隱式呼叫，可用 `$pick-ui-library`、`$prototype` 和 `$review-animations` 顯式呼叫。
 
 ### GitHub Copilot CLI marketplace
 
@@ -81,18 +81,18 @@ copilot plugin marketplace add ShanireZ/Aptinery
 copilot plugin install animate@aptinery
 ```
 
-### Agent Plugins 客户端
+### Agent Plugins 用戶端
 
-每个 `plugins/<skill-name>/plugin.json` 都是独立的 Agent Plugins v1 入口；可安装名称与上表完全一致。
+每個 `plugins/<skill-name>/plugin.json` 都是獨立的 Agent Plugins v1 入口；可安裝名稱與上表完全一致。
 
-## 来源与许可
+## 來源與授權
 
-本仓库原创内容采用 [GNU General Public License v3.0](LICENSE) 发布。
+本儲存庫原創內容採用 [GNU General Public License v3.0](LICENSE) 發佈。
 
-第三方内容继续采用各自的 `LICENSE` 和归属声明：
+第三方內容繼續採用各自的 `LICENSE` 和歸屬聲明：
 
-- Anthropic / Learning Commons 的四个 K-12 skill 使用 Apache-2.0，固定来源 commit 记录在 [`NOTICE`](NOTICE)。
-- Emil Kowalski 的 14 个设计与工程 skill 使用 MIT，固定来源 commit 记录在 [`NOTICE`](NOTICE)。
-- `punk-cover` 与 `punk-avatar` 的固定来源 commit 记录在 [`NOTICE`](NOTICE)。当前上游为 Punk Skill v2.0.0 双轨授权：个人非商用免费，商业用途须事先书面授权并付费；其 `LICENSE-PERSONAL.md` §5 禁止向他人分发本体或修改版。Aptinery 不把该材料标为 MIT，也不推定或补充转分发许可。`punk-poster-layout` 是另行归属的 Aptinery 改编包，使用 GPL-3.0。
+- Anthropic / Learning Commons 的四個 K-12 skill 使用 Apache-2.0，固定來源 commit 記錄在 [`NOTICE`](NOTICE)。
+- Emil Kowalski 的 14 個設計與工程 skill 使用 MIT，固定來源 commit 記錄在 [`NOTICE`](NOTICE)。
+- `punk-cover` 與 `punk-avatar` 的固定來源 commit 記錄在 [`NOTICE`](NOTICE)。當前上游為 Punk Skill v2.0.0 雙軌授權：個人非商用免費，商業用途須事先書面授權並付費；其 `LICENSE-PERSONAL.md` §5 禁止向他人散布本體或修改版。Aptinery 不把該材料標為 MIT，也不推定或補充轉散布授權。`punk-poster-layout` 是另行歸屬的 Aptinery 改編包，使用 GPL-3.0。
 
-已有明确许可的主插件根目录及其 skill 目录包含适用的许可证副本；`punk-cover` 与 `punk-avatar` 因上游 v2.0.0 禁止转分发且未取得商业授权，不附加或推定任何许可，也不宣称可公开再分发。Claude 专用镜像仅用于保留 3 个 skill 的 `disable-model-invocation: true` 语义，不增加新的市场条目或许可条件。
+已有明確授權的主外掛根目錄及其 skill 目錄包含適用的授權條款副本；`punk-cover` 與 `punk-avatar` 因上游 v2.0.0 禁止轉散布且未取得商業授權，不附加或推定任何授權，也不宣稱可公開再散布。Claude 專用鏡像僅用於保留 3 個 skill 的 `disable-model-invocation: true` 語義，不增加新的市場條目或授權條件。
