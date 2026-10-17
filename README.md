@@ -34,7 +34,7 @@
 | [`pick-ui-library`](plugins/pick-ui-library/skills/pick-ui-library/SKILL.md) | 從精選清單中為前端任務選擇合適的庫 | Emil Kowalski，MIT |
 | [`prototype`](plugins/prototype/skills/prototype/SKILL.md) | 建立多個差異化 UI 方案並通過可視選擇器比較 | Emil Kowalski，MIT |
 | [`ask-sonner`](plugins/ask-sonner/skills/ask-sonner/SKILL.md) | 安裝、設定、樣式化和排查 Sonner toast | Emil Kowalski，MIT |
-| [`punk-cover`](plugins/punk-cover/skills/punk-cover/SKILL.md) | 將文章、帖子和主題生成平台適配的封面圖或重複使用提示詞 | AdrianPunk 與貢獻者；上游未聲明授權條款 |
+| [`punk-cover`](plugins/punk-cover/skills/punk-cover/SKILL.md) | 將文章、貼文和主題生成平台適配的封面圖或重複使用提示詞 | AdrianPunk 與貢獻者；上游未聲明授權條款 |
 | [`punk-avatar`](plugins/punk-avatar/skills/punk-avatar/SKILL.md) | 將人物、寵物、物品照片或描述生成頭像與紀念卡 | AdrianPunk 與貢獻者；上游未聲明授權條款 |
 | [`punk-poster-layout`](plugins/punk-poster-layout/skills/punk-poster-layout/SKILL.md) | 僅在明確要求結構構圖控制時，為獨立海報、傳單、主視覺或單畫布編輯版塊選擇 32 種構圖；普通網站/UI、通用 Hero 與未明確要求構圖控制的平台封面不預設觸發 | 原文 AdrianPunk；Agent Skill 由 Aptinery 貢獻者改編與包裝；GPL-3.0 |
 

@@ -45,6 +45,6 @@ Aptinery 是公開 Agent Skills 市場；機器標識 `aptinery`、顯示名/目
 ## 格式與記錄
 
 - shanirez-style SKILL frontmatter 僅 name/description，name 等於目錄名，檔案少於 500 行。
-- `.gitattributes` 固定 LF；只對四個 K-12 目錄關閉 whitespace 診斷以保上游原文，不擴大例外。無空行/末尾不換行只約束生成 OJ .cpp 與 C++ 示例，不約束 Markdown。
+- `.gitattributes` 固定 LF；只對四個 K-12 目錄關閉 whitespace 診斷以保上游原文，不擴大例外。無空行/末尾不換行只約束生成 OJ .cpp 與 C++ 範例，不約束 Markdown。
 - 不建立或恢復 `docs/research/`、獨立研究/稽核報告；臨時研究回對話。核實的授權/來源變更只回寫 AGENTS、README 或 NOTICE 的有效事實，不從歷史/存檔/快取重建已刪除報告。
 - Issue tracker：本儲存庫 GitHub Issues；triage、domain、OKF 沿用 [`docs/agents/index.md`](docs/agents/index.md)。
