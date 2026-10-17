@@ -8,13 +8,13 @@ Styles default to `1:1` inside `punk-avatar`, regardless of the `default_ratio` 
 
 | Style | Style ID | Subject | Metadata | Style | Best For |
 | --- | --- | --- | --- | --- | --- |
-| 像素头像 | `pixel-avatar` | person, pet, object | `styles/pixel-avatar/META.md` | `styles/pixel-avatar/STYLE.md` | Standard profile avatars, icon-like portraits, symbolic avatars, objects, and unclear subjects. |
-| 怪诞灵魂手绘 | `grotesque-soul-sketch` | person, pet | `styles/grotesque-soul-sketch/META.md` | `styles/grotesque-soul-sketch/STYLE.md` | Funny, expressive, sketchy, personality-driven people or pet avatars. |
-| 凌乱蜡笔宠物肖像 | `messy-crayon-pet-portrait` | pet | `styles/messy-crayon-pet-portrait/META.md` | `styles/messy-crayon-pet-portrait/STYLE.md` | Pet avatars, named pet portraits, light crayon and colored-pencil pet drawings. |
-| 时尚速写观察页 | `fashion-sketch-observation` | person | `styles/fashion-sketch-observation/META.md` | `styles/fashion-sketch-observation/STYLE.md` | Human profile portraits with fashion sketch, travel observation, street-photo, or film-still energy. |
-| 拍立得纪念卡 | `polaroid-keepsake` | pet | `styles/polaroid-keepsake/META.md` | `styles/polaroid-keepsake/STYLE.md` | Pet avatar-derived keepsake cards, named pet watercolor polaroid portraits, collectible pet images. |
-| 极简纸感丙烯色块插画 | `minimal-paper-acrylic-block-illustration` | person, pet, object, scene, concept | `styles/minimal-paper-acrylic-block-illustration/META.md` | `styles/minimal-paper-acrylic-block-illustration/STYLE.md` | Small symbolic subjects on rough white paper with thin hand-drawn lines, vivid acrylic blocks, and large negative space. |
-| 立体人物扁平景色纸艺 | `surreal-pop-up-paper-landscape` | person, scene | `styles/surreal-pop-up-paper-landscape/META.md` | `styles/surreal-pop-up-paper-landscape/STYLE.md` | Photorealistic people rising from a flattened paper-plane version of the original environment, as either a before/after comparison or one final artwork. |
+| 像素頭像 | `pixel-avatar` | person, pet, object | `styles/pixel-avatar/META.md` | `styles/pixel-avatar/STYLE.md` | Standard profile avatars, icon-like portraits, symbolic avatars, objects, and unclear subjects. |
+| 怪誕靈魂手繪 | `grotesque-soul-sketch` | person, pet | `styles/grotesque-soul-sketch/META.md` | `styles/grotesque-soul-sketch/STYLE.md` | Funny, expressive, sketchy, personality-driven people or pet avatars. |
+| 凌亂蠟筆寵物肖像 | `messy-crayon-pet-portrait` | pet | `styles/messy-crayon-pet-portrait/META.md` | `styles/messy-crayon-pet-portrait/STYLE.md` | Pet avatars, named pet portraits, light crayon and colored-pencil pet drawings. |
+| 時尚速寫觀察頁 | `fashion-sketch-observation` | person | `styles/fashion-sketch-observation/META.md` | `styles/fashion-sketch-observation/STYLE.md` | Human profile portraits with fashion sketch, travel observation, street-photo, or film-still energy. |
+| 拍立得紀念卡 | `polaroid-keepsake` | pet | `styles/polaroid-keepsake/META.md` | `styles/polaroid-keepsake/STYLE.md` | Pet avatar-derived keepsake cards, named pet watercolor polaroid portraits, collectible pet images. |
+| 極簡紙感丙烯色塊插畫 | `minimal-paper-acrylic-block-illustration` | person, pet, object, scene, concept | `styles/minimal-paper-acrylic-block-illustration/META.md` | `styles/minimal-paper-acrylic-block-illustration/STYLE.md` | Small symbolic subjects on rough white paper with thin hand-drawn lines, vivid acrylic blocks, and large negative space. |
+| 立體人物扁平景色紙藝 | `surreal-pop-up-paper-landscape` | person, scene | `styles/surreal-pop-up-paper-landscape/META.md` | `styles/surreal-pop-up-paper-landscape/STYLE.md` | Photorealistic people rising from a flattened paper-plane version of the original environment, as either a before/after comparison or one final artwork. |
 
 ## Style-Specific Modes
 

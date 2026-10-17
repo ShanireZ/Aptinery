@@ -1,4 +1,4 @@
-# 前后对比图模式
+# 前後對比圖模式
 
 Use this mode only when the user asks for `前后对比图`, `对比图`, `before/after`, or `comparison`.
 

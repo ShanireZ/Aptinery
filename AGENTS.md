@@ -1,50 +1,50 @@
 # AGENTS.md — Aptinery
 
-> 继承 [`../AGENTS.md`](../AGENTS.md)；勿假定自动加载。这里只写项目合同。
+> 繼承 [`../AGENTS.md`](../AGENTS.md)；勿假定自動載入。這裡只寫專案合同。
 
-## 分发与权威
+## 散布與權威
 
-Aptinery 是公开 Agent Skills 市场；机器标识 `aptinery`、显示名/目录/仓库名 `Aptinery`。GitHub `ShanireZ/Aptinery` 是权威，CNB `Round1/Aptinery` 由 [`../sync-github-cnb.ps1`](../sync-github-cnb.ps1) 镜像同步。
+Aptinery 是公開 Agent Skills 市場；機器標識 `aptinery`、顯示名/目錄/儲存庫名 `Aptinery`。GitHub `ShanireZ/Aptinery` 是權威，CNB `Round1/Aptinery` 由 [`../sync-github-cnb.ps1`](../sync-github-cnb.ps1) 鏡像同步。
 
-- 每插件恰含一个同名 skill；名单以 `.claude-plugin/marketplace.json` 与各 `plugin.json` 为准，不在此维护数量快照。
-- `plugins/*/plugin.json` 是 Agent Plugins v1；`plugins/*/.codex-plugin/plugin.json` 与 `.agents/plugins/marketplace.json` 面向 Codex/ChatGPT；`plugins/*/skills/` 供 skills CLI/直接发现。
-- Claude 适配在 `plugins/*/.claude-plugin/plugin.json`、`.claude-plugins/*/.claude-plugin/plugin.json` 和 `.claude-plugin/marketplace.json`。`.claude-plugins/{pick-ui-library,prototype,review-animations}/` 是适配源镜像，不是额外产品。
-- 版本在所有插件与 marketplace/客户端 manifest 间同步；路径、名称及 skill 入口也须一致。
+- 每外掛恰含一個同名 skill；名單以 `.claude-plugin/marketplace.json` 與各 `plugin.json` 為準，不在此維護數量快照。
+- `plugins/*/plugin.json` 是 Agent Plugins v1；`plugins/*/.codex-plugin/plugin.json` 與 `.agents/plugins/marketplace.json` 面向 Codex/ChatGPT；`plugins/*/skills/` 供 skills CLI/直接發現。
+- Claude 適配在 `plugins/*/.claude-plugin/plugin.json`、`.claude-plugins/*/.claude-plugin/plugin.json` 和 `.claude-plugin/marketplace.json`。`.claude-plugins/{pick-ui-library,prototype,review-animations}/` 是適配源鏡像，不是額外產品。
+- 版本在所有外掛與 marketplace/用戶端 manifest 間同步；路徑、名稱及 skill 入口也須一致。
 
-## 来源、许可与不可变边界
+## 來源、授權與不可變邊界
 
-| 内容 | 来源与必须保留的约束 |
+| 內容 | 來源與必須保留的約束 |
 |---|---|
-| `plugins/shanirez-style/` | 一方 GPL-3.0；SKILL 的统计依据为 [`../OJCode`](../OJCode)，未复算不得新增、削弱或强化断言。方法见 [`docs/style-corpus-method.md`](docs/style-corpus-method.md) |
-| 四个 `k12-*` skill | `anthropics/k12-teacher-skills` commit `281eb8d41fe2837d911541c9bbb870b58add804c`，Apache-2.0，逐字保留；目录为 lesson-plan-creation、lesson-differentiation、lesson-prep、check-for-understanding |
-| Emil Kowalski skill | `emilkowalski/skills` commit `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`，MIT；除下述调用适配外保持上游相同 |
-| punk-cover / punk-avatar | `adrianpunk/Punk-Skill` commit `3fe93635e8842ca4f77ae472b8bb1c5a35b4a7d8`（此前 pin `a52e4456b8a4ccd4312069d6bc3755e2894dbc93`）。上游 v2.0.0 双轨：个人非商用 LICENSE-PERSONAL，商业须书面授权付费；§5 禁止向他人分发。不得标为 MIT、不得推断转分发许可或恢复已移除的 GPLv3 文件/声明 |
-| punk-poster-layout | 改编自 AdrianPunk 的两篇 Punk Space 文章，不是上述 commit 的原样树；来源与署名在 `NOTICE`，本改编 GPL-3.0 |
+| `plugins/shanirez-style/` | 一方 GPL-3.0；SKILL 的統計依據為 [`../OJCode`](../OJCode)，未復算不得新增、削弱或強化斷言。方法見 [`docs/style-corpus-method.md`](docs/style-corpus-method.md) |
+| 四個 `k12-*` skill | `anthropics/k12-teacher-skills` commit `281eb8d41fe2837d911541c9bbb870b58add804c`，Apache-2.0，逐字保留；目錄為 lesson-plan-creation、lesson-differentiation、lesson-prep、check-for-understanding |
+| Emil Kowalski skill | `emilkowalski/skills` commit `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`，MIT；除下述呼叫適配外保持上游相同 |
+| punk-cover / punk-avatar | `adrianpunk/Punk-Skill` commit `3fe93635e8842ca4f77ae472b8bb1c5a35b4a7d8`（此前 pin `a52e4456b8a4ccd4312069d6bc3755e2894dbc93`）。上游 v2.0.0 雙軌：個人非商用 LICENSE-PERSONAL，商業須書面授權付費；§5 禁止向他人散布。不得標為 MIT、不得推斷轉散布授權或恢復已移除的 GPLv3 檔案/聲明 |
+| punk-poster-layout | 改編自 AdrianPunk 的兩篇 Punk Space 文章，不是上述 commit 的原樣樹；來源與署名在 `NOTICE`，本改編 GPL-3.0 |
 
-- K-12 保留各目录 LICENSE、SPDX、引用 NOTICE 与根 NOTICE 署名；本地修改须有 Apache 要求的醒目修改说明并记 NOTICE。不引入上游可选 `.mcp.json`，保留无 connector 回退。
-- Emil 保留根 NOTICE 及插件/skill 两层 MIT LICENSE；任何适配记 NOTICE。K-12 的 license frontmatter、Emil 的原 frontmatter 均保留，只有已记录的三处调用翻译例外。
-- `pick-ui-library` / `prototype` / `review-animations` 的 `agents/openai.yaml` 必须 `policy.allow_implicit_invocation: false`；Markdown body 保持上游一致，仅翻译调用 frontmatter，并给 review-animations description 加 explicit-only 句。
-- 三份 `.claude-plugins/` 源镜像由 Claude marketplace 使用，保留 `disable-model-invocation: true`，须与固定上游树逐字节一致。
-- Punk 保留 SKILL、openai.yaml、references、选定 style atoms 原文；有意适配记 NOTICE。恢复/新增许可须有权利人独立可验证证据，不从历史/缓存恢复无依据声明。
-- punk-cover 只带 33 个封面 atoms；punk-avatar 带 7 个头像 atoms，包括 surreal-pop-up-paper-landscape 的两个 mode references。`../../styles/{style-id}` 依赖插件根 styles，不能当附件删除。上游截图/仓级验证脚本有意不 vendored。
-- punk-poster-layout 保留 32 个具名构图系统、image-prompt 与 HTML/CSS 表达、评审标准；只负责结构与焦点/层级/栅格/密度，不接管 punk-cover 的风格 atoms。原 MHTML 是包外资料，不引入不完整网页存档或远端懒加载图。
+- K-12 保留各目錄 LICENSE、SPDX、引用 NOTICE 與根 NOTICE 署名；本機修改須有 Apache 要求的醒目修改說明並記 NOTICE。不引入上游可選 `.mcp.json`，保留無 connector 退回。
+- Emil 保留根 NOTICE 及外掛/skill 兩層 MIT LICENSE；任何適配記 NOTICE。K-12 的 license frontmatter、Emil 的原 frontmatter 均保留，只有已記錄的三處呼叫翻譯例外。
+- `pick-ui-library` / `prototype` / `review-animations` 的 `agents/openai.yaml` 必須 `policy.allow_implicit_invocation: false`；Markdown body 保持上游一致，僅翻譯呼叫 frontmatter，並給 review-animations description 加 explicit-only 句。
+- 三份 `.claude-plugins/` 源鏡像由 Claude marketplace 使用，保留 `disable-model-invocation: true`，須與固定上游樹逐位元組一致。
+- Punk 保留 SKILL、openai.yaml、references、選定 style atoms 原文；有意適配記 NOTICE。恢復/新增授權須有權利人獨立可驗證證據，不從歷史/快取恢復無依據聲明。
+- punk-cover 只帶 33 個封面 atoms；punk-avatar 帶 7 個頭像 atoms，包括 surreal-pop-up-paper-landscape 的兩個 mode references。`../../styles/{style-id}` 相依外掛根 styles，不能當附件刪除。上游截圖/倉級驗證指令碼有意不 vendored。
+- punk-poster-layout 保留 32 個具名構圖系統、image-prompt 與 HTML/CSS 表達、評審標準；只負責結構與焦點/層級/柵格/密度，不接管 punk-cover 的風格 atoms。原 MHTML 是包外資料，不引入不完整網頁存檔或遠端懶載入圖。
 
-## 命令与验收
+## 命令與驗收
 
-从仓库根执行；本仓是分发包，没有应用级 build/test 入口。下表为定义与验收要求，不代表本轮已跑过。
+從儲存庫根執行；本儲存庫是散布包，沒有應用級 build/test 入口。下表為定義與驗收要求，不代表本輪已跑過。
 
-| 何时 | 命令 / 前置 | 能证明什么 / 边界 |
+| 何時 | 命令 / 前置 | 能證明什麼 / 邊界 |
 |---|---|---|
-| skill/分发变更 | `npx skills add . --list`；skills CLI 可用 | 发现入口；npx 可能获取工具，不当作离线静态检查，也不证明各客户端行为 |
-| Claude 适配变更 | `claude plugin validate . --strict`；Claude CLI 可用 | 严格 manifest 验证；不代替其他客户端或 vendor 一致性 |
-| 任意文档/分发变更 | `git diff --check` | 空白诊断；不证明语义或许可合规 |
-| C++ 模板变更 | `g++ -std=c++14 -O2 -Wall -m64 -static-libgcc <模板.cpp> -o <临时输出>`；g++ 可用 | 编译后还须手算输入运行核对，产物不入包 |
+| skill/散布變更 | `npx skills add . --list`；skills CLI 可用 | 發現入口；npx 可能獲取工具，不當作離線靜態檢查，也不證明各用戶端行為 |
+| Claude 適配變更 | `claude plugin validate . --strict`；Claude CLI 可用 | 嚴格 manifest 驗證；不代替其他用戶端或 vendor 一致性 |
+| 任意文件/散布變更 | `git diff --check` | 空白診斷；不證明語義或授權合規 |
+| C++ 範本變更 | `g++ -std=c++14 -O2 -Wall -m64 -static-libgcc <模板.cpp> -o <临时输出>`；g++ 可用 | 編譯後還須手算輸入執行核對，產物不入包 |
 
-此外必须解析所有 JSON manifests；对照各客户端名称/版本/路径/入口，检查上述显式调用策略、LICENSE/NOTICE 和必需 styles/references。未有意修改的 vendor 与固定上游 commit 比对；本地缺上游对象时明确未验，不以 JSON 可解析替代。记录实际命令、退出码及未覆盖客户端。
+此外必須解析所有 JSON manifests；對照各用戶端名稱/版本/路徑/入口，檢查上述顯式呼叫策略、LICENSE/NOTICE 和必需 styles/references。未有意修改的 vendor 與固定上游 commit 比對；本機缺上游物件時明確未驗，不以 JSON 可解析替代。記錄實際命令、結束代碼及未覆蓋用戶端。
 
-## 格式与记录
+## 格式與記錄
 
-- shanirez-style SKILL frontmatter 仅 name/description，name 等于目录名，文件少于 500 行。
-- `.gitattributes` 固定 LF；只对四个 K-12 目录关闭 whitespace 诊断以保上游原文，不扩大例外。无空行/末尾不换行只约束生成 OJ .cpp 与 C++ 示例，不约束 Markdown。
-- 不创建或恢复 `docs/research/`、独立研究/审计报告；临时研究回对话。核实的许可/来源变更只回写 AGENTS、README 或 NOTICE 的有效事实，不从历史/存档/缓存重建已删除报告。
-- Issue tracker：本仓 GitHub Issues；triage、domain、OKF 沿用 [`docs/agents/index.md`](docs/agents/index.md)。
+- shanirez-style SKILL frontmatter 僅 name/description，name 等於目錄名，檔案少於 500 行。
+- `.gitattributes` 固定 LF；只對四個 K-12 目錄關閉 whitespace 診斷以保上游原文，不擴大例外。無空行/末尾不換行只約束生成 OJ .cpp 與 C++ 示例，不約束 Markdown。
+- 不建立或恢復 `docs/research/`、獨立研究/稽核報告；臨時研究回對話。核實的授權/來源變更只回寫 AGENTS、README 或 NOTICE 的有效事實，不從歷史/存檔/快取重建已刪除報告。
+- Issue tracker：本儲存庫 GitHub Issues；triage、domain、OKF 沿用 [`docs/agents/index.md`](docs/agents/index.md)。

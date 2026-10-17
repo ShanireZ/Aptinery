@@ -15,25 +15,25 @@ cover or thumbnail dimensions.
 
 ## Platform choices
 
-| 中文模式平台 / 场景 | English mode platform / use case | Requested ratio | Generation ratio | 中文说明 | English note |
+| 中文模式平台 / 場景 | English mode platform / use case | Requested ratio | Generation ratio | 中文說明 | English note |
 | --- | --- | ---: | ---: | --- | --- |
-| 小红书 | Xiaohongshu | `3:4` | `3:4` | 当前生图工具支持此比例。 | Exact supported ratio. |
-| 微信公众号 | WeChat public account | `2.35:1` | `21:9` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
+| 小紅書 | Xiaohongshu | `3:4` | `3:4` | 當前生圖工具支援此比例。 | Exact supported ratio. |
+| 微信公眾號 | WeChat public account | `2.35:1` | `21:9` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
 | X | X | `5:2` | `21:9` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
-| Instagram 方形贴文 | Instagram square post | `1:1` | `1:1` | 当前生图工具支持此比例。 | Exact supported ratio. |
-| Instagram 竖版贴文 | Instagram portrait post | `4:5` | `3:4` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
-| Instagram 横版贴文 | Instagram landscape post | `1.91:1` | `16:9` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
-| Instagram 快拍 / Reels | Instagram Stories / Reels | `9:16` | `9:16` | 当前生图工具支持此比例。 | Exact supported ratio. |
-| Facebook 贴文 / 链接预览 | Facebook post / link preview | `1.91:1` | `16:9` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
-| LinkedIn 贴文 / 链接预览 | LinkedIn post / link preview | `1.91:1` | `16:9` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
-| YouTube 缩略图 / 视频封面 | YouTube thumbnail / video cover | `16:9` | `16:9` | 当前生图工具支持此比例。 | Exact supported ratio. |
-| TikTok 视频封面 | TikTok video cover | `9:16` | `9:16` | 当前生图工具支持此比例。 | Exact supported ratio. |
-| Pinterest Pin | Pinterest Pin | `2:3` | `2:3` | 当前生图工具支持此比例。 | Exact supported ratio. |
-| Snapchat Spotlight / 快拍 | Snapchat Spotlight / Story | `9:16` | `9:16` | 当前生图工具支持此比例。 | Exact supported ratio. |
-| Reddit 贴文 | Reddit post | `1:1` | `1:1` | 当前生图工具支持此比例。 | Exact supported ratio. |
-| Threads 贴文 | Threads post | `1:1` | `1:1` | 当前生图工具支持此比例。 | Exact supported ratio. |
-| Bluesky 贴文 | Bluesky post | `1:1` | `1:1` | 当前生图工具支持此比例。 | Exact supported ratio. |
-| Medium 文章封面 | Medium article cover | `16:9` | `16:9` | 当前生图工具支持此比例。 | Exact supported ratio. |
+| Instagram 方形貼文 | Instagram square post | `1:1` | `1:1` | 當前生圖工具支援此比例。 | Exact supported ratio. |
+| Instagram 豎版貼文 | Instagram portrait post | `4:5` | `3:4` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
+| Instagram 橫版貼文 | Instagram landscape post | `1.91:1` | `16:9` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
+| Instagram 快拍 / Reels | Instagram Stories / Reels | `9:16` | `9:16` | 當前生圖工具支援此比例。 | Exact supported ratio. |
+| Facebook 貼文 / 連結預覽 | Facebook post / link preview | `1.91:1` | `16:9` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
+| LinkedIn 貼文 / 連結預覽 | LinkedIn post / link preview | `1.91:1` | `16:9` | 只能生成最接近的比例。 | Only the closest supported ratio can be generated. |
+| YouTube 縮略圖 / 影片封面 | YouTube thumbnail / video cover | `16:9` | `16:9` | 當前生圖工具支援此比例。 | Exact supported ratio. |
+| TikTok 影片封面 | TikTok video cover | `9:16` | `9:16` | 當前生圖工具支援此比例。 | Exact supported ratio. |
+| Pinterest Pin | Pinterest Pin | `2:3` | `2:3` | 當前生圖工具支援此比例。 | Exact supported ratio. |
+| Snapchat Spotlight / 快拍 | Snapchat Spotlight / Story | `9:16` | `9:16` | 當前生圖工具支援此比例。 | Exact supported ratio. |
+| Reddit 貼文 | Reddit post | `1:1` | `1:1` | 當前生圖工具支援此比例。 | Exact supported ratio. |
+| Threads 貼文 | Threads post | `1:1` | `1:1` | 當前生圖工具支援此比例。 | Exact supported ratio. |
+| Bluesky 貼文 | Bluesky post | `1:1` | `1:1` | 當前生圖工具支援此比例。 | Exact supported ratio. |
+| Medium 文章封面 | Medium article cover | `16:9` | `16:9` | 當前生圖工具支援此比例。 | Exact supported ratio. |
 
 ## Ratio resolution rules
 
@@ -43,7 +43,7 @@ cover or thumbnail dimensions.
 3. If it is not supported, choose the numerically closest supported ratio
    automatically. Do not stop to ask the user to choose a second ratio.
 4. Before the prompt or image is generated, explicitly state in the active
-   language mode: “只能生成最接近的比例：{generation ratio}（请求比例：{requested
+   language mode: “只能生成最接近的比例：{generation ratio}（請求比例：{requested
    ratio}）。” or “Only the closest supported ratio can be generated: {generation
    ratio} (requested: {requested ratio}).”
 5. Use the resolved generation ratio everywhere the image tool needs an aspect

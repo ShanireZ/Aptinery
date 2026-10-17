@@ -1,12 +1,12 @@
 ---
 type: procedure
-title: shanirez-style 语料计数方法
-description: SKILL.md 里每条统计断言的复算方法，针对 OJCode 语料。
+title: shanirez-style 語料計數方法
+description: SKILL.md 裡每條統計斷言的復算方法，針對 OJCode 語料。
 tags: [style, corpus, verification]
 status: stable
 ---
 
-# shanirez-style 语料计数方法
+# shanirez-style 語料計數方法
 
 Every statistic in `plugins/shanirez-style/skills/shanirez-style/SKILL.md` is measured against the [`../../OJCode`](../../OJCode) corpus — do not add, soften, or strengthen a claim without re-running the count. Method:
 
