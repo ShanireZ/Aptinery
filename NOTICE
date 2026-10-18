@@ -3,7 +3,7 @@ Copyright 2026 ShanireZ
 
 This distribution includes material copied from:
 https://github.com/anthropics/k12-teacher-skills
-upstream commit 281eb8d41fe2837d911541c9bbb870b58add804c
+upstream commit 31fd6dbb0c07cb50bb3ce7f62a4135a393bd0e8c
 
 The following upstream notice is preserved verbatim:
 
@@ -18,11 +18,11 @@ directories contain the applicable LICENSE and reference NOTICE files.
 
 This distribution also includes material copied from:
 https://github.com/emilkowalski/skills
-upstream commit e8a175de22ae1e49370fc144c1f3bb9aeedf988d
+upstream commit 2d228630ba1446365f614a108cb8252f1feda202
 
 Copyright (c) 2026 Emil Kowalski
 
-The 14 imported design and engineering skills remain licensed under the MIT
+The 15 imported design and engineering skills remain licensed under the MIT
 License. Each plugin root and skill directory contains the applicable LICENSE.
 
 For cross-client compatibility, the primary copies of `pick-ui-library`,
@@ -35,7 +35,7 @@ the sources used by the Claude marketplace.
 
 This distribution also includes material copied from:
 https://github.com/adrianpunk/Punk-Skill
-upstream commit 3fe93635e8842ca4f77ae472b8bb1c5a35b4a7d8
+upstream commit c9ad7a3745e07060c50270141efed418a0cd04d6
 
 Earlier import pin (superseded by the 2026-09-29 refresh):
 a52e4456b8a4ccd4312069d6bc3755e2894dbc93
@@ -113,3 +113,44 @@ packaging, restructuring the two articles' 32 composition systems, prompt
 patterns, HTML/CSS guidance, and review criteria for progressive loading. The
 package retains its existing GNU GPL v3.0 declaration; this notice does not
 claim or document a GPL adaptation grant for the source articles.
+
+On 2026-10-18, K-12 was refreshed to
+31fd6dbb0c07cb50bb3ce7f62a4135a393bd0e8c, including its rendering guidance,
+common JSON references and updated examples. All four imported skill trees
+are verbatim; no optional upstream MCP configuration is imported.
+Emil's pin was advanced to 2d228630ba1446365f614a108cb8252f1feda202 and
+animation-performance was added verbatim with MIT license copies. Existing
+Emil skill bodies and the three invocation adaptations remain unchanged.
+Punk's pin was advanced to c9ad7a3745e07060c50270141efed418a0cd04d6;
+the selected punk-cover and shared style material did not change upstream.
+punk-avatar was removed and punk-ip-video-cover is intentionally not imported,
+as requested by the user on 2026-10-18.
+
+Verification also found an existing provenance/guide mismatch: of 71 remaining
+punk-cover source files compared with upstream, 70 differ locally, including the
+two documented cover adaptations and the previously committed Taiwan
+Traditional Chinese localization (bab4da6 and 597b512). This refresh preserves
+all remaining punk-cover content byte-for-byte from Aptinery commit 597b512; the
+selected upstream blobs are unchanged between the previous and current pins.
+It does not claim that the whole current Punk import is verbatim upstream.
+
+This distribution also includes material copied from:
+https://github.com/feitangyuan/onetake
+upstream commit 415758128aa45cc54340df40d8109363447f582e
+
+Required Notice: Copyright (c) 2026 Patrick. onetake is free for noncommercial use only.
+
+OneTake remains under PolyForm Noncommercial License 1.0.0, with the full
+license at both plugin and skill roots. Commercial use requires a separate
+license from the upstream rights holder. The bundled fonts retain their
+individual notices and licenses in looks/fonts/LICENSES.txt. Aptinery does
+not relicense this material under GPL or grant commercial-use rights.
+
+Aptinery shortens OneTake's SKILL description for discovery and adds a
+packaging/path note after its title. Its runtime, fonts, scripts, references,
+templates, gallery and case breakdowns are otherwise unchanged except for
+trimming trailing horizontal whitespace or extra blank lines at EOF in
+eight files, listed in the plugin's NOTICE; no code or license wording is
+changed. Large case
+films and promotional assets remain upstream rather than in this package.
+Client manifests and matching plugin/skill NOTICE files are added locally.

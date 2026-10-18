@@ -1,0 +1,25 @@
+Required Notice: Copyright (c) 2026 Patrick. onetake is free for noncommercial use only.
+
+Copied from https://github.com/feitangyuan/onetake
+upstream commit 415758128aa45cc54340df40d8109363447f582e
+
+The upstream material remains under PolyForm Noncommercial License 1.0.0;
+see LICENSE. Bundled fonts retain their own licenses in looks/fonts/LICENSES.txt.
+No GPL or commercial-use rights are assigned to this material by Aptinery.
+
+Aptinery packaging changes (2026-10-18): shorten only the SKILL description
+for discovery, add the packaging/path note after its title, and add client
+manifests and this notice. Whitespace-only adaptations remove trailing spaces or excess blank lines
+at EOF in these eight files (code and license wording are unchanged):
+lib/motion.js
+looks/fonts/LICENSES.txt
+cases/clearing-15s/README.md
+cases/knockon-15s/README.md
+cases/motion-web-15s/README.md
+cases/one-dot-15s/README.md
+references/motion-library.md
+references/reference-deconstruction.md
+All other imported files are unchanged.
+Runtime libraries, scripts, references, templates, looks/fonts, the gallery,
+and case README files are included. Large case films and promotional assets
+are omitted and remain available from the pinned upstream repository.

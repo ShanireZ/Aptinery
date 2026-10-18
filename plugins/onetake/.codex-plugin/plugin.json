@@ -1,0 +1,39 @@
+{
+  "name": "onetake",
+  "version": "0.4.0",
+  "description": "Create continuous motion films and feature demos with HTML, motion blur, sound, and continuity checks. Noncommercial use only.",
+  "author": {
+    "name": "Patrick",
+    "url": "https://github.com/feitangyuan"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "keywords": [
+    "agent-skills",
+    "video",
+    "motion",
+    "product-demo",
+    "noncommercial"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OneTake",
+    "shortDescription": "Create continuous product motion films",
+    "longDescription": "Create product launch films and feature demos with deterministic HTML, motion blur, sound and continuity checks. Requires Python, Playwright/Chromium, FFmpeg and supporting libraries. PolyForm Noncommercial 1.0.0; commercial use requires a separate upstream license. Bundled fonts retain their own licenses.",
+    "developerName": "Patrick",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ShanireZ/Aptinery",
+    "defaultPrompt": [
+      "Create a continuous 15-second product launch film.",
+      "Build a narrated feature demo from these UI screenshots."
+    ],
+    "brandColor": "#7C3AED",
+    "screenshots": []
+  }
+}
