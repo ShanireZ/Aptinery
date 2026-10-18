@@ -221,18 +221,6 @@
       "category": "Design"
     },
     {
-      "name": "punk-avatar",
-      "source": {
-        "source": "local",
-        "path": "./plugins/punk-avatar"
-      },
-      "policy": {
-        "installation": "AVAILABLE",
-        "authentication": "ON_INSTALL"
-      },
-      "category": "Design"
-    },
-    {
       "name": "punk-poster-layout",
       "source": {
         "source": "local",
@@ -267,6 +255,30 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Education"
+    },
+    {
+      "name": "animation-performance",
+      "source": {
+        "source": "local",
+        "path": "./plugins/animation-performance"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    },
+    {
+      "name": "onetake",
+      "source": {
+        "source": "local",
+        "path": "./plugins/onetake"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
     }
   ]
 }

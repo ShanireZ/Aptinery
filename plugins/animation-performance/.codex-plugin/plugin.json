@@ -1,0 +1,39 @@
+{
+  "name": "animation-performance",
+  "version": "0.4.0",
+  "description": "Diagnose web animation frame drops, rendering costs, main-thread contention, and React animation bottlenecks.",
+  "author": {
+    "name": "Emil Kowalski",
+    "url": "https://github.com/emilkowalski"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "animation",
+    "performance",
+    "web",
+    "react"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Animation Performance",
+    "shortDescription": "Diagnose animation frame drops",
+    "longDescription": "Diagnose dropped frames and recommend targeted animation performance fixes, distinguishing code findings from device measurements.",
+    "developerName": "Emil Kowalski",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ShanireZ/Aptinery",
+    "defaultPrompt": [
+      "Find why this web animation drops frames.",
+      "Review animation performance in this component."
+    ],
+    "brandColor": "#7C3AED",
+    "screenshots": []
+  }
+}

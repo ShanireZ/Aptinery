@@ -1,0 +1,20 @@
+{
+  "name": "onetake",
+  "version": "0.4.0",
+  "description": "Create continuous motion films and feature demos with HTML, motion blur, sound, and continuity checks. Noncommercial use only.",
+  "author": {
+    "name": "Patrick",
+    "url": "https://github.com/feitangyuan"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "keywords": [
+    "agent-skills",
+    "video",
+    "motion",
+    "product-demo",
+    "noncommercial"
+  ],
+  "skills": "./skills/"
+}

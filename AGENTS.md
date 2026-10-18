@@ -16,17 +16,21 @@ Aptinery 是公開 Agent Skills 市場；機器標識 `aptinery`、顯示名/目
 | 內容 | 來源與必須保留的約束 |
 |---|---|
 | `plugins/shanirez-style/` | 一方 GPL-3.0；SKILL 的統計依據為 [`../OJCode`](../OJCode)，未復算不得新增、削弱或強化斷言。方法見 [`docs/style-corpus-method.md`](docs/style-corpus-method.md) |
-| 四個 `k12-*` skill | `anthropics/k12-teacher-skills` commit `281eb8d41fe2837d911541c9bbb870b58add804c`，Apache-2.0，逐字保留；目錄為 lesson-plan-creation、lesson-differentiation、lesson-prep、check-for-understanding |
-| Emil Kowalski skill | `emilkowalski/skills` commit `e8a175de22ae1e49370fc144c1f3bb9aeedf988d`，MIT；除下述呼叫適配外保持上游相同 |
-| punk-cover / punk-avatar | `adrianpunk/Punk-Skill` commit `3fe93635e8842ca4f77ae472b8bb1c5a35b4a7d8`（此前 pin `a52e4456b8a4ccd4312069d6bc3755e2894dbc93`）。上游 v2.0.0 雙軌：個人非商用 LICENSE-PERSONAL，商業須書面授權付費；§5 禁止向他人散布。不得標為 MIT、不得推斷轉散布授權或恢復已移除的 GPLv3 檔案/聲明 |
+| 四個 `k12-*` skill | `anthropics/k12-teacher-skills` commit `31fd6dbb0c07cb50bb3ce7f62a4135a393bd0e8c`，Apache-2.0，逐字保留；目錄為 lesson-plan-creation、lesson-differentiation、lesson-prep、check-for-understanding |
+| Emil Kowalski skill | `emilkowalski/skills` commit `2d228630ba1446365f614a108cb8252f1feda202`，MIT；除下述呼叫適配外保持上游相同 |
+| punk-cover | `adrianpunk/Punk-Skill` commit `c9ad7a3745e07060c50270141efed418a0cd04d6`（此前 pin `a52e4456b8a4ccd4312069d6bc3755e2894dbc93`）。上游 v2.0.0 雙軌：個人非商用 LICENSE-PERSONAL，商業須書面授權付費；§5 禁止向他人散布。不得標為 MIT、不得推斷轉散布授權或恢復已移除的 GPLv3 檔案/聲明 |
+| `onetake` | `feitangyuan/onetake` commit `415758128aa45cc54340df40d8109363447f582e`；PolyForm Noncommercial 1.0.0，保留兩層 LICENSE 與 Required Notice；字型另依 `looks/fonts/LICENSES.txt`。適配 description、套件路徑說明、散布中繼資料，並對新匯入的八個檔案移除行尾空白及末尾多餘空行（名單見外掛 NOTICE）；不重新授權 |
 | punk-poster-layout | 改編自 AdrianPunk 的兩篇 Punk Space 文章，不是上述 commit 的原樣樹；來源與署名在 `NOTICE`，本改編 GPL-3.0 |
 
 - K-12 保留各目錄 LICENSE、SPDX、引用 NOTICE 與根 NOTICE 署名；本機修改須有 Apache 要求的醒目修改說明並記 NOTICE。不引入上游可選 `.mcp.json`，保留無 connector 退回。
 - Emil 保留根 NOTICE 及外掛/skill 兩層 MIT LICENSE；任何適配記 NOTICE。K-12 的 license frontmatter、Emil 的原 frontmatter 均保留，只有已記錄的三處呼叫翻譯例外。
 - `pick-ui-library` / `prototype` / `review-animations` 的 `agents/openai.yaml` 必須 `policy.allow_implicit_invocation: false`；Markdown body 保持上游一致，僅翻譯呼叫 frontmatter，並給 review-animations description 加 explicit-only 句。
 - 三份 `.claude-plugins/` 源鏡像由 Claude marketplace 使用，保留 `disable-model-invocation: true`，須與固定上游樹逐位元組一致。
+- `onetake` 保留 lib、scripts、references、templates、looks/fonts、gallery 與案例 README；大型範例影片與宣傳素材留在固定上游連結。執行相依見 README；不把影片案例提到的歷史工作檔視為隨包提供。
 - Punk 保留 SKILL、openai.yaml、references、選定 style atoms 原文；有意適配記 NOTICE。恢復/新增授權須有權利人獨立可驗證證據，不從歷史/快取恢復無依據聲明。
-- punk-cover 只帶 33 個封面 atoms；punk-avatar 帶 7 個頭像 atoms，包括 surreal-pop-up-paper-landscape 的兩個 mode references。`../../styles/{style-id}` 相依外掛根 styles，不能當附件刪除。上游截圖/倉級驗證指令碼有意不 vendored。
+- 已核實既有 Punk 臺灣繁體在地化與上述原文約定有差異；本次保留已提交內容，未擴大改動。與固定上游的比較範圍及差異見 NOTICE，不宣稱整份 Punk 匯入逐位元組相同。
+- `punk-avatar` 與 `punk-ip-video-cover` 依使用者 2026-10-18 指示不收錄；Punk 僅保留 punk-cover 及其既有 style 選集。
+- punk-cover 只帶 33 個封面 atoms。`../../styles/{style-id}` 相依外掛根 styles，不能當附件刪除。上游截圖/倉級驗證指令碼有意不 vendored。
 - punk-poster-layout 保留 32 個具名構圖系統、image-prompt 與 HTML/CSS 表達、評審標準；只負責結構與焦點/層級/柵格/密度，不接管 punk-cover 的風格 atoms。原 MHTML 是包外資料，不引入不完整網頁存檔或遠端懶載入圖。
 
 ## 命令與驗收
