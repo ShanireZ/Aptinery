@@ -1,0 +1,40 @@
+{
+  "name": "design-taste-frontend",
+  "version": "0.5.0",
+  "description": "Art direction for websites, product pages, dashboards and app screens, with researched directions, real pictures and a real-browser check against generic AI pages.",
+  "author": {
+    "name": "Leonxlnx",
+    "url": "https://github.com/Leonxlnx"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "frontend",
+    "design",
+    "art-direction",
+    "ui"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Taste Skill",
+    "shortDescription": "Art direction for pages and app screens",
+    "longDescription": "tasteskill v2 from Leonxlnx/taste-skill: researched art directions, real pictures from open collections and a real-browser inspector for landing pages, product pages, dashboards and app screens. Requires Node 22+ and Chrome, Edge or Chromium; finding pictures needs network access.",
+    "developerName": "Leonxlnx",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ShanireZ/Aptinery",
+    "defaultPrompt": [
+      "Design a distinctive frontend without generic AI patterns.",
+      "Redesign this interface while preserving its brand.",
+      "Build the dashboard for this product with real data and charts."
+    ],
+    "brandColor": "#7C3AED",
+    "screenshots": []
+  }
+}

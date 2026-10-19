@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "animation-performance",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Diagnose web animation frame drops, rendering costs, main-thread contention, and React animation bottlenecks.",
   "author": {
     "name": "Emil Kowalski",

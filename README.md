@@ -9,7 +9,7 @@
 
 **Aptinery — A curated foundry for Agent Skills.**
 
-精選、改造並跨用戶端發行 Agent Skills 的個人技能工坊與市場。儲存庫同時提供通用 Agent Skills、Agent Plugins、Codex/ChatGPT 外掛和 Claude Code marketplace 入口，當前收錄 23 個可獨立安裝的 skill；市場不把它們捆綁成一個聚合外掛。
+精選、改造並跨用戶端發行 Agent Skills 的個人技能工坊與市場。儲存庫同時提供通用 Agent Skills、Agent Plugins、Codex/ChatGPT 外掛和 Claude Code marketplace 入口，當前收錄 24 個可獨立安裝的 skill；市場不把它們捆綁成一個聚合外掛。
 
 ## Skills
 
@@ -38,6 +38,7 @@
 | [`punk-cover`](plugins/punk-cover/skills/punk-cover/SKILL.md)                                                       | 將文章、貼文和主題生成平台適配的封面圖或重複使用提示詞                                                                                              | AdrianPunk 與貢獻者；個人非商用                                               |
 | [`punk-poster-layout`](plugins/punk-poster-layout/skills/punk-poster-layout/SKILL.md)                               | 僅在明確要求結構構圖控制時，為獨立海報、傳單、主視覺或單畫布編輯版塊選擇 32 種構圖；普通網站/UI、通用 Hero 與未明確要求構圖控制的平台封面不預設觸發 | 原文 AdrianPunk；Agent Skill 由 Aptinery 貢獻者改編與包裝；GPL-3.0            |
 | [`onetake`](plugins/onetake/skills/onetake/SKILL.md)                                                                | 製作一鏡到底的產品發布片、預告與旁白功能演示，包含鏡頭連續性檢查                                                                                    | Patrick / feitangyuan，PolyForm Noncommercial 1.0.0；非商用，商用須另取得授權 |
+| [`design-taste-frontend`](plugins/design-taste-frontend/skills/design-taste-frontend/SKILL.md)                      | 為網站、產品頁、儀表板與 App 畫面提供藝術指導：抽取研究過的設計方向、取用開放圖庫真實圖片，並以真實瀏覽器檢查擺脫千篇一律的 AI 頁面                 | Leonxlnx，MIT                                                                 |
 
 ## 安裝
 
@@ -94,6 +95,7 @@ copilot plugin install animate@aptinery
 
 - Anthropic / Learning Commons 的四個 K-12 skill 使用 Apache-2.0，固定來源 commit 記錄在 [`NOTICE`](NOTICE)。
 - Emil Kowalski 的 15 個設計與工程 skill 使用 MIT，固定來源 commit 記錄在 [`NOTICE`](NOTICE)。
+- Leonxlnx 的 `design-taste-frontend`（tasteskill v2，上游 [`Leonxlnx/taste-skill`](https://github.com/Leonxlnx/taste-skill)）使用 MIT，固定來源 commit 記錄在 [`NOTICE`](NOTICE)；技能執行時下載的圖片、影片與字型保留各自授權。
 - `onetake` 固定來源 commit 與打包適配記錄在 [`NOTICE`](NOTICE)，上游材料使用 [PolyForm Noncommercial 1.0.0](plugins/onetake/LICENSE)，不適用本儲存庫原創內容的 GPL；字型保留各自授權。商業用途須另取得上游商業授權。
 - `punk-cover` 的固定來源 commit 記錄在 [`NOTICE`](NOTICE)。當前上游為 Punk Skill v2.0.0 雙軌授權：個人非商用免費，商業用途須事先書面授權並付費；其 `LICENSE-PERSONAL.md` §5 禁止向他人散布本體或修改版。Aptinery 不把該材料標為 MIT，也不推定或補充轉散布授權。`punk-poster-layout` 是另行歸屬的 Aptinery 改編包，使用 GPL-3.0。
 
@@ -111,3 +113,10 @@ misaki[ja] 與 unidic-lite。具體用法保留在技能及其 references 中。
 套件包含執行函式庫、腳本、範本、字型及其授權、gallery 和案例拆解；大型範例影片與
 宣傳素材留在[固定上游](https://github.com/feitangyuan/onetake/tree/415758128aa45cc54340df40d8109363447f582e/cases)。
 案例拆解提及的成片與歷史工作檔是上游案例資訊，不表示它們隨此套件散布。
+
+## design-taste-frontend 執行需求
+
+`design-taste-frontend` 的腳本不安裝相依，也不需 API 金鑰：需 Node.js 22 以上，以及已安裝的
+Chrome、Edge 或 Chromium（位置特殊時設定 `CHROME_PATH`）；`assets.mjs` 搜尋與下載開放圖庫素材時需要網路。
+工作檔寫入目標專案的 `.taste-skill/`，抽取紀錄寫入 `~/.taste-skill/history.json`（可用 `TASTE_SKILL_HISTORY` 移動）。
+本包只收錄上游預設 skill；上游的 classic 風格 skill 與已遷出的生圖 skill 不在此散布。

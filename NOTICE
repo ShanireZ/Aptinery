@@ -154,3 +154,23 @@ eight files, listed in the plugin's NOTICE; no code or license wording is
 changed. Large case
 films and promotional assets remain upstream rather than in this package.
 Client manifests and matching plugin/skill NOTICE files are added locally.
+
+This distribution also includes material copied from:
+https://github.com/Leonxlnx/taste-skill
+upstream commit b9ca2fd8047f4c72d7da90ebc1c1203e57c72cd2 (tasteskill 2.1.2)
+
+Copyright (c) 2026 Leonxlnx
+
+The `design-taste-frontend` skill (tasteskill v2, upstream directory
+`skills/taste-skill/`) remains licensed under the MIT License. Its plugin root
+and skill directory contain the applicable LICENSE.
+
+On 2026-10-19, Aptinery imported only this default skill. Every file of the
+upstream `skills/taste-skill/` directory is byte-identical at the pinned
+commit; the directory is renamed to `design-taste-frontend` to match the
+skill's `name` and upstream install name. LICENSE copies and client manifests
+are added locally. The opt-in classic skills, the moved or retired skill
+stubs, and the upstream repository's README, research notes, examples and
+images are not imported. As stated upstream, library photographs are served
+by Lorem Picsum from Unsplash; pictures, footage and fonts the skill fetches
+at run time keep their own licenses.
