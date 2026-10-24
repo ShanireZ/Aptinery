@@ -136,7 +136,7 @@ It does not claim that the whole current Punk import is verbatim upstream.
 
 This distribution also includes material copied from:
 https://github.com/feitangyuan/onetake
-upstream commit 415758128aa45cc54340df40d8109363447f582e
+upstream commit 013a61ac8d98883c73733f59c06e49e9ba444f14
 
 Required Notice: Copyright (c) 2026 Patrick. onetake is free for noncommercial use only.
 
@@ -155,9 +155,15 @@ changed. Large case
 films and promotional assets remain upstream rather than in this package.
 Client manifests and matching plugin/skill NOTICE files are added locally.
 
+On 2026-10-24, OneTake was refreshed to the upstream commit recorded above.
+The import includes the GPU render option, closed-browser retry, finer shutter
+sampling, 3D/rhythm/sound references and the Clawd case breakdown. Existing
+description, packaging/path, whitespace and media-exclusion adaptations remain
+in place; no additional runtime or license adaptations are made.
+
 This distribution also includes material copied from:
 https://github.com/Leonxlnx/taste-skill
-upstream commit b9ca2fd8047f4c72d7da90ebc1c1203e57c72cd2 (tasteskill 2.1.2)
+upstream commit 6010f91a9935f1c167dfc500fb1a475681892e6b (tasteskill 2.1.4)
 
 Copyright (c) 2026 Leonxlnx
 
@@ -174,3 +180,9 @@ stubs, and the upstream repository's README, research notes, examples and
 images are not imported. As stated upstream, library photographs are served
 by Lorem Picsum from Unsplash; pictures, footage and fonts the skill fetches
 at run time keep their own licenses.
+
+On 2026-10-24, the default taste-skill import was refreshed to the upstream
+commit recorded above (2.1.4). Only scripts/lib/cdp.mjs changed in the selected
+skill tree: browser-profile cleanup now checks its owner host and process IDs.
+All 38 upstream skill files remain byte-identical; the directory rename and
+the added license copies and client manifests are preserved.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "design-taste-frontend",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Art direction for websites, product pages, dashboards and app screens, with researched directions, real pictures and a real-browser check against generic AI pages.",
   "author": {
     "name": "Leonxlnx",

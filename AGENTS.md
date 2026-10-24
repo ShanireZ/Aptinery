@@ -19,8 +19,8 @@ Aptinery 是公開 Agent Skills 市場；機器標識 `aptinery`、顯示名/目
 | 四個 `k12-*` skill | `anthropics/k12-teacher-skills` commit `31fd6dbb0c07cb50bb3ce7f62a4135a393bd0e8c`，Apache-2.0，逐字保留；目錄為 lesson-plan-creation、lesson-differentiation、lesson-prep、check-for-understanding |
 | Emil Kowalski skill | `emilkowalski/skills` commit `2d228630ba1446365f614a108cb8252f1feda202`，MIT；除下述呼叫適配外保持上游相同 |
 | punk-cover | `adrianpunk/Punk-Skill` commit `c9ad7a3745e07060c50270141efed418a0cd04d6`（此前 pin `a52e4456b8a4ccd4312069d6bc3755e2894dbc93`）。上游 v2.0.0 雙軌：個人非商用 LICENSE-PERSONAL，商業須書面授權付費；§5 禁止向他人散布。不得標為 MIT、不得推斷轉散布授權或恢復已移除的 GPLv3 檔案/聲明 |
-| `onetake` | `feitangyuan/onetake` commit `415758128aa45cc54340df40d8109363447f582e`；PolyForm Noncommercial 1.0.0，保留兩層 LICENSE 與 Required Notice；字型另依 `looks/fonts/LICENSES.txt`。適配 description、套件路徑說明、散布中繼資料，並對新匯入的八個檔案移除行尾空白及末尾多餘空行（名單見外掛 NOTICE）；不重新授權 |
-| `design-taste-frontend` | `Leonxlnx/taste-skill` commit `b9ca2fd8047f4c72d7da90ebc1c1203e57c72cd2`（tasteskill 2.1.2），MIT；上游 `skills/taste-skill/` 逐位元組保留，僅目錄改名為 skill 的 name/上游安裝名，並加外掛/skill 兩層 LICENSE。只收預設 skill，classic 風格與已遷出/退役 stub 不收 |
+| `onetake` | `feitangyuan/onetake` commit `013a61ac8d98883c73733f59c06e49e9ba444f14`；PolyForm Noncommercial 1.0.0，保留兩層 LICENSE 與 Required Notice；字型另依 `looks/fonts/LICENSES.txt`。適配 description、套件路徑說明、散布中繼資料，並對新匯入的八個檔案移除行尾空白及末尾多餘空行（名單見外掛 NOTICE）；不重新授權 |
+| `design-taste-frontend` | `Leonxlnx/taste-skill` commit `6010f91a9935f1c167dfc500fb1a475681892e6b`（tasteskill 2.1.4），MIT；上游 `skills/taste-skill/` 逐位元組保留，僅目錄改名為 skill 的 name/上游安裝名，並加外掛/skill 兩層 LICENSE。只收預設 skill，classic 風格與已遷出/退役 stub 不收 |
 | punk-poster-layout | 改編自 AdrianPunk 的兩篇 Punk Space 文章，不是上述 commit 的原樣樹；來源與署名在 `NOTICE`，本改編 GPL-3.0 |
 
 - K-12 保留各目錄 LICENSE、SPDX、引用 NOTICE 與根 NOTICE 署名；本機修改須有 Apache 要求的醒目修改說明並記 NOTICE。不引入上游可選 `.mcp.json`，保留無 connector 退回。

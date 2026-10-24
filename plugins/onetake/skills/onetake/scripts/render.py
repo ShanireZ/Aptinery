@@ -95,6 +95,9 @@ def integrate_png(pngs):
     return LIN_TO_SRGB[idx], len(keep) < len(pngs)
 
 
+GPU_ARGS = ["--use-angle=metal", "--enable-gpu", "--ignore-gpu-blocklist", "--enable-gpu-rasterization"]
+
+
 def work(job):
     """One browser in its own process, rendering the frames f ≡ job['k'] (mod job['n']). Returns its counters."""
     return asyncio.run(_work(job))
@@ -109,7 +112,7 @@ async def _work(j):
         async def launch():
             if B:
                 await B["br"].close()
-            B["br"] = br = await p.chromium.launch()
+            B["br"] = br = await p.chromium.launch(args=GPU_ARGS if j.get("gpu") else [])
             B["pg"] = pg = await (await br.new_context(viewport={"width": j["width"], "height": j["height"]}, device_scale_factor=j["scale"])).new_page()
             pg.on("pageerror", lambda e: st["errors"].append(str(e))); pg.on("console", lambda m: st["errors"].append(m.text) if m.type == "error" else None)
             await pg.goto("file://" + j["comp"]); await pg.evaluate("window.__ready")
@@ -122,6 +125,30 @@ async def _work(j):
             await B["pg"].evaluate(f"window.__seek({t})"); st["captures"] += 1
             return await B["pg"].screenshot(type="png")
 
+        async def frame(t, path):
+            """One output frame: a still capture, or the shutter's captures averaged in linear light."""
+            if sh <= 0:
+                open(path, "wb").write(await grab(t))
+                return
+            S = j["samples"]
+            if adaptive:
+                try:
+                    far = await B["pg"].evaluate(f"window.__motion({max(t - open_s / 2, 0.0)}, {min(t + open_s / 2, dur - 1e-6)})")
+                    S = min(j["smax"], max(j["smin"], math.ceil(far * j["scale"] / j["gap"])))
+                except Exception:                                   # a page whose __motion throws keeps the fixed count
+                    if not B["br"].is_connected():
+                        raise
+                    S = j["samples"]
+            times = [min(max(t + open_s * ((k + 0.5) / S - 0.5), 0.0), dur - 1e-6) for k in range(S)]
+            first = await grab(times[0]); last = await grab(times[-1])
+            if first == last:                                        # nothing moved while the shutter was open
+                open(path, "wb").write(first); st["still"] += 1
+                return
+            pngs = [first] + [await grab(tk) for tk in times[1:-1]] + [last]
+            img, cut = integrate_png(pngs); st["cuts"] += cut
+            Image.fromarray(img).save(path, compress_level=1)
+            st["hist"][S] = st["hist"].get(S, 0) + 1
+
         done = 0
         for f in range(j["k"], j["N"], j["n"]):
             t = f / fps; path = f"{fr}/{f:05d}.png"
@@ -129,33 +156,27 @@ async def _work(j):
                 continue
             if done and j.get("recycle") and done % j["recycle"] == 0:
                 await launch()                   # a Chrome taking 4K screenshots for ~30 min grows until the OS closes it
-            done += 1; pg = B["pg"]
-            if sh <= 0:
-                open(path, "wb").write(await grab(t))
-                continue
-            S = j["samples"]
-            if adaptive:
+            done += 1
+            for attempt in range(4):
                 try:
-                    far = await pg.evaluate(f"window.__motion({max(t - open_s / 2, 0.0)}, {min(t + open_s / 2, dur - 1e-6)})")
-                    S = min(j["smax"], max(j["smin"], math.ceil(far * j["scale"] / j["gap"])))
-                except Exception:                                   # a page whose __motion throws keeps the fixed count
-                    S = j["samples"]
-            times = [min(max(t + open_s * ((k + 0.5) / S - 0.5), 0.0), dur - 1e-6) for k in range(S)]
-            first = await grab(times[0]); last = await grab(times[-1])
-            if first == last:                                        # nothing moved while the shutter was open
-                open(path, "wb").write(first); st["still"] += 1
-                continue
-            pngs = [first] + [await grab(tk) for tk in times[1:-1]] + [last]
-            img, cut = integrate_png(pngs); st["cuts"] += cut
-            Image.fromarray(img).save(path, compress_level=1)
-            st["hist"][S] = st["hist"].get(S, 0) + 1
+                    await frame(t, path)
+                    break
+                except Exception as e:           # a 4K Chrome can still be closed mid-frame: lose the frame, not the run
+                    if "closed" not in str(e) or attempt == 3:
+                        raise
+                    st["relaunched"] = st.get("relaunched", 0) + 1
+                    try:
+                        await B["br"].close()
+                    except Exception:
+                        pass
+                    B.clear(); await launch()
         await B["br"].close()
     return st
 
 
-async def page_info(comp, width, height):
+async def page_info(comp, width, height, gpu=False):
     async with async_playwright() as p:
-        br = await p.chromium.launch()
+        br = await p.chromium.launch(args=GPU_ARGS if gpu else [])
         pg = await (await br.new_context(viewport={"width": width, "height": height})).new_page()
         await pg.goto("file://" + comp); await pg.evaluate("window.__ready")
         info = await pg.evaluate("({dur: (window.__meta && window.__meta.dur) || null, motion: typeof window.__motion === 'function'})")
@@ -170,13 +191,14 @@ def main():
     ap.add_argument("--final", action="store_true", help="3840×2160 at 60 fps (sets --fps 60 --scale 2) — only once the cut is accepted")
     ap.add_argument("--shutter", type=float, default=180.0, help="shutter angle in degrees; 0 = no motion blur")
     ap.add_argument("--samples", type=int, default=8, help="captures per moving frame when the page has no window.__motion")
-    ap.add_argument("--gap", type=float, default=24.0, help="px between neighbouring captures, for a page with window.__motion")
-    ap.add_argument("--samples-min", type=int, default=4); ap.add_argument("--samples-max", type=int, default=12)
+    ap.add_argument("--gap", type=float, default=6.0, help="px between neighbouring captures, for a page with window.__motion")
+    ap.add_argument("--samples-min", type=int, default=4); ap.add_argument("--samples-max", type=int, default=48)
     ap.add_argument("--workers", type=int, default=max(1, min(8, (os.cpu_count() or 3) - 2)), help="browsers rendering in parallel processes")
     ap.add_argument("--width", type=int, default=1920); ap.add_argument("--height", type=int, default=1080)
     ap.add_argument("--dur", type=float, default=None); ap.add_argument("--sfx", default=None); ap.add_argument("--crf", type=int, default=16)
     ap.add_argument("--keep-frames", action="store_true")
     ap.add_argument("--recycle", type=int, default=150, help="relaunch each worker's browser after this many frames (0 = never)")
+    ap.add_argument("--gpu", action="store_true", help="launch Chromium on the GPU (ANGLE/Metal) — WebGL comps: 11k instanced PBR meshes 652 → 168 ms a capture")
     ap.add_argument("--resume", action="store_true", help="keep _frames/ from a run that died and render only the missing frames (counts in the log cover this run only)")
     a = ap.parse_args()
     if a.final:
@@ -185,14 +207,14 @@ def main():
     if not a.resume:
         shutil.rmtree(fr, ignore_errors=True)
     os.makedirs(fr, exist_ok=True)
-    info = asyncio.run(page_info(comp, a.width, a.height))
+    info = asyncio.run(page_info(comp, a.width, a.height, a.gpu))
     dur = a.dur or info["dur"] or 15; N = int(round(dur * a.fps)); nw = max(1, min(a.workers, N))
     adaptive = a.shutter > 0 and info["motion"]
     how = "no shutter" if a.shutter <= 0 else f"shutter {a.shutter:g}°, " + (
         f"captures per frame sized by __motion (gap {a.gap:g} px, {a.samples_min}–{a.samples_max})" if adaptive else f"{a.samples} captures per moving frame")
     print(f"{N} frames on {nw} workers · {how}", flush=True)
     job = dict(comp=comp, fr=fr, fps=a.fps, dur=dur, N=N, n=nw, width=a.width, height=a.height, scale=a.scale, shutter=a.shutter,
-               samples=max(2, a.samples), gap=a.gap, smin=max(2, a.samples_min), smax=max(2, a.samples_max), resume=a.resume, recycle=a.recycle)
+               samples=max(2, a.samples), gap=a.gap, smin=max(2, a.samples_min), smax=max(2, a.samples_max), resume=a.resume, recycle=a.recycle, gpu=a.gpu)
     t0 = time.time()
     with ProcessPoolExecutor(max_workers=nw, mp_context=multiprocessing.get_context("spawn")) as ex:
         futs = [ex.submit(work, dict(job, k=k)) for k in range(nw)]
@@ -205,7 +227,8 @@ def main():
     for r in res:
         for k, v in r["hist"].items():
             hist[k] = hist.get(k, 0) + v
-    print(f"{N} frames, {captures} captures ({still} still frames skipped the shutter, {cuts} kept a cut hard) in {secs:.0f}s on {nw} workers; page errors: {errs[:3] or 'none'}")
+    print(f"{N} frames, {captures} captures ({still} still frames skipped the shutter, {cuts} kept a cut hard) in {secs:.0f}s on {nw} workers; page errors: {errs[:3] or 'none'}"
+          + (f"; relaunched a closed browser {rel}×" if (rel := sum(r.get('relaunched', 0) for r in res)) else ""))
     cmd = ["ffmpeg", "-v", "error", "-y", "-framerate", str(a.fps), "-i", f"{fr}/%05d.png"]
     if a.sfx: cmd += ["-i", os.path.abspath(a.sfx)]
     cmd += ["-c:v", "libx264", "-preset", "medium", "-crf", str(a.crf), "-pix_fmt", "yuv420p", "-profile:v", "high", "-level", "5.2", "-movflags", "+faststart"]

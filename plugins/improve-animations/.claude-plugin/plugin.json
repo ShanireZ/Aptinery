@@ -1,6 +1,6 @@
 {
   "name": "improve-animations",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Audit a codebase's motion and produce prioritized, implementation-ready improvement plans.",
   "author": {
     "name": "Emil Kowalski",

@@ -1,6 +1,6 @@
 {
   "name": "mobile-native",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Make a web app feel native on a phone through platform-layer CSS and meta fixes: hover, tap highlight, 100vh, input zoom, pull-to-refresh, safe areas, and more.",
   "author": {
     "name": "Emil Kowalski",
