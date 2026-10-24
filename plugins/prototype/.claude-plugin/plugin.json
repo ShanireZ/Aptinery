@@ -1,6 +1,6 @@
 {
   "name": "prototype",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Build several distinct UI variants behind a visual picker, then promote the chosen direction.",
   "author": {
     "name": "Emil Kowalski",

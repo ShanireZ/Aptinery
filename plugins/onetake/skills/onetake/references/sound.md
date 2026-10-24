@@ -81,5 +81,22 @@ In the rejected v3, SFX were 26.8–35.0 dB below music by event-window RMS and 
 normalising the whole mix to −19 LUFS did not repair that balance. Do not reuse whole case mixes and their repeated
 end chords when combining films: reuse the independent sources, timing curves and material identities instead.
 
-**Retired ending: the vibraphone chord + crotale shimmer.** three earlier films all resolved on it; the user
+**Retired ending: the vibraphone chord + crotale shimmer.** pith, ebb and the onetake v1 cut all resolved on it; the user
 heard it as the stock ending 「好多视频都是这个音效」. End on the music's own cadence, or a hit that belongs to the film.
+
+**Dense chains — the frog** (iPhone domino, v5 → v6). Twelve thousand phones, up to 32 lines falling side by side. v5's
+clacks were Kenney glass / plate samples pitched up a little, plus a synthetic ping; the user: 「新的碰撞声我没听出来…后面太
+密集了听着也像青蛙在叫，不脆」. Root cause: the lines ran at one pace and were all paced to land on the same beats, so their
+contacts arrived in lockstep — summed, one hard pulse train at ~24 Hz carrying a mid-band sample resonance, which the ear
+hears as a croak; and thinning it to "≤ 22 a second" kept the period. The principle: many near-identical hits lined up
+in time become a tone — break the alignment and the sameness. What that film did (one way, not the recipe):
+
+- **one voice, never the same twice**: a modal-synthesis tick, every call a new set of detuned modes, nothing
+  below ~700 Hz but a 4 ms knock. No sample, no tonal ping (a 25 ms sine repeated 24 times a second *is* a pitch);
+- **accents**: only the contacts the viewer can follow stay countable, loosened in time where it gets dense (phones never
+  strike in perfect sync), on their own bus;
+- **the swarm**: the rest become grains at random times from a varied bank, their level from how many land together;
+- **check it, don't trust it**: a periodicity measure per section (the autocorrelation peak of the > 1.5 kHz envelope
+  at lags of 20–80 ms) says whether a buzz is there (that film's dense stretches
+  went from ~0.7 to ~0.1). It is a warning light, not a target: a single line's even tick reads high and is the right
+  sound. The ear decides.

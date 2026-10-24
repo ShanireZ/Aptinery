@@ -1,6 +1,6 @@
 {
   "name": "k12-lesson-differentiation",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Adapt an existing K-12 lesson for students at different proficiency levels and needs.",
   "author": {
     "name": "Anthropic / Learning Commons",

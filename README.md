@@ -111,7 +111,7 @@ opencv-python；旁白另需 faster-whisper、Kokoro（kokoro-onnx、soundfile�
 misaki[ja] 與 unidic-lite。具體用法保留在技能及其 references 中。
 
 套件包含執行函式庫、腳本、範本、字型及其授權、gallery 和案例拆解；大型範例影片與
-宣傳素材留在[固定上游](https://github.com/feitangyuan/onetake/tree/415758128aa45cc54340df40d8109363447f582e/cases)。
+宣傳素材留在[固定上游](https://github.com/feitangyuan/onetake/tree/013a61ac8d98883c73733f59c06e49e9ba444f14/cases)。
 案例拆解提及的成片與歷史工作檔是上游案例資訊，不表示它們隨此套件散布。
 
 ## design-taste-frontend 執行需求

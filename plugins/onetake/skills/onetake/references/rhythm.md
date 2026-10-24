@@ -133,3 +133,35 @@ Two more blind spots, from the camera films:
 - Bare cuts only in a burst of hits or into the end card.
 - Run probe.py on the first playable storyboard. Its `bare` lines are the beats that will read as slides.
 - Rests are dead still: no `drift`, no settling camera. A push in a hold is motion to verify.
+
+# Camera on the beat — the domino film's tree (8–12 s)
+
+Five splits on beats 20–28 turn one line of phones into 32. Two cuts of the camera, one lesson.
+
+**v6 — one smooth move** (a low three-quarter behind the fronts, widening over 4 s; lines at constant speed): 「7-12s，
+看着有点无聊呢，没啥节奏变动」. Every split landed on a beat, and nothing on screen moved *with* it.
+
+**v7 — a new set-up snapped to on every split**, sides alternating, each higher and wider, a stiff spring (ω 8.5), a
+small shake per split; and each generation's lines starting slow and surging into the next split (`acc`, references/3d.md). The
+surge stayed. The camera was sent back: 「除了镜头左右摆来摆去…有点生硬了」. Equal-sized jumps every 0.86 s are a
+metronome, and alternating sides crossed the line on every beat — the lines' screen direction flipped each time, so the
+eye re-found the picture five times in four seconds.
+
+**v8 — accepted** (「牛逼，可以了」). One direction for the whole stretch, and the beat carried by speed, not by position:
+
+- **motivated movement first**: swoop off the previous set-up onto the trunk and ride the hero front FPV (0.42 m behind,
+  11 cm up, fov 44). At each split the hero line veers and the camera banks with it — roll = −0.5 × the front's turn
+  rate, clamped to ±0.22 rad, on a softer spring than the move. The turn has a reason, so it isn't a jolt;
+- **then a stepped pull-back**: from split 3, one step per split — 0.24 s, `cubicOut`, starting 40 ms early — back and
+  up along a single direction, landing exactly on the next section's set-up (make that set-up a function, `set32(t)`,
+  and interpolate look / direction / log-distance towards it). Between steps the camera drifts with the fronts.
+
+What it suggests (a way of thinking, not a camera recipe — the right move depends on what the section is about):
+
+- A camera that reframes on every beat becomes the metronome. Hitting the beat by jumping sides also flips the picture's
+  direction each time; the eye pays for that. Movement with a reason (following the thing that turns) and accents in
+  speed, scale or lens read as rhythm without the jolt.
+- **The subject can carry the rhythm too.** A front that surges into its beat makes the beat visible even from a still
+  camera; a constant-speed chain only lands on it.
+- Think about what each part of the stretch is for — here, close for force, far for the count — and where it has to
+  end up for the next section to begin.

@@ -9,7 +9,7 @@ description: "Create short product launch films, teasers, and narrated feature d
 
 # onetake
 
-Aptinery packaging: paths below are relative to this skill directory; run bundled commands from here or use absolute script paths. This package includes the runtime, fonts and their licenses, gallery, templates, and case breakdowns. Large example films and promotional media stay in the [pinned upstream repository](https://github.com/feitangyuan/onetake/tree/415758128aa45cc54340df40d8109363447f582e/cases). Names of films and historical working files in case breakdowns refer to those upstream examples, not additional bundled runtime dependencies.
+Aptinery packaging: paths below are relative to this skill directory; run bundled commands from here or use absolute script paths. This package includes the runtime, fonts and their licenses, gallery, templates, and case breakdowns. Large example films and promotional media stay in the [pinned upstream repository](https://github.com/feitangyuan/onetake/tree/013a61ac8d98883c73733f59c06e49e9ba444f14/cases). Names of films and historical working files in case breakdowns refer to those upstream examples, not additional bundled runtime dependencies.
 
 Short motion films about a product, built from the product. Not a video editor, not a slideshow
 generator: a **composition** (one HTML file, `window.__seek(t)`), a **move library** (`lib/motion.js`),
@@ -151,9 +151,10 @@ The shutter is real motion blur: each moving frame is several seeks across the o
 light; holds are detected and skip it. A capture is a Chrome screenshot (~150 ms; the page itself draws in under 1 ms),
 so render.py runs `--workers` browsers in parallel processes (default cores − 2, max 8). A page that defines
 `window.__motion(t0, t1)` — the farthest anything travels on screen, camera included — gets as many captures per frame
-as keep copies `--gap` px apart, between `--samples-min` and `--samples-max`; if a fast move shows bands, tighten the gap and raise the cap. Budget: the
+as keep copies 6 px apart (4–48); a fixed 8 stepped the one-dot film's 633 px/frame opening into bands. Budget: the
 one-dot camera cut took 103 s for 2,480 captures on 8 workers (one browser: ~0.2 s a capture, ~8.5 minutes) — tell
-the user the estimate before starting a long render.
+the user the estimate before starting a long render. A WebGL comp renders with `--gpu` (Chromium on ANGLE/Metal);
+without it headless Chrome draws on SwiftShader at ~4× the cost (`references/3d.md`).
 
 ### 7 · Sound — a palette in a room, never one beep per event
 
@@ -236,7 +237,7 @@ behind a snap and nothing else noticed. With `--ref`, the reference's energy map
 | `scripts/analyze_ref.py` | reference → energy map, cuts, stillness, contact sheets, motion line (t80, smear), JSON |
 | `scripts/record_footage.py` | config → real-time recordings with action marker → 30 fps frames + paths |
 | `scripts/probe.py` | comp → what is on screen per frame → continuity per boundary, curves per move |
-| `scripts/render.py` | comp → mp4: 1080p30 draft by default, `--final` 4K60, shutter motion blur sized by `__motion`, parallel `--workers`, `.render.json` |
+| `scripts/render.py` | comp → mp4: 1080p30 draft by default, `--final` 4K60, shutter motion blur sized by `__motion`, parallel `--workers`, `--gpu` for WebGL, `.render.json` |
 | `scripts/stills.py` | comp → contact sheet of chosen times |
 | `scripts/vo_tools.py` | narration: `tts` (Kokoro, English and Japanese via a kana reading, auditions), `words` (faster-whisper), `plan` (line starts), `subs` (chunked, timed) |
 | `scripts/frame_diff.py` | two comps (or one with `?lang=`) at chosen times → identical or not, with diff images |
@@ -253,12 +254,16 @@ behind a snap and nothing else noticed. With `--ref`, the reference's energy map
 | `references/composition.md` | the `f(t)` architecture, primitives, hand path, probe, render and shutter |
 | `references/sound.md` | palette, room, levels, what sounded cheap |
 | `references/product-demo.md` | feature demos without a recording: the replica, legibility, highlights from the DOM, narration, languages and the time warp, brand end clips, what bit |
+| `references/3d.md` | 3D films: Blender (MCP) model → GLB → three.js in the comp, the IIFE bundle for `file://`, `--gpu` (render with it: SwiftShader costs ~4×), instanced LODs, the chain as f(t) without physics, a 3D camera, text in the world that has to be read |
 | `cases/motion-web-15s/README.md` | case 1: the rhythm film — beat sheet and numbers |
 | `cases/one-dot-15s/README.md` | case 3: one dot is the whole film — the concept step, an operator's camera, recorded + synthesised sound |
 | `cases/knockon-15s/README.md` | case 4: the light chain-reaction film — causal carry, height from shadows, sound placed from the comp's `__events()` |
 | `cases/clearing-15s/README.md` | case 5: the one-take dive through scale — levels drawn in their own units, a screen-space camera for 1×–300×, sound driven by the zoom's speed |
 | `cases/pith-21s/README.md` | case 6: the reverse dive — 440× → 0.52× out of one phosphor pixel, the product's own dark→light theme flip as the film's one transition, a mascot close-up used as the rhythm break, and a claim built from seven objects already on screen |
 | `cases/ebb-15s/` | case 7: one take through five places, carried by a field of light — keyed camera with a hand, shake and depth, odometer digits, a flood that drains in rings onto the next scene, silk cards on belts at three depths |
+| `cases/domino-25s/README.md` | case 9: 12,346 phones, one pixel each — a measured Blender model instanced in three.js, trigger times on the music's grid, an FPV ride and stepped pull-back on the beat, a dense-chain foley swarm |
+| `cases/infra-25s/README.md` | case 10: every image starts as heat — a 2D film in a reference's own motion language, thermal false colour and per-pixel cooling as SVG filters on real photos (no canvas), the picture on a measured music grid, and a mix fixed by measuring it (a 141 ms flam, then foley and track sharing one low band) |
+| `cases/clawd-desktop-19s/README.md` | case 11: the mascot is the pointer — a macOS desktop as a glass tabletop in three.js, Liquid Glass windows by transmission, every UI action caused by the character's body (click, type, drag, the window's "no"), a camera that rides the Dock and rises for Mission Control, the track's own drop-out as the breath before the drop |
 | `cases/<film>/` | every film made with this skill: the film and a README (beat sheet, numbers, what was rejected and why). Also: overlap, unbroken, skill-demo, and onetake's own launch film. The films' source code is not included |
 
 Requires: python3 with `playwright` (chromium), `numpy`, `scipy`, `Pillow`, `matplotlib`, `fonttools` + `brotli` (looks); `opencv-python` for the
