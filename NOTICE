@@ -1,6 +1,10 @@
 Aptinery
 Copyright 2026 ShanireZ
 
+The `shanirez-style` Agent Skill is original Aptinery work, distributed under
+GNU GPL v3.0. Its style corpus and measured claims remain documented in
+`docs/style-corpus-method.md`.
+
 This distribution includes material copied from:
 https://github.com/anthropics/k12-teacher-skills
 upstream commit 31fd6dbb0c07cb50bb3ce7f62a4135a393bd0e8c
@@ -108,8 +112,7 @@ https://mp.weixin.qq.com/s/HZHnjGwxIa9tBel3Xky1ag
 https://mp.weixin.qq.com/s/1y6PzWf4mij5je0pExIQFA
 "AI 做海报、HTML 构图手册：16 种控制网格、图文关系与信息密度的海报构图——下册"
 
-Aptinery contributors prepared the Agent Skill adaptation and distribution
-packaging, restructuring the two articles' 32 composition systems, prompt
+Aptinery adapted and packaged the Agent Skill from those AdrianPunk articles, restructuring the two articles' 32 composition systems, prompt
 patterns, HTML/CSS guidance, and review criteria for progressive loading. The
 package retains its existing GNU GPL v3.0 declaration; this notice does not
 claim or document a GPL adaptation grant for the source articles.
