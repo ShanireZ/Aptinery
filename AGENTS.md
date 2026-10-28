@@ -24,8 +24,12 @@ policies consistent. Preserve fixed upstream copies and licenses byte-for-byte
 except for adaptations explicitly documented in NOTICE. The three Claude source
 mirrors are distribution adapters, not additional products.
 
-Write Aptinery-authored documentation in English. Retain upstream language,
-source titles and domain-specific output examples where preservation requires it.
+Keep each document's prose consistent with its intended language: English
+editions use English, and localized editions use their respective languages.
+Keep the English, Simplified Chinese, Taiwan Traditional Chinese and Japanese
+README editions synchronized with links to all four. Retain
+upstream language, source titles and domain-specific output examples where
+preservation requires it.
 Keep machine settings, publication approvals, investigation logs and temporary
 execution records outside the repository. Record reusable source and license
 facts in NOTICE, and reusable contributor rules in CONTRIBUTING.md.
