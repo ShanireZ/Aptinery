@@ -1,360 +1,366 @@
-# 構圖詳表 01–16：焦點、平衡、幾何與動勢
+# Compositions 01–16: focus, balance, geometry and motion
 
-以下詳細提示詞中的色彩、字體、材質、電影感及平面／編輯風格詞，是為忠實保留源文而收錄的範例；只有使用者或上游提供相應風格時才攜帶，否則只保留構圖結構並將風格欄位參數化或省略，不得自行選擇外部 style atom。
+The colors, typefaces, materials, cinematic treatment and graphic/editorial style
+words in these examples preserve source-article guidance. Carry them forward
+only when the user or upstream workflow supplies the matching style. Otherwise
+retain the structure and parameterize or omit style fields; do not independently
+select external style atoms.
 
-本表用於單一主角、強符號骨架、明確視線路徑和雙區域分割。每項都提供圖像模型與 HTML/CSS 的結構表達；替換方括號內容，並把所選條目融合進完整任務提示詞。
+Ratios, grid counts, proportions, offsets, gutters and dimensions are adjustable
+starting examples, not fixed requirements. Adapt to the supplied aspect ratio,
+content quantity, minimum type size and unit width, crop safety and medium.
+State the values actually used.
 
-表中的 `3:4`、`5×6`、欄數、比例、偏移和具體尺寸都是可調的起始範例，不是不可變規範。按使用者給定畫幅、內容量、最小字號、最小單元寬度、裁切安全和媒介約束調整，並在交付中說明實際採用的值。
+Use this catalog for one protagonist, strong symbolic structures, clear reading paths and two-region splits. Replace bracketed fields and integrate the chosen structure into the complete task prompt.
 
-## 01｜中軸對稱 Axial Symmetry
+## 01 | Axial Symmetry
 
-所有主要元素圍繞一條中軸組織，左右視覺重量接近，產生莊重、穩定與儀式感。
+Arrange major elements around one central axis, with similar visual weight on both sides for solemnity, stability and ceremony.
 
-- 視線路徑：上方標題 → 中央主視覺 → 底部資訊；沿中軸下行。
-- 適合：品牌發佈、展覽、奢侈品、典禮、單一主角。
-- 避坑：不要機械鏡像每個小元素；資訊很多時容易僵硬。
-- 標籤：`中轴` `镜像平衡` `中央焦点` `庄重` `axial symmetry` `centered composition` `mirrored balance`
+- Reading path: Top title → central visual → bottom information, down the axis.
+- Suitable for: Brand launches, exhibitions, luxury, ceremonies, one protagonist.
+- Pitfall: Avoid mechanically mirroring every detail; dense information can become rigid.
+- Tags: axial symmetry, centered composition, mirrored balance, central focal point
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版 3:4 海报，主题为[主题]。
-采用中轴对称构图：主标题“[主标题]”居上且居中，主视觉[对象]精确落在垂直中轴，副标题、日期与署名沿中线分层排列；左右视觉重量近似镜像，边距与留白均衡；高对比、清晰三层层级、平面设计。避免多焦点、随机偏移和无意义装饰。
+Portrait 3:4 poster about [theme]. Center the headline "[title]" at the top and [subject] on the vertical axis. Layer subtitle, date and credit along the same centerline. Balance margins and negative space with near-mirrored visual weight, strong contrast and three clear levels; flat graphic design. Avoid competing focal points, random offsets and meaningless decoration.
 Keywords: axial symmetry, centered composition, mirrored balance, central focal point.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用 aspect-ratio:3/4 的海报容器；display:grid，单列三行，place-items:center；用 ::before 绘制可隐藏的垂直中轴；标题、主视觉、元信息都以 inline-size 居中约束；左右 padding 相同。
+Use an aspect-ratio:3/4 container; display:grid with one column and three rows, place-items:center. Draw a hideable axis with ::before. Center title, visual and metadata within inline-size limits; use equal horizontal padding.
 ```
 
-## 02｜非對稱平衡 Asymmetrical Balance
+## 02 | Asymmetrical Balance
 
-左右形狀不同，但通過大小、明度、密度與距離交換視覺重量，形成有張力的穩定。
+Exchange visual weight through size, brightness, density and distance, balancing different shapes with deliberate tension.
 
-- 視線路徑：大形體先進入，小而高對比的資訊塊在另一側完成配重。
-- 適合：文化海報、設計展、時尚、科技、當代品牌。
-- 避坑：偏左不等於平衡；另一側必須有足夠對比或密度回應。
-- 標籤：`非对称` `视觉配重` `偏置焦点` `动态稳定` `asymmetrical balance` `visual counterweight` `offset focal point`
+- Reading path: Enter through the large form; a smaller high-contrast block on the opposite side supplies counterweight.
+- Suitable for: Cultural posters, design exhibitions, fashion, technology, contemporary brands.
+- Pitfall: An offset alone is not balance; the other side needs sufficient contrast or density.
+- Tags: asymmetrical balance, visual counterweight, offset focal point, dynamic equilibrium
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报，主题[主题]，采用非对称平衡构图。将大尺度主视觉[对象]偏置于画面一侧，在对侧以更小但更高对比的标题“[主标题]”和信息组完成视觉配重；对齐线清晰、留白不等量但视觉重量稳定，现代编辑设计感。避免随意散落、两侧同等抢眼。
+Portrait poster about [theme], using asymmetrical balance. Offset a large [subject] to one side; balance it with a smaller, higher-contrast title "[title]" and information group opposite. Use clear alignment lines and unequal negative space with stable visual weight, in a modern editorial treatment. Avoid scattered placement and equally dominant sides.
 Keywords: asymmetrical balance, visual counterweight, offset focal point, dynamic equilibrium.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用 5×6 隐形 CSS Grid；主视觉跨 3 列 4 行，文本块占对角侧 2 列；通过 clamp() 控制尺度差，使用 align-self:end 与 justify-self:start 制造偏置；保留一条共同对齐线。
+Use an invisible 5×6 CSS Grid. Span the visual across 3 columns and 4 rows; place text in 2 columns on the diagonal opposite. Control scale with clamp(), offset with align-self:end and justify-self:start, and retain one shared alignment line.
 ```
 
-## 03｜三分法焦點 Rule of Thirds
+## 03 | Rule of Thirds
 
-把畫面橫豎各分三份，將焦點放在分割線或交點附近，兼顧穩定與自然偏移。
+Divide the canvas into thirds horizontally and vertically; place the focus near a line or intersection for stable, natural offset.
 
-- 視線路徑：先到三分交點的主視覺，再沿分割線進入標題和資訊。
-- 適合：攝影主導海報、人物、產品、活動、網頁 Hero。
-- 避坑：不要為卡交點犧牲主體朝向、文字空間或裁切。
-- 標籤：`三分法` `交点焦点` `偏心留白` `rule of thirds` `thirds intersection` `off-center subject`
+- Reading path: Reach the visual at a thirds intersection, then follow division lines into title and information.
+- Suitable for: Photography-led posters, people, products, events, web heroes.
+- Pitfall: Preserve subject direction, text space and safe crops over exact intersection placement.
+- Tags: rule of thirds, thirds intersection, off-center focal point, directional negative space
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-3:4 竖版海报，使用三分法构图。将主视觉[对象]的视觉中心放在右上三分交点附近，标题“[主标题]”沿左侧三分线对齐，保留与主体视线方向一致的大块留白；信息层级清楚、裁切有意图。避免把所有内容塞进交点、避免边距失衡。
+Portrait 3:4 poster using Rule of Thirds. Place the visual center of [subject] near the upper-right thirds intersection, align "[title]" along the left thirds line, and preserve broad space in the subject’s viewing direction. Use clear hierarchy and intentional cropping. Avoid crowding every item into intersections or unbalanced margins.
 Keywords: rule of thirds, thirds intersection, off-center focal point, directional negative space.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-容器使用 3 列 × 3 行 CSS Grid；主视觉以 grid-column:2/4、grid-row:1/3 定位，标题沿第 1 条纵向分割线对齐；调试时用 repeating-linear-gradient 显示三分线，完成后关闭。
+Use a 3-column × 3-row CSS Grid. Position the visual with grid-column:2/4 and grid-row:1/3; align the title along the first vertical division. Show thirds with repeating-linear-gradient during debugging and turn it off when finished.
 ```
 
-## 04｜黃金螺旋 Golden Spiral
+## 04 | Golden Spiral
 
-以逐級縮小的矩形與弧線組織焦點和節奏；把它作為比例草圖，而不是必須服從的美學定律。
+Use progressively smaller rectangles and arcs to organize focus and rhythm. Treat it as a proportional sketch, not a compulsory aesthetic law.
 
-- 視線路徑：從寬闊區域沿弧線逐漸收緊，最終落到內圈焦點。
-- 適合：藝術、自然主題、電影、敘事型產品、概念海報。
-- 避坑：不要把螺旋線貼在成品上；內容層級仍優先。
-- 標籤：`黄金螺旋` `比例递进` `收束焦点` `golden spiral` `Fibonacci layout` `progressive scale`
+- Reading path: From the broad outer area, tighten along an arc toward the inner focus.
+- Suitable for: Art, nature, film, narrative products, conceptual posters.
+- Pitfall: Keep spiral guides out of finished artwork; content hierarchy takes priority.
+- Tags: golden spiral composition, Fibonacci proportion, progressive scale, converging focal point
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版概念海报，主题[主题]，使用隐性的黄金螺旋组织画面：大面积主视觉从外圈进入，标题“[主标题]”与辅助元素按逐级缩小的比例沿弧形轨迹排列，最终焦点落在内圈的[关键对象]；节奏由宽到紧。不要显示数学辅助线，不要牺牲可读性。
+Portrait concept poster about [theme], arranged around an implied golden spiral. A large visual enters from outside; "[title]" and supporting elements decrease in scale along an arc toward [key subject] at the inner focus. Move from broad to tight spacing. Hide mathematical guides and preserve readability.
 Keywords: golden spiral composition, Fibonacci proportion, progressive scale, converging focal point.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用嵌套的绝对定位矩形，每一级尺寸约为前一级的 61.8%；用 border-radius 与伪元素暗示弧线，内容锚点放在最小矩形附近；把比例做成 CSS 自定义属性，勿硬编码为装饰线。
+Use nested absolute-positioned rectangles at approximately 61.8% of the preceding size. Suggest arcs through border-radius and pseudo-elements, with content anchors near the smallest rectangle. Store the ratio in CSS custom properties rather than hard-coding decorative lines.
 ```
 
-## 05｜大留白單點 Isolated Focal Point
+## 05 | Isolated Focal Point
 
-用大面積主動留白隔離一個小而明確的焦點，讓稀疏本身成為語氣。
+Use extensive active negative space to isolate one small, distinct focus; sparseness sets the tone.
 
-- 視線路徑：被孤立度直接拉向單點，再讀取附近的少量文字。
-- 適合：高端品牌、藝術展、詩歌、香氛、安靜的產品傳播。
-- 避坑：留白不是把內容縮小；焦點需要足夠對比、質感或語義。
-- 標籤：`大留白` `孤立焦点` `低密度` `克制` `macro white space` `isolated focal point` `minimal composition`
+- Reading path: Isolation draws the eye to one point, then nearby minimal text.
+- Suitable for: Premium brands, art exhibitions, poetry, fragrance, quiet product communication.
+- Pitfall: Space is more than shrinking content; the focus needs contrast, texture or meaning.
+- Tags: macro white space, isolated focal point, low-density layout, restrained typography
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版极简海报，主题[主题]。保留 65%–80% 的主动留白，只设置一个小尺度但高辨识度的主视觉[对象]，位于下方或偏心位置；标题“[主标题]”靠近焦点，元信息极少、字号克制；安静、高级、精确。避免把留白填满、避免多个装饰点。
+Minimal portrait poster about [theme]. Preserve 65%–80% active negative space. Place one small, recognizable [subject] low or off-center, with "[title]" nearby and little metadata in restrained type. Quiet, premium and precise. Avoid filling space or adding multiple decorative points.
 Keywords: macro white space, isolated focal point, low-density layout, restrained typography.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用单一相对定位容器；主视觉 inline-size:18%–28%，绝对定位在 60%–75% 高度；文本与主视觉组成一个小型内容簇，其余区域保持空；设置 generous padding 与 max-width。
+Use one position:relative container. Set visual inline-size:18%–28%, positioned at 60%–75% of the height. Group text and visual into one small cluster, leave the rest open, and use generous padding and max-width.
 ```
 
-## 06｜邊緣錨定 Edge-Anchored
+## 06 | Edge-Anchored
 
-將主體推向畫面邊緣並允許裁切，通過屏外延伸感製造尺度與張力。
+Push the subject toward an edge and crop deliberately; off-canvas continuation creates scale and tension.
 
-- 視線路徑：從被裁切的大形體進入，沿其朝向或邊緣移動到文字。
-- 適合：時尚、人像、產品特寫、社交媒體封面、強態度傳播。
-- 避坑：不要誤裁臉、關節、文字或產品關鍵結構；必須留安全區。
-- 標籤：`边缘锚定` `越界裁切` `屏外延伸` `edge-anchored` `cropped subject` `off-canvas continuation`
+- Reading path: Enter through the large cropped form and follow its orientation or edge toward text.
+- Suitable for: Fashion, portraits, product close-ups, social covers, forceful communication.
+- Pitfall: Protect faces, joints, text and key product structure with safe zones.
+- Tags: edge-anchored composition, intentional crop, off-canvas continuation, edge tension
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-3:4 竖版海报，将主视觉[对象]锚定在右侧边缘并有意越界裁切，主体约占画面 55%–70%；标题“[主标题]”在相反边缘形成细长信息带，留出明确安全区；产生屏外延伸与大尺度感。避免误切关键部位、避免四边同时拥挤。
+Portrait 3:4 poster. Anchor [subject] to the right edge with an intentional crop beyond the canvas, occupying about 55%–70%. Place "[title]" in a narrow information band at the opposite edge with clear safe space. Create scale and off-canvas continuation; avoid unsafe cuts or crowding all four edges.
 Keywords: edge-anchored composition, intentional crop, off-canvas continuation, edge tension.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-海报容器 overflow:hidden；主视觉 position:absolute，inline-size:70%，inset-inline-end:-16%；文字固定在相反侧安全区；响应式时用 object-position 控制裁切焦点。
+Use overflow:hidden. Position the visual absolutely with inline-size:70% and inset-inline-end:-16%. Keep text in the opposite safe zone. Control responsive crop focus with object-position.
 ```
 
-## 07｜三角／金字塔 Triangular Hierarchy
+## 07 | Triangular Hierarchy
 
-元素構成穩定三角，頂點負責強調，底邊負責承重，天然適合三層層級。
+Arrange elements as a stable triangle: the apex emphasizes and the base supports a natural three-level hierarchy.
 
-- 視線路徑：頂點焦點 → 兩側下行 → 底邊資訊，或從底部匯聚到頂點。
-- 適合：人物群像、電影、論壇、權威主題、層級明確的發佈。
-- 避坑：三角外的元素不能成為更強焦點，否則骨架會塌。
-- 標籤：`三角构图` `金字塔层级` `稳定底座` `triangular composition` `pyramid hierarchy` `stable base`
+- Reading path: Apex focus → descend along the sides → base information, or converge from base to apex.
+- Suitable for: Ensembles, film, forums, authoritative themes, clearly layered launches.
+- Pitfall: A stronger focus outside the triangle collapses the structure.
+- Tags: triangular composition, pyramid hierarchy, stable base, apex focal point
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报，主题[主题]，用稳定的三角/金字塔构图组织[主视觉或人物组]：最高点放置核心对象或标题“[主标题]”，两侧元素向下展开，底边承载日期与地点；三层尺度递减、重心低、整体庄重。避免三角外出现更强焦点。
+Portrait poster about [theme], arranging [visual or group] as a stable triangle/pyramid. Put the key subject or "[title]" at the apex, spread supporting elements downward at both sides, and place date and location along the base. Decrease scale through three levels, with a low center of gravity and solemn tone. Avoid a stronger focus outside the triangle.
 Keywords: triangular composition, pyramid hierarchy, stable base, apex focal point.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-用 CSS Grid 3 列 4 行，核心元素置于中列第 1–2 行，次要元素位于左右第 3 行，元信息横跨底行；可用 clip-path:polygon() 绘制辅助三角形。
+Use a 3-column × 4-row CSS Grid. Put the key element in the middle column, rows 1–2; supporting elements at both sides in row 3; metadata across the bottom. A hideable guide triangle can use clip-path:polygon().
 ```
 
-## 08｜倒三角懸置 Inverted Triangle
+## 08 | Inverted Triangle
 
-上寬下窄的倒三角把重量懸在上方，製造不穩定、壓迫、速度或危險感。
+Suspend weight in a broad top narrowing downward, creating instability, pressure, speed or danger.
 
-- 視線路徑：上方寬區域收束到下方尖點，像漏斗一樣壓向結論。
-- 適合：先鋒藝術、音樂、懸疑、警示、反傳統文化活動。
-- 避坑：不適合強調可靠與舒適的主題；底部文字避免被尖點擠壓。
-- 標籤：`倒三角` `悬置重心` `漏斗收束` `inverted triangle` `unstable balance` `downward convergence`
+- Reading path: Funnel a broad upper area toward a lower point and conclusion.
+- Suitable for: Avant-garde art, music, suspense, warnings, countercultural events.
+- Pitfall: Avoid reliable, comfortable themes, and protect bottom text from the apex.
+- Tags: inverted triangle composition, top-heavy balance, downward convergence, suspended tension
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-实验性竖版海报，采用倒三角构图：宽大的标题“[主标题]”与图形占据上半部，向下逐级收窄，最终尖点指向底部的[日期/CTA]；高重心、压迫、紧张、有下坠感。避免底部信息拥挤，避免使用安稳温和的品牌语气。
+Experimental portrait poster using an inverted triangle. Place a broad "[title]" and graphics in the upper half, progressively narrow downward, and aim the final point at [date/CTA]. Use a high center of gravity, pressure, tension and falling motion. Avoid cramped bottom information and a calm, reassuring brand tone.
 Keywords: inverted triangle composition, top-heavy balance, downward convergence, suspended tension.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-顶部内容区宽 100%，中段 66%，底部焦点 20%；用 grid-template-rows 与 justify-self:center 逐级收窄，背景图形使用 clip-path:polygon(0 0,100% 0,50% 100%)。
+Make upper content 100% wide, middle 66%, and bottom focus 20%. Narrow stages with grid-template-rows and justify-self:center. Use clip-path:polygon(0 0,100% 0,50% 100%) for the background form.
 ```
 
-## 09｜同心環繞 Concentric
+## 09 | Concentric
 
-多箇中心相同的環、框或形狀反覆包圍焦點，強調聚焦、回聲與層層深入。
+Repeat rings, frames or shapes around a common center to emphasize focus, echoes and inward depth.
 
-- 視線路徑：外圈先建立場域，向內層層收束到中心。
-- 適合：音樂、科技、聲波、社群、週年、抽象主題。
-- 避坑：中心文字與環線錯開；環太多會產生噪聲或眩暈。
-- 標籤：`同心` `环绕焦点` `层层收束` `concentric composition` `nested rings` `central convergence`
+- Reading path: Outer rings establish the field, then converge layer by layer toward the center.
+- Suitable for: Music, technology, sound waves, communities, anniversaries, abstract themes.
+- Pitfall: Keep center text away from rings; too many rings cause noise or dizziness.
+- Tags: concentric composition, nested rings, central convergence, rhythmic intervals
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报，围绕中央[主视觉]使用 4–7 层同心圆或同心框，尺寸与线宽有节奏变化；标题“[主标题]”置于中心或切入其中一层，辅助信息沿外环分布；形成聚焦、声波、回声感。避免环线遮挡文字、避免所有环同样粗。
+Portrait poster with 4–7 concentric circles or frames around central [visual], varying size and line weight rhythmically. Place "[title]" at the center or intersecting one ring; distribute supporting information along the outer ring. Suggest focus, sound waves and echoes. Avoid ring lines over text or identical line weights.
 Keywords: concentric composition, nested rings, central convergence, rhythmic intervals.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-海报使用 place-items:center；创建多个绝对定位元素，inset 按等比递增，border-radius:50% 或矩形；用 CSS 变量控制每环尺寸、线宽与透明度；文字层 z-index 最高。
+Use place-items:center with multiple absolute-positioned elements, geometrically increasing inset, and border-radius:50% or rectangular frames. Control ring size, weight and opacity with CSS variables; give text the highest z-index.
 ```
 
-## 10｜框中框 Frame within Frame
+## 10 | Frame within Frame
 
-利用邊框、視窗或嵌套容器反覆限定觀看範圍，形成展陳感和縱深。
+Use borders, windows or nested containers to repeatedly define the viewing area, creating exhibition character and depth.
 
-- 視線路徑：先識別外框，再穿過內框進入主體，最後讀取框外註解。
-- 適合：藝術展、建築、檔案、攝影、復古印刷、畫冊封面。
-- 避坑：框線層級不能與文字層級競爭；內框太小會像縮略圖。
-- 標籤：`框中框` `嵌套边界` `窗口焦点` `frame within frame` `nested borders` `contained focal area`
+- Reading path: Read the outer frame, pass through inner frames to the subject, then read outside annotations.
+- Suitable for: Art exhibitions, architecture, archives, photography, retro print, art-book covers.
+- Pitfall: Frame hierarchy must not compete with type; an undersized inner frame looks like a thumbnail.
+- Tags: frame within frame, nested borders, contained focal area, gallery layout
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版文化海报，使用框中框构图：外层细边框定义安全区，中层偏置窗口裁切主视觉[对象]，内层小框锁定标题“[主标题]”；框外保留编号和注释，形成档案与展陈感。避免所有边框同粗、避免边框压迫正文。
+Portrait cultural poster with nested frames. A thin outer frame defines the safe zone, an offset middle window crops [subject], and a small inner frame anchors "[title]". Keep numbering and notes outside the frame for an archive/exhibition effect. Vary border weights and avoid squeezing body copy.
 Keywords: frame within frame, nested borders, contained focal area, gallery layout.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用三层嵌套容器，每层独立 padding 与 border；中层可偏离中心 4%–8%；主视觉 object-fit:cover；用 outline-offset 而非堆叠 box-shadow 保持边界清晰。
+Use three nested containers with separate padding and border. Offset the middle by 4%–8%; use object-fit:cover for the visual. Prefer outline-offset over stacked box-shadow for clear boundaries.
 ```
 
-## 11｜對角線動勢 Diagonal Tension
+## 11 | Diagonal Tension
 
-強斜軸貫穿畫面，打破水平穩定，快速建立速度、衝突和方向。
+A strong diagonal axis breaks horizontal stability and establishes speed, conflict and direction.
 
-- 視線路徑：沿斜軸從一角穿向對角；資訊依附或反向切斷斜軸。
-- 適合：體育、音樂、促銷、科技、行動號召、青年文化。
-- 避坑：正文不要全部傾斜；斜線必須指向有效資訊而非畫外。
-- 標籤：`对角线` `斜轴` `速度` `切割` `diagonal composition` `dynamic axis` `directional tension`
+- Reading path: Cross from one corner toward its opposite; information follows or cuts against the axis.
+- Suitable for: Sports, music, promotions, technology, calls to action, youth culture.
+- Pitfall: Keep body text readable; aim the diagonal at useful information rather than outside the canvas.
+- Tags: diagonal composition, dynamic axis, directional tension, kinetic layout
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报，以一条从左下穿向右上的强对角轴组织画面；主视觉[对象]压在线上，标题“[主标题]”沿斜轴或与其形成反向切割，次要信息保持水平以保证可读；高速度、高张力。避免所有文字同时旋转、避免斜轴把视线带离关键信息。
+Portrait poster organized along a strong lower-left to upper-right diagonal. Place [subject] on the axis; align "[title]" with it or cut across it in the opposite direction. Keep secondary information horizontal. Create speed and tension without rotating every text block or drawing attention away from key information.
 Keywords: diagonal composition, dynamic axis, directional tension, kinetic layout.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-用 ::before 创建宽色带，position:absolute，transform:rotate(-24deg) scale(1.4)；关键元素沿对角的多个锚点绝对定位；正文保持 transform:none。
+Create a broad ::before band with position:absolute and transform:rotate(-24deg) scale(1.4). Anchor key elements at points along the diagonal; keep body text transform:none.
 ```
 
-## 12｜放射爆發 Radial Burst
+## 12 | Radial Burst
 
-線條、形狀或人物從共同中心向外輻射，形成能量爆發與集中傳播。
+Radiate lines, shapes or people outward from one shared center for concentrated energy.
 
-- 視線路徑：中心先被鎖定，隨後向四周擴散，再回到中心文字。
-- 適合：音樂節、促銷、慶典、運動、宣言、強情緒活動。
-- 避坑：放射中心必須唯一；細密射線會干擾小字號。
-- 標籤：`放射` `爆发中心` `向外扩散` `radial burst` `radiating lines` `explosive focal point`
+- Reading path: Lock onto the center, expand outward, then return to central text.
+- Suitable for: Festivals, promotions, celebrations, sports, manifestos, emotional events.
+- Pitfall: Use one center only; dense rays interfere with small type.
+- Tags: radial burst composition, radiating lines, explosive focal point, centrifugal energy
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-3:4 竖版海报，以[主视觉/标题]为唯一放射中心，使用粗细相间的射线、文字或图形向四周扩散；中心标题“[主标题]”高对比、紧凑，边缘信息较弱；能量强、节庆或宣言感。避免多个放射中心、避免射线穿过小字。
+Portrait 3:4 poster with [visual/title] as the sole radiation center. Alternate thick and thin rays, text or shapes toward the edges. Keep "[title]" compact and high-contrast in the center; weaken edge details. Energetic, festive or declarative. Avoid multiple radiation centers and rays crossing small text.
 Keywords: radial burst composition, radiating lines, explosive focal point, centrifugal energy.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-背景使用 repeating-conic-gradient() 生成射线；中心内容用 place-items:center；射线层降低 opacity 并放在文字之下，给中心文字增加纯色底或 isolation:isolate。
+Generate rays with repeating-conic-gradient(). Center content with place-items:center; lower the ray layer’s opacity below text and give center text a solid background or isolation:isolate.
 ```
 
-## 13｜Z 型路徑 Z-Path
+## 13 | Z-Path
 
-用左上、右上、左下、右下四個錨點構成折線路徑，適合少量資訊的順序閱讀。
+Arrange upper-left, upper-right, lower-left and lower-right anchors into a zigzag for sequential reading of limited information.
 
-- 視線路徑：左上標題 → 右上主視覺 → 左下說明 → 右下 CTA。
-- 適合：活動、產品頁首屏、課程、發佈會、社交媒體廣告。
-- 避坑：Z 只是編排腳手架，不是所有觀眾固定的眼動規律。
-- 標籤：`Z 型路径` `四角锚点` `顺序阅读` `Z-pattern layout` `corner anchors` `sequential scan`
+- Reading path: Upper-left title → upper-right visual → lower-left explanation → lower-right CTA.
+- Suitable for: Events, product heroes, courses, launches, social ads.
+- Pitfall: The Z is layout scaffolding, not a universal eye-movement law.
+- Tags: Z-pattern composition, corner anchors, sequential visual path, diagonal handoff
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版信息海报，使用清晰的 Z 型阅读路径：左上放主标题“[主标题]”，右上放主视觉[对象]，左下放简短说明，右下放日期/CTA；用对比、细线或视线方向暗示两条水平线与中间斜线，但不要画出字母 Z。避免四角同等强。
+Portrait information poster with a clear Z reading path: "[title]" at upper left, [subject] at upper right, short explanation at lower left, date/CTA at lower right. Suggest two horizontal strokes and a diagonal handoff with contrast, fine lines or subject direction; do not draw a literal Z. Avoid equal emphasis at every corner.
 Keywords: Z-pattern composition, corner anchors, sequential visual path, diagonal handoff.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用 2 列 × 2 行网格，四个内容簇分别占四角；用伪元素绘制低对比折线或通过元素朝向建立交接；右下 CTA 设置最高色彩对比但不超过主标题尺度。
+Use a 2-column × 2-row grid with one cluster at each corner. Suggest a low-contrast path with pseudo-elements or element orientation. Give the lower-right CTA the strongest color contrast without exceeding headline scale.
 ```
 
-## 14｜S 型曲線 S-Curve
+## 14 | S-Curve
 
-以柔和的反向曲線連接多個焦點，產生流動、優雅和漸進敘事。
+Connect focal nodes through a soft reversing curve for flow, elegance and gradual narrative.
 
-- 視線路徑：從上方一側切入，沿曲線越過中央，最終到達下方另一側。
-- 適合：美妝、時尚、舞蹈、自然、飲品、優雅敘事。
-- 避坑：不要讓曲線成為無關裝飾；每次轉彎應有資訊節點。
-- 標籤：`S 曲线` `蛇形路径` `柔性动势` `S-curve composition` `serpentine flow` `graceful movement`
+- Reading path: Enter on one upper side, cross the center, finish on the opposite lower side.
+- Suitable for: Beauty, fashion, dance, nature, drinks, elegant narratives.
+- Pitfall: Each turn needs an information node; avoid an unrelated decorative curve.
+- Tags: S-curve composition, serpentine flow, graceful movement, sequential nodes
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报，围绕一条隐性的 S 型曲线安排[主视觉]与 3 个信息节点；标题“[主标题]”在上方入口，中段元素跨越画面中心，日期/CTA 位于下方反侧终点；流动、优雅、连续，空间张弛交替。避免无节点的装饰曲线。
+Portrait poster placing [visual] and 3 information nodes around an implied S-curve. Put "[title]" at the upper entry, cross the canvas center in the middle, and end at date/CTA on the opposite lower side. Alternate open and tight space for flowing continuity. Avoid decorative curves without nodes.
 Keywords: S-curve composition, serpentine flow, graceful movement, sequential nodes.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-用 SVG path 或两个大圆弧伪元素构成 S 曲线；三个内容节点用 absolute + 百分比坐标附着路径；正文保持水平。窄屏或 200% 缩放时，只有在最小字号、裁切安全和交互尺寸仍满足时才整体等比缩放；否则按语义 DOM 顺序重排节点，同时保留入口、转折、终点及相邻关系，不强求同一几何曲线。
+Use an SVG path or two large arc pseudo-elements. Attach three nodes with absolute positioning and percentage coordinates; keep body text horizontal. On narrow screens or at 200% zoom, scale the whole only if type size, safe crops and interaction targets remain usable. Otherwise reflow nodes in semantic DOM order, preserving entry, turn, destination and adjacency without requiring identical geometry.
 ```
 
-## 15｜L 型錨定 L-Shaped Anchor
+## 15 | L-Shaped Anchor
 
-一條豎向與一條橫向資訊帶在角落相交，像支架一樣托住主視覺。
+Intersect a vertical and horizontal information band at a corner, supporting the main visual like a bracket.
 
-- 視線路徑：沿豎邊下行，在角點轉向橫邊，最後進入被框住的主視覺。
-- 適合：建築、展覽、目錄、理性品牌、空間與工業主題。
-- 避坑：L 的兩臂需要明顯長短關係；四邊都封閉會變成框中框。
-- 標籤：`L 型` `角落锚点` `边栏` `L-shaped layout` `corner anchor` `edge rails`
+- Reading path: Descend along the vertical rail, turn along the horizontal rail, then enter the enclosed visual.
+- Suitable for: Architecture, exhibitions, catalogs, rational brands, space and industry.
+- Pitfall: Give the arms different lengths; closing all four sides becomes Frame within Frame.
+- Tags: L-shaped composition, corner anchor, edge rails, open field
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报，使用 L 型构图：左侧竖向信息栏与底部横向标题带在左下角相交，形成视觉支架；主视觉[对象]占据右上开放区域，标题“[主标题]”沿底边展开；理性、建筑感、边缘对齐明确。避免四边全部封闭。
+Portrait poster with an L-shaped structure: a left information rail meets a bottom headline band at the lower-left corner. Place [subject] in the open upper-right field and "[title]" along the bottom. Rational, architectural, with clear edge alignment. Keep the other sides open.
 Keywords: L-shaped composition, corner anchor, edge rails, open field.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-容器 grid-template-columns:18% 1fr；grid-template-rows:1fr 18%；竖栏占第 1 列，底栏跨两列，主视觉占右上；文字可用 writing-mode:vertical-rl。
+Use grid-template-columns:18% 1fr and grid-template-rows:1fr 18%. Place the vertical rail in column 1, bottom rail across both columns, and visual upper right. Vertical type may use writing-mode:vertical-rl.
 ```
 
-## 16｜左右分屏 Vertical Split
+## 16 | Vertical Split
 
-畫面垂直分成兩個對等或主次區域，用於對比、問答、前後或雙主題。
+Divide the canvas vertically into equal or hierarchical regions for comparison, questions/answers, before/after or two themes.
 
-- 視線路徑：先讀對比更強的一側，再跨越中縫讀取另一側關係。
-- 適合：對比型產品、雙人、前後變化、觀點碰撞、聯名。
-- 避坑：兩側必須有明確關係；50/50 分割可能缺乏主次。
-- 標籤：`左右分屏` `双主题` `并置对比` `vertical split` `dual-panel composition` `juxtaposition`
+- Reading path: Read the stronger side first, then cross the seam to its counterpart.
+- Suitable for: Product comparisons, pairs, before/after changes, competing views, collaborations.
+- Pitfall: Relate both sides explicitly; 50/50 can erase hierarchy.
+- Tags: vertical split composition, dual-panel layout, juxtaposition, 60/40 balance
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报采用左右分屏构图，左侧呈现[对象 A]，右侧呈现[对象 B]，通过色彩/材质形成鲜明对比；标题“[主标题]”跨越中缝或分别拆分在两侧，设置 60/40 主次比例；强调并置关系。避免两侧毫无关联、避免完全同权导致无焦点。
+Portrait poster split vertically, showing [subject A] left and [subject B] right with contrasting color/material. Let "[title]" cross the seam or split across both sides. Use a 60/40 hierarchy and a clear juxtaposition. Avoid unrelated halves or equal emphasis without a focus.
 Keywords: vertical split composition, dual-panel layout, juxtaposition, 60/40 balance.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用 5 列 CSS Grid，左区 3 列、右区 2 列；两侧独立背景与 content wrapper；跨缝标题设置 grid-column:2/5、z-index:2。窄屏时仅在两侧都满足最小单元宽度、最小字号和安全裁切时保留并排；否则可改为上下或顺序分区，但保持 A/B 的语义顺序、对比关系和 60/40 主次。
+Use a 5-column CSS Grid: 3 columns left, 2 right. Give each side its own background and content wrapper. A seam-crossing title uses grid-column:2/5 and z-index:2. Keep side-by-side on narrow screens only while minimum unit width, type size and safe crops hold; otherwise stack or sequence regions while retaining A/B semantic order, comparison and 60/40 hierarchy.
 ```

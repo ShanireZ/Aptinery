@@ -2,8 +2,9 @@
 name: shanirez-style
 description: >-
   ShanireZ's personal C++ competitive-programming / online-judge coding style. Use whenever the
-  user wants C++ for an algorithm or online-judge problem — pasting a problem statement ("題目如下，
-  幫我分析解決", "幫我完成這道題", "幫我寫題解 / 給出完整程式碼"), naming a judge problem id (Luogu
+  user wants C++ for an algorithm or online-judge problem — pasting a problem statement, asking
+  to solve it, requesting an explanation or complete code in any language, naming a judge
+  problem id (Luogu
   P*/B*, CodeForces CF*, LOJ #*, PAT, AtCoder ABC*/ARC*/AGC*, SPOJ SP*, UVa UVA*), or asking to
   write, debug, optimize, or refactor an existing .cpp in the OJCode workspace. Read this first so
   the code matches the author's own hand (Allman braces, 4-space, no blank lines, 1-based, global
@@ -33,11 +34,11 @@ build system, no abstraction layers. Resist the instinct to "engineer" them. No 
 around algorithms, no namespaces, no templates-for-reuse, no exceptions, no logging, no test
 scaffolding. The whole point is a dense, fast, self-contained script.
 
-The C++ dialect is **C++14** — the workspace build task compiles with
+The C++ dialect is **C++14**. The corpus reference build used
 `g++ -std=c++14 -O2 -Wall -m64 -static-libgcc -fexec-charset=UTF-8 -Wl,-stack=1073741824`.
-Don't reach for C++17/20-only library features. Note the **1 GB stack** in that flag list:
-deep recursion is safe on this machine, which is why the recursive form stays the house form
-for tree algorithms that a textbook would write iteratively.
+Don't reach for C++17/20-only library features. The **1 GB stack** belongs to that reference
+environment; verify the target's stack budget before relying on deep recursion. This budget
+explains the recursive house forms for tree algorithms that a textbook would write iteratively.
 
 ---
 
@@ -127,7 +128,7 @@ years' files use.
 The exception is real and not rare: **96 of the last 940 files (10.2%) are tab-indented.** It
 arrives in bursts rather than as a drift — every file added in 2025-08, 41 of 51 in 2025-12, and
 11 of 36 in 2026-01 are tabs, while 2026-02 through 2026-04 and 2026-07 have none at all. Read it
-as "written somewhere without the workspace's editor config", not as a change of taste.
+as "written with a different editor configuration", not as a change of taste.
 
 So: **new file → 4 spaces. Editing an existing file → look at what it already uses and match it**;
 roughly one file in ten will be tabs. Never mix the two inside one file, and never reindent a
@@ -179,7 +180,7 @@ corpus is written this way.
     index, e.g. Floyd's intermediate vertex `for (k) for (i) for (j) dis[i][j] = min(..., dis[i][k] + dis[k][j])`.
   - graph: `u v w` for an edge's two endpoints and weight; **`to`** for an unweighted adjacency
     list and **`es`** for a `vector<Edge>` one (see the graph-storage idiom below). `pre`/`last`
-    belong to the legacy 鏈式前向星 form — read them, don't write them.
+    belong to the legacy chained forward star form — read them, don't write them.
   - **depth in a rooted tree is `h[]`** (29 recent files) more often than `dep[]` (5).
   - **node you're at vs. node you step to: `now` = the current node, `nxt` = the next/neighbour
     node** (`for (int nxt : to[now])`, `int nxt = e.to;`). Keep this pair consistent.
@@ -195,7 +196,7 @@ corpus is written this way.
     **comparator functor**, which takes a lowercase name — `cmpa` / `cmpb` / `cmp11` / `hsh` —
     used when one struct needs several orderings or a custom hash.
   - a Chinese-pinyin initialism is fine for a derived table with no short English name —
-    `qzmx`/`qzmn` for 前綴 max/min, `hzmx`/`hzmn` for 後綴. Don't force it where `pre`/`suf` reads fine.
+    `qzmx`/`qzmn` for prefix max/min, `hzmx`/`hzmn` for suffix max/min. Don't force it where `pre`/`suf` reads fine.
 - **`long long` is written out explicitly** where range demands it. **Never `#define int long long`**
   (0 occurrences in the corpus) and no `typedef long long ll`. On a long-long-range problem the rule
   is pragmatic, not dogmatic: if a handful of variables fit on **one short declaration line**, just
@@ -299,7 +300,7 @@ dimensions** — and cast `.size()` to `int` when comparing in a loop bound.
   **Push with `push_back`** — `push_back(Edge{v, w})` 22 files vs `emplace_back(Edge{v, w})` 2,
   and unweighted `push_back(v)` 21 vs `emplace_back(v)` 7. `emplace_back` isn't foreign, but
   `push_back` is the default; stay consistent within a file.
-  **鏈式前向星 (chained forward star) is legacy**: 72 old files use it and **zero** in the last two
+  **Chained forward star is legacy**: 72 old files use it and **zero** in the last two
   years. Recognize it when reading old code (`last[u]` head, `pre[i]` previous edge, `to[i]`
   endpoint); don't write it in a new file.
 - **Iterate edges with range-for when you don't need the edge index:** `for (int nxt : to[now])` or
@@ -407,7 +408,8 @@ techniques, Chinese (sometimes mixed with English names).
 **This one is an aspiration, not a reproduction of the current hand.** Only 17 of the last 940
 files (1.8%) carry a `// TAG:` line, and the habit effectively stopped after 2024-10; across the
 whole corpus it's 243 of 3,208 (7.6%). The reason to write it anyway is that the repo README
-lists "為題解補齊演算法標籤" as an open Todo — so adding it is helping with a stated goal. Don't
+lists completing algorithm tags for solutions as an open Todo — so adding it helps a stated
+goal. Don't
 mistake its absence in surrounding files for a signal to drop it, and don't cite it as evidence
 of what the author's recent code looks like.
 
@@ -428,10 +430,10 @@ This line is the last thing in the file, with no newline after it.
   `PAT/Advanced/` (or a contest subfolder like `PAT/22Q2/Basic/`), `SP UVA AT/`.
 - Name it by the **exact problem id**: `P3372.cpp`, `B3609.cpp`, `CF1009F.cpp`, `#10000.cpp`,
   `ABC403G.cpp`, `ARC085E.cpp`, `UVA10079.cpp`, `SP1043.cpp`. Luogu's other id prefixes keep the
-  same rule — `T777250.cpp` (團隊/私有題), `U422706.cpp` (使用者上傳題).
+  same rule — `T777250.cpp` (team/private problems), `U422706.cpp` (user-uploaded problems).
 - For an **alternative approach or partial solution**, append `space + Suffix`:
   `P3367 Dfn.cpp`, `B3609 Tarjan.cpp`, `B3609 Kosaraju.cpp`, `P3372 Zkw.cpp`, `P9753 90pts.cpp`,
-  `P3014 PBDS.cpp`, `P1486 Seg.cpp`, `P1525 PowDfn.cpp` (帶權並查集), `P2216 DQ.cpp`.
+  `P3014 PBDS.cpp`, `P1486 Seg.cpp`, `P1525 PowDfn.cpp` (weighted DSU), `P2216 DQ.cpp`.
 
 ---
 
@@ -442,7 +444,7 @@ When you need a standard data structure or algorithm, use the canonical forms in
 already follow every convention above (Allman, no blank lines, 1-based, global pools, `dfn`/`g[]`
 DSU, `lc/rc` segment-tree pool, `to[]`/`es[]` graphs with range-for, recursive binary-lifting LCA,
 `read()` + `printf`, Dijkstra, grid BFS, struct sort, `__int128` output, fixed-precision float;
-鏈式前向星 included only as a legacy form to read). Read that file when implementing one of those;
+chained forward star included only as a legacy form to read). Read that file when implementing one of those;
 don't reinvent the form from memory.
 
 ---
@@ -462,7 +464,7 @@ don't reinvent the form from memory.
 - Tab indentation **in a new file** — 4 spaces. (In an existing file, match what's already there;
   about one in ten is tabs.)
 - `while (!q.empty())` — the house form is `while (q.size())`.
-- 鏈式前向星 in a new file — `vector<int> to[MX]` unweighted, `vector<Edge> es[MX]` weighted.
+- chained forward star in a new file — `vector<int> to[MX]` unweighted, `vector<Edge> es[MX]` weighted.
 - `vector<int> es[MX]` for an *unweighted* graph — that name is reserved for `vector<Edge>`; the
   unweighted list is `to[]`.
 - `dx`/`dy` grid offsets — the table is `ms[4][2]`, the targets are `nx`/`ny`.

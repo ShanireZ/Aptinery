@@ -1,359 +1,366 @@
-# 構圖詳表 17–32：分區、網格、圖文與密度
+# Compositions 17–32: regions, grids, image-text relationships and density
 
-以下詳細提示詞中的色彩、字體、材質、電影感及平面／編輯風格詞，是為忠實保留源文而收錄的範例；只有使用者或上游提供相應風格時才攜帶，否則只保留構圖結構並將風格欄位參數化或省略，不得自行選擇外部 style atom。
+The colors, typefaces, materials, cinematic treatment and graphic/editorial style
+words in these examples preserve source-article guidance. Carry them forward
+only when the user or upstream workflow supplies the matching style. Otherwise
+retain the structure and parameterize or omit style fields; do not independently
+select external style atoms.
 
-本表用於多類資訊共存、精確網格、圖文主次、連續畫幅和實驗構圖。圖像模型只能把網格當作結構趨勢；HTML/CSS 應把欄數、行數、跨度、溝槽、對齊線和裁切焦點直接編碼。
+Ratios, grid counts, proportions, offsets, gutters and dimensions are adjustable
+starting examples, not fixed requirements. Adapt to the supplied aspect ratio,
+content quantity, minimum type size and unit width, crop safety and medium.
+State the values actually used.
 
-表中的 `3:4`、`4×6`、`5 栏`、`62/38`、具體溝槽和跨度都是可調的起始範例，不是不可變規範。按使用者給定畫幅、內容量、最小字號、最小單元寬度、裁切安全和媒介約束調整，並在交付中說明實際採用的值。
+Use this catalog for multiple information types, precise grids, image/type priority, sequential panels and experimental structures. Image models treat grids as tendencies; HTML/CSS must encode columns, rows, spans, gutters, alignment lines and crop focus.
 
-## 17｜上下分屏 Horizontal Split
+## 17 | Horizontal Split
 
-用水平分界把圖像與文字或兩個場景疊放，天然形成先後和上下文關係。
+Stack image/text or two scenes across a horizontal division to establish sequence and context.
 
-- 視線路徑：通常從上方主視覺下落到下方解釋，也可反向用文字引出圖像。
-- 適合：電影、旅行、講座、產品說明、資料 + 圖像。
-- 避坑：分界不要卡在主體臉部或文字中線；上下比例體現主次。
-- 標籤：`上下分屏` `地平线分割` `图文两层` `horizontal split` `stacked panels` `image-text division`
+- Reading path: Usually descend from the upper visual into lower explanation; text can also introduce an image.
+- Suitable for: Film, travel, lectures, product explanations, data plus images.
+- Pitfall: Keep the division away from faces and text midlines; use proportions to show hierarchy.
+- Tags: horizontal split composition, stacked panels, image-text division, 62/38 layout
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-3:4 竖版海报，使用上下分屏构图：上方约 62% 为主视觉[对象/场景]，下方 38% 为纯色信息区，承载标题“[主标题]”、日期和说明；分界线清晰并与图像地平线或结构线呼应。避免分界切过关键主体。
+Portrait 3:4 poster split horizontally: the top 62% contains [subject/scene], the bottom 38% is a solid information area with "[title]", date and explanation. Relate the clear division to the horizon or a structural line. Avoid cutting a key subject at the boundary.
 Keywords: horizontal split composition, stacked panels, image-text division, 62/38 layout.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-容器 display:grid，grid-template-rows:62% 38%；图像区 overflow:hidden + object-fit:cover；信息区用内部 2 列网格；标题可轻微跨越分界但须有对比底。
+Use display:grid and grid-template-rows:62% 38%. Give the image region overflow:hidden and object-fit:cover; use an internal 2-column grid for information. The title may slightly cross the division with a contrast background.
 ```
 
-## 18｜水平帶狀 Horizontal Bands
+## 18 | Horizontal Bands
 
-用多個橫向色帶或內容帶分層，產生節拍、章節感與橫向速度。
+Layer horizontal color or content bands to create beats, chapters and lateral speed.
 
-- 視線路徑：從最強色帶開始，按頻寬、顏色或編號逐層移動。
-- 適合：音樂、交通、體育、時間表、系列活動、資訊密集海報。
-- 避坑：每條帶不能同等搶眼；避免把段落擠成過窄行長。
-- 標籤：`水平色带` `分层条带` `章节节奏` `horizontal bands` `striped layout` `stacked information bars`
+- Reading path: Start at the strongest band and move through size, color or numbering.
+- Suitable for: Music, transport, sports, timetables, event series, information-dense posters.
+- Pitfall: Vary emphasis between bands and keep paragraph line lengths readable.
+- Tags: horizontal band composition, striped layout, stacked information bars, rhythmic widths
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报由 4–6 条宽度不等的水平内容带构成；主标题“[主标题]”占最宽且对比最强的一带，主视觉[对象]跨越相邻两带，日期、地点、编号分布在较窄带中；形成节拍与横向速度。避免所有条带等宽等强。
+Portrait poster made of 4–6 unequal horizontal content bands. Give "[title]" the largest, highest-contrast band; span [subject] across two adjacent bands; distribute date, location and numbering in narrower bands. Create rhythm and lateral speed; avoid equal-sized, equally strong bands.
 Keywords: horizontal band composition, striped layout, stacked information bars, rhythmic widths.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用 grid-template-rows:10% 24% 12% 36% 18% 等不等比例；每一带设置独立背景与对齐；主视觉通过 grid-row 跨带；文本行高随带高用 clamp() 调整。
+Use unequal grid-template-rows such as 10% 24% 12% 36% 18%. Give each band its own background and alignment; span the visual with grid-row. Adjust text line-height to band height with clamp().
 ```
 
-## 19｜單欄手稿網格 Single-Column Grid
+## 19 | Single-Column Grid
 
-所有資訊落在一個連續主欄中，靠邊距、段落間距與字號建立清晰閱讀秩序。
+Place all information in one continuous main column, using margins, paragraph spacing and type size to establish reading order.
 
-- 視線路徑：從欄頂到欄底線性閱讀，把內容當成一篇短文字。
-- 適合：宣言、文學、學術、演講、極簡產品說明。
-- 避坑：海報不是論文頁；行長、段落數和字號必須適合遠讀。
-- 標籤：`单栏网格` `线性阅读` `大边距` `single-column grid` `manuscript grid` `linear reading`
+- Reading path: Read linearly from column top to bottom, like a short text.
+- Suitable for: Manifestos, literature, scholarship, talks, minimal product explanations.
+- Pitfall: A poster is not a paper page: line length, paragraph count and type size must work at distance.
+- Tags: single-column grid, manuscript grid, linear reading, generous margins
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版文字海报，使用单栏手稿网格：一条窄而明确的主栏贯穿页面，标题“[主标题]”在栏顶占 2–4 行，短正文与日期沿同一左边线向下排列；四周大边距、基线节奏一致、安静理性。避免长段小字和过宽行长。
+Portrait typographic poster with one narrow, clear main column. Put "[title]" in 2–4 lines at the top, then short body copy and date along the same left edge. Use generous margins, consistent baseline rhythm and a quiet, rational tone. Avoid long small-type paragraphs and overwide lines.
 Keywords: single-column grid, manuscript grid, linear reading, generous margins.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-海报内部 max-inline-size:62%，margin-inline:auto；display:flex; flex-direction:column；所有文本共用左边线；正文 max-width:28ch，使用固定 line-height 建立基线节奏。
+Inside the poster use max-inline-size:62%, margin-inline:auto, display:flex and flex-direction:column. Share one text left edge; limit body max-width:28ch and use a fixed line-height for baseline rhythm.
 ```
 
-## 20｜多欄編輯網格 Multi-Column Grid
+## 20 | Multi-Column Grid
 
-多條縱向欄提供靈活跨度，圖像與文字可佔一欄或跨欄，適合複雜資訊層級。
+Use multiple vertical columns and deliberate spans for complex image/text hierarchy.
 
-- 視線路徑：大跨欄元素先定級，再按欄線讀取細分資訊。
-- 適合：編輯海報、會議、課程表、展覽目錄、資料與說明。
-- 避坑：不要讓所有元素佔不同的隨機跨度；重複欄寬和溝槽。
-- 標籤：`多栏网格` `跨栏` `编辑布局` `multi-column grid` `column span` `editorial layout`
+- Reading path: Wide-spanning elements establish priority, then column lines organize details.
+- Suitable for: Editorial posters, conferences, timetables, exhibition catalogs, data and explanations.
+- Pitfall: Repeat column widths and gutters rather than assigning random spans to every item.
+- Tags: multi-column grid, editorial layout, column span, consistent gutters
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-3:4 竖版编辑海报，建立 4 栏等宽网格与清晰沟槽；标题“[主标题]”跨 3 栏，主视觉[对象]跨 2–4 栏，日期和说明分别占 1 栏；通过跨栏数量建立层级，左对齐、节奏严谨。避免每个元素随机跨栏。
+Portrait 3:4 editorial poster with 4 equal columns and clear gutters. "[title]" spans 3 columns, [subject] spans 2–4, and date/explanation each occupy 1. Establish hierarchy through spans, left alignment and rigorous rhythm. Avoid arbitrary spans.
 Keywords: multi-column grid, editorial layout, column span, consistent gutters.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-display:grid; grid-template-columns:repeat(4,1fr); column-gap:clamp(8px,2vw,20px)；标题 grid-column:1/4，主视觉可用 2/5，元信息各占 1 栏；统一使用网格线编号。
+Use display:grid; grid-template-columns:repeat(4,1fr); column-gap:clamp(8px,2vw,20px). Set title grid-column:1/4, visual optionally 2/5, and each metadata group to 1 column. Use grid line numbers consistently.
 ```
 
-## 21｜模組網格 Modular Grid
+## 21 | Modular Grid
 
-縱欄與橫行交叉成可重複使用模組，圖像、文字和編號按模組組合，適合高密度系統化資訊。
+Cross columns and rows into reusable modules for systematic, high-density image, text and numbering.
 
-- 視線路徑：先看跨模組的大元素，再按模組群組掃描局部資訊。
-- 適合：瑞士風格、資訊設計、活動日程、展覽、系列視覺。
-- 避坑：網格是底層關係，不必把每條線都畫出來。
-- 標籤：`模块网格` `矩阵` `跨模块` `modular grid` `matrix layout` `grid modules`
+- Reading path: Read large spanning elements first, then scan local groups of modules.
+- Suitable for: Swiss design, information design, schedules, exhibitions, visual series.
+- Pitfall: The grid expresses relationships; every line need not be drawn.
+- Tags: modular grid, matrix layout, spanning modules, systematic hierarchy
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版信息海报，使用 4 列 × 6 行模块网格；标题“[主标题]”跨 3×2 模块，主视觉[对象]占 2×3 模块，编号和详情填入较小模块；重复边距与沟槽，系统感强，可局部越界形成层级。不要显示全部辅助线。
+Portrait information poster on a 4-column × 6-row modular grid. Let "[title]" span 3×2 modules and [subject] 2×3; put numbering and detail in smaller modules. Repeat margins and gutters for a systematic hierarchy, with local crossings where useful. Hide most construction lines.
 Keywords: modular grid, matrix layout, spanning modules, systematic hierarchy.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-display:grid; grid-template-columns:repeat(4,1fr); grid-template-rows:repeat(6,1fr); gap:10px；用 grid-area 明确每个内容块；调试态显示网格，发布态仅保留少量分隔线。
+Use display:grid; grid-template-columns:repeat(4,1fr); grid-template-rows:repeat(6,1fr); gap:10px. Define every block with grid-area. Show the grid in debug mode; retain only a few separators in the finished output.
 ```
 
-## 22｜瑞士非對稱網格 Swiss Grid
+## 22 | Swiss Grid
 
-嚴格網格、左對齊無襯線字、非對稱留白與客觀攝影共同形成清晰理性的國際主義語氣。
+Combine a strict grid, flush-left sans-serif type, asymmetric space and objective photography for clear internationalist communication.
 
-- 視線路徑：大字號無襯線標題進入，沿左對齊線和模組關係讀取。
-- 適合：設計展、建築、音樂會、文化機構、理性科技品牌。
-- 避坑：加紅圓和 Helvetica 不等於瑞士風格；關鍵是結構與層級。
-- 標籤：`瑞士风格` `左齐右不齐` `客观排印` `Swiss style` `International Typographic Style` `flush left ragged right`
+- Reading path: Enter through a large sans-serif title, then follow left edges and module relationships.
+- Suitable for: Design exhibitions, architecture, concerts, cultural institutions, rational technology brands.
+- Pitfall: Red circles and Helvetica alone do not establish Swiss structure or hierarchy.
+- Tags: Swiss grid, International Typographic Style, flush left ragged right, asymmetric grid
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版文化海报，采用瑞士国际主义非对称网格：无衬线标题“[主标题]”左齐右不齐，严格对齐到 4–6 栏网格；一个高对比几何形或客观主视觉偏置放置，红/黑/米白克制配色，信息清晰、功能优先。避免居中排满、避免把装饰当结构。
+Portrait cultural poster on an asymmetric Swiss grid. Set "[title]" sans-serif, flush left and ragged right, aligned to 4–6 columns. Offset one high-contrast geometric form or objective visual; use restrained red/black/off-white and functional hierarchy. Avoid centered fullness and decoration as a substitute for structure.
 Keywords: Swiss grid, International Typographic Style, flush left ragged right, asymmetric grid.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-建立 6 栏网格；所有文本 text-align:left，主标题跨 4 栏，元信息占 2 栏；用单一强调色与 1px 规则线；字体使用系统无衬线并限制字重数量。
+Use a 6-column grid, all text text-align:left, title spanning 4 columns and metadata 2. Use one accent color and 1px rules; choose system sans-serif and limit font weights.
 ```
 
-## 23｜層級卡片網格 Bento / Hierarchical Grid
+## 23 | Bento / Hierarchical Grid
 
-不同尺寸的矩形區塊共享統一間距與圓角，通過卡片面積表達資訊優先級。
+Use different-sized rectangular cards with shared spacing and corner radii; card area expresses priority.
 
-- 視線路徑：最大卡片先讀，隨後按相鄰關係在小卡片間跳轉。
-- 適合：科技、產品功能、資料、服務組合、HTML 完成實作頁。
-- 避坑：不是隨意拼方塊；同層卡片需要一致語義和間距。
-- 標籤：`Bento 网格` `层级卡片` `不等模块` `bento grid` `hierarchical cards` `variable-span grid`
+- Reading path: Read the largest card first, then jump through adjacent smaller cards.
+- Suitable for: Technology, product features, data, service bundles, implemented HTML pages.
+- Pitfall: Keep peer cards consistent in meaning and spacing rather than assembling arbitrary rectangles.
+- Tags: bento grid, hierarchical cards, variable-span modules, dashboard composition
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版科技海报，使用 Bento 层级卡片网格：最大卡片承载主标题“[主标题]”与主视觉[对象]，3–5 个较小卡片承载卖点、数字、日期和 CTA；卡片跨度不等但沟槽一致，信息像仪表盘一样清晰。避免十几个同权小格。
+Portrait technology poster on a Bento hierarchy. Put "[title]" and [subject] in the largest card; place benefits, numbers, date and CTA in 3–5 smaller cards. Vary spans with consistent gutters for dashboard-like clarity. Avoid many equally weighted small cells.
 Keywords: bento grid, hierarchical cards, variable-span modules, dashboard composition.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:1fr；主卡 grid-column:span 3; grid-row:span 3，副卡使用 span 1/2；统一 gap、border-radius 与内边距 token。
+Use display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:1fr. Set the main card to grid-column:span 3 and grid-row:span 3; use span 1/2 for supporting cards. Share gap, border-radius and padding tokens.
 ```
 
-## 24｜棋盤交替 Checkerboard
+## 24 | Checkerboard
 
-圖像與文字在規則矩陣中交替出現，利用反轉、重複和對應關係形成節奏。
+Alternate images and text in a regular matrix, using reversals, repetition and correspondence for rhythm.
 
-- 視線路徑：在深淺或圖文單元間跳讀，整體先於局部被感知。
-- 適合：系列產品、作品集、活動陣容、對照概念、時尚。
-- 避坑：矩陣過細會像社交媒體九宮格；需要一個破格焦點。
-- 標籤：`棋盘` `图文交替` `反转节奏` `checkerboard layout` `alternating tiles` `image-text rhythm`
+- Reading path: Jump between light/dark or image/text cells; perceive the whole before details.
+- Suitable for: Product series, portfolios, event lineups, comparisons, fashion.
+- Pitfall: Avoid excessively small cells; retain one deliberate focal exception.
+- Tags: checkerboard composition, alternating tiles, image-text rhythm, one deliberate break
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报使用 3×4 棋盘式模块，图像、色块与文字交替出现；标题“[主标题]”占据或打破其中 2–3 个相邻格，其他格维持深浅反转与重复节奏；整齐但有一个明确破格焦点。避免所有格同等复杂。
+Portrait poster on a 3×4 checkerboard of images, color blocks and text. Let "[title]" occupy or break 2–3 adjacent cells; keep repeated light/dark reversal elsewhere. Ordered with one clear focal break. Avoid equally complex cells everywhere.
 Keywords: checkerboard composition, alternating tiles, image-text rhythm, one deliberate break.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用 3 列 × 4 行网格；通过 :nth-child(even) 反转前景/背景；主标题块 grid-column:span 2。小屏仅在每格满足最小单元宽度、最小字号和可读行长时保留 3 列；否则减少列数或顺序重排，同时保留图文交替、对应关系、语义 DOM 顺序和主焦点。
+Use a 3-column × 4-row grid; reverse foreground/background with :nth-child(even) and set title grid-column:span 2. Retain 3 columns on small screens only while minimum unit width, type size and readable line length hold. Otherwise reduce columns or reflow, preserving alternation, correspondences, semantic DOM order and primary focus.
 ```
 
-## 25｜滿版主視覺 Full-Bleed Hero
+## 25 | Full-Bleed Hero
 
-單張圖像鋪滿畫布，文字疊加或放入局部安全區，以情緒與沉浸感優先。
+Fill the canvas with one image, overlaying text or placing it in a local safe zone for atmosphere and immersion.
 
-- 視線路徑：先感受整體圖像，再由高對比標題進入具體資訊。
-- 適合：電影、旅行、時尚、攝影、產品氛圍、人物。
-- 避坑：文字不能壓在複雜紋理上；裁切焦點需要跨尺寸管理。
-- 標籤：`满版图像` `沉浸主视觉` `文字叠图` `full-bleed image` `hero image` `type overlay`
+- Reading path: Sense the whole image first, then enter details through a high-contrast title.
+- Suitable for: Film, travel, fashion, photography, product atmosphere, people.
+- Pitfall: Keep type off complex textures and manage crop focus across sizes.
+- Tags: full-bleed hero image, immersive poster, type overlay, controlled crop
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-3:4 竖版海报，一张高质感主视觉[场景/对象]满版铺设并延伸到四边；标题“[主标题]”放在图像中低纹理、高对比的安全区域，辅文控制在一个紧凑信息簇；电影感、沉浸、裁切明确。避免文字压在主体脸部或杂乱纹理上。
+Portrait 3:4 poster with one rich [scene/subject] image extending to all four edges. Put "[title]" in a low-texture, high-contrast safe zone and keep supporting copy in one compact cluster. Cinematic and immersive with intentional crop. Avoid text over faces or clutter.
 Keywords: full-bleed hero image, immersive poster, type overlay, controlled crop.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-容器内 img 使用 position:absolute; inset:0; width:100%; height:100%; object-fit:cover；用 object-position 自定义焦点；增加局部渐变遮罩而非整图变暗；文字置于安全区并设置 max-width。
+Position img absolutely at inset:0; width:100%; height:100%; object-fit:cover. Set focal point with object-position. Add a local gradient mask rather than darkening the entire image; limit text width in the safe zone.
 ```
 
-## 26｜大字主導 Typographic Dominant
+## 26 | Typographic Dominant
 
-把標題本身當作主視覺，靠尺度、字重、字距、斷行和裁切建立圖像感。
+Treat the headline as the main visual through scale, weight, tracking, line breaks and cropping.
 
-- 視線路徑：先識別巨型關鍵詞，再在字形縫隙或邊緣找到細節資訊。
-- 適合：觀點、宣言、音樂、促銷、社會議題、無圖素材。
-- 避坑：大字不等於全部加粗；斷行必須保留語義與辨識度。
-- 標籤：`大字海报` `字体主视觉` `超尺度标题` `big type poster` `typographic dominant` `oversized headline`
+- Reading path: Recognize huge keywords first, then find details in letterform gaps or edges.
+- Suitable for: Opinions, manifestos, music, promotions, social causes, work without images.
+- Pitfall: Oversized does not mean everything bold; preserve meaning and recognition through line breaks.
+- Tags: big type poster, typographic dominant composition, oversized headline, cropped letterforms
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版纯文字海报，让标题“[主标题]”成为唯一主视觉，使用超大无衬线或展示字体，占画面 60%–85%，允许部分字形越界裁切；副标题、日期以极小字号贴合字形空隙；高对比、强节奏。避免随机断词、避免过多字体。
+Portrait type-only poster where "[title]" is the sole main visual. Use oversized sans-serif or display type occupying 60%–85%, with intentional letterform cropping beyond edges. Fit subtitle/date into negative spaces in very small type. High contrast and rhythm. Avoid random word breaks and too many typefaces.
 Keywords: big type poster, typographic dominant composition, oversized headline, cropped letterforms.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-标题使用 font-size:clamp(72px,24vw,260px)、line-height:.78、letter-spacing:-.07em；容器 overflow:hidden；用 max-inline-size 与手动 <br> 控制断行，元信息绝对定位到负空间。
+Use font-size:clamp(72px,24vw,260px), line-height:.78 and letter-spacing:-.07em. Set container overflow:hidden. Control breaks with max-inline-size and deliberate <br>; position metadata in negative space.
 ```
 
-## 27｜圖上疊字 Type over Image
+## 27 | Type over Image
 
-文字與圖像共享同一空間，通過遮擋、穿插和對比建立一體化主視覺。
+Share image and typography in one space, using occlusion, interleaving and contrast to form an integrated visual.
 
-- 視線路徑：圖像與標題幾乎同時進入，再通過前後層級辨認關係。
-- 適合：時尚、人像、雜誌、電影、音樂、文化活動。
-- 避坑：明確字在前、字在後或字穿插；半透明一蓋了之通常發灰。
-- 標籤：`图上叠字` `图文穿插` `前后层级` `type over image` `interleaved typography` `foreground-background layering`
+- Reading path: Image and title enter together; foreground/background hierarchy explains their relationship.
+- Suitable for: Fashion, portraits, magazines, film, music, cultural events.
+- Pitfall: Make type clearly in front, behind or interleaved; blanket translucency often muddies hierarchy.
+- Tags: type over image, interleaved typography, foreground-background layering, editorial poster
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报，主视觉[人物/对象]占据中央，超大标题“[主标题]”跨越图像；让部分字在主体前、部分字被主体遮挡，形成明确的图文穿插与空间层级；文字仍可读，边缘干净。避免整行半透明文字、避免遮住脸和关键信息。
+Portrait poster with [person/subject] centered and oversized "[title]" crossing the image. Put some letterforms in front and let the subject hide others for explicit image-text depth. Keep text legible and edges clean. Avoid whole translucent text lines and covering faces or key information.
 Keywords: type over image, interleaved typography, foreground-background layering, editorial poster.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-建立背景文字层、图像层、前景文字层三个 z-index；同一标题使用两个视觉副本，但只保留一个可访问副本，并给装饰副本 aria-hidden="true"；主体可用透明 PNG 或 clip-path，避免仅靠 opacity。
+Create background-text, image and foreground-text z-index layers. Use two visual title copies but only one accessible copy; mark decorative duplicates aria-hidden="true". Use a transparent PNG or clip-path for the subject rather than relying only on opacity.
 ```
 
-## 28｜雙聯／三聯 Diptych / Triptych
+## 28 | Diptych / Triptych
 
-把一個主題拆成兩個或三個連續畫幅，利用重複與變化表現時間、對比或多視角。
+Divide one theme into two or three continuous panels, expressing time, comparison or perspectives through repetition and variation.
 
-- 視線路徑：從第一畫幅橫向或縱向移動，在相似結構中比較變化。
-- 適合：敘事、前後、系列產品、人物組、電影、攝影展。
-- 避坑：每格要有共同變數；三張無關圖片並排不構成三聯。
-- 標籤：`双联` `三联` `连续画幅` `diptych` `triptych` `sequential panels`
+- Reading path: Move horizontally or vertically between panels and compare changes within shared structure.
+- Suitable for: Narratives, before/after, product series, ensembles, film, photo exhibitions.
+- Pitfall: Each panel needs a common variable; unrelated adjacent images do not form a triptych.
+- Tags: triptych composition, sequential panels, repeated framing, variation within a system
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报分成三个连续窄画幅，分别呈现[同一主题]的三个时刻/视角/状态；三格裁切、色调与视平线保持共同规则，标题“[主标题]”跨越三格或置于统一底栏；重复中有变化。避免三张无关图片简单拼接。
+Portrait poster divided into three narrow sequential panels showing three moments/views/states of [one theme]. Share crop, tone and horizon rules. Let "[title]" span all panels or occupy a shared bottom band. Repeat with variation; avoid merely joining unrelated images.
 Keywords: triptych composition, sequential panels, repeated framing, variation within a system.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用 grid-template-columns:repeat(3,1fr) 与统一 gap；每格 img 使用相同 aspect-ratio、object-position 规则；标题可 grid-column:1/-1；用 data-state 标记三个状态。
+Use grid-template-columns:repeat(3,1fr) and a shared gap. Give panel images the same aspect-ratio and object-position rules. The title may use grid-column:1/-1; mark states with data-state.
 ```
 
-## 29｜拼貼層疊 Overlapping Collage
+## 29 | Overlapping Collage
 
-圖像、紙片、紋理和文字以遮擋與旋轉疊加，製造手動、記憶與亞文化語氣。
+Overlap and rotate images, paper, texture and type for handmade, remembered or subcultural expression.
 
-- 視線路徑：從最高對比層進入，在遮擋邊緣間跳讀，依靠層級而非網格推進。
-- 適合：音樂、青年文化、雜誌、藝術、復古、手動品牌。
-- 避坑：隨機旋轉不是拼貼；需要統一的材質、色彩或敘事線索。
-- 標籤：`拼贴` `层叠` `撕纸` `遮挡` `overlapping collage` `torn paper` `layered ephemera`
+- Reading path: Enter through the highest-contrast layer and jump across occlusion edges, guided by hierarchy rather than a grid.
+- Suitable for: Music, youth culture, magazines, art, retro work, handmade brands.
+- Pitfall: Random rotation is not collage; unify material, palette or narrative cues.
+- Tags: overlapping collage, torn paper layers, controlled rotation, layered ephemera
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版拼贴海报，用 4–7 层照片、撕纸、色块、印章与标题“[主标题]”相互遮挡，角度控制在少数几个方向；保持一个主图层最大、其他层辅助，统一纸张颗粒与有限配色。避免每层同等抢眼、避免无主题素材堆砌。
+Portrait collage with 4–7 layers of photos, torn paper, color blocks, stamps and "[title]" overlapping. Restrict rotation to a few directions. Keep one main image largest and other layers subordinate, with unified paper grain and limited colors. Avoid equally dominant layers or unrelated material piles.
 Keywords: overlapping collage, torn paper layers, controlled rotation, layered ephemera.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-容器 position:relative；每层 absolute + transform:translate/rotate，旋转角度限定为 -8deg/0deg/6deg；用 box-shadow、mix-blend-mode 谨慎模拟纸层；明确 z-index token。
+Use a position:relative container; absolute layers with transform:translate/rotate. Restrict rotation to -8deg/0deg/6deg. Use box-shadow and mix-blend-mode cautiously for paper effects and define z-index tokens.
 ```
 
-## 30｜破格網格 Broken Grid
+## 30 | Broken Grid
 
-先建立可感知的網格，再讓少數關鍵元素跨線、錯位或越界，以破壞製造強調。受控破格通常由一個主破格元素或焦點簇承擔；源文範例中的標題和主視覺可以是服務同一層級的兩個相關破格。
+Establish a perceptible grid, then let a few key elements cross, shift or overflow it for emphasis. Usually one primary break or focal cluster suffices; the source example allows title and visual as two related breaks serving one hierarchy.
 
-- 視線路徑：規則網格建立預期，破格元素因違背預期成為焦點。
-- 適合：先鋒文化、設計展、科技、實驗編輯、作品集。
-- 避坑：沒有底層網格就沒有破格；每個元素都錯位只會混亂。
-- 標籤：`破格网格` `跨线` `错位` `控制性破坏` `broken grid` `intentional misalignment` `grid disruption`
+- Reading path: The grid establishes expectation; the break attracts attention by departing from it.
+- Suitable for: Avant-garde culture, design exhibitions, technology, experimental editing, portfolios.
+- Pitfall: A break needs an underlying grid; shifting every element creates disorder.
+- Tags: broken grid, intentional misalignment, controlled disruption, visible underlying structure
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版实验海报，先建立清晰的 5 栏网格与重复对齐线，再让标题“[主标题]”跨出两条栏线、主视觉[对象]越过一个模块边界；两者形成一个相关焦点簇，其余信息严格归位，用少量控制性错位制造焦点。避免所有元素随机漂浮。
+Experimental portrait poster with a clear 5-column grid and repeated alignment lines. Let "[title]" cross two column lines and [subject] cross one module boundary, forming a related focal cluster. Keep other information aligned; create focus with a few controlled offsets. Avoid randomly floating everything.
 Keywords: broken grid, intentional misalignment, controlled disruption, visible underlying structure.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-底层使用 5 栏 Grid；约 80% 元素遵守 grid lines，主破格元素或相关焦点簇通过 grid-column 跨栏并 translateX(8%–15%)；避免全部使用 absolute；调试时显示网格覆盖层。
+Use an underlying 5-column Grid. Keep about 80% of elements on grid lines. Let the primary break or related focal cluster span columns and translateX(8%–15%). Avoid absolute positioning for everything; show a grid overlay when debugging.
 ```
 
-## 31｜重複節奏 Repetition & Pattern
+## 31 | Repetition & Pattern
 
-重複同一形狀、圖像或文字建立節拍，再以一個差異項形成焦點。
+Repeat a shape, image or word to establish rhythm, then make one difference the focus.
 
-- 視線路徑：先感知整體模式，隨後立刻捕捉破例元素。
-- 適合：系列產品、群體、音樂、運動、資料、概念傳播。
-- 避坑：重複項過多且無變化會成為背景噪聲；差異必須服務主題。
-- 標籤：`重复` `模式` `节奏` `破例焦点` `repetition` `pattern` `one anomaly` `rhythmic grid`
+- Reading path: Perceive the pattern, then immediately detect the exception.
+- Suitable for: Product series, groups, music, sports, data, conceptual communication.
+- Pitfall: Many unchanged repeats become background noise; the difference must serve the theme.
+- Tags: repetition and pattern, rhythmic grid, one anomaly, pattern interruption
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版海报，以同一[形状/对象/词语]按规则阵列重复 12–30 次，保持相同间距与尺度；其中一个元素用颜色、方向或大小打破模式，并与标题“[主标题]”建立关系；整体节奏强、焦点明确。避免多个同时破例。
+Portrait poster repeating [shape/subject/word] 12–30 times in a regular array with shared size and spacing. Change one item’s color, direction or size and relate it to "[title]" for a strong rhythm and clear focus. Avoid multiple simultaneous exceptions.
 Keywords: repetition and pattern, rhythmic grid, one anomaly, pattern interruption.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用 CSS Grid + repeat(auto-fit,minmax()) 生成阵列；所有单元继承统一样式，仅用 .is-anomaly 改一个变量；标题与异常单元共享 accent color。
+Use CSS Grid with repeat(auto-fit,minmax()) for the array. Inherit shared cell styles and change one variable only through .is-anomaly. Give the title and anomalous cell the same accent color.
 ```
 
-## 32｜密集全鋪 Dense All-Over
+## 32 | Dense All-Over
 
-高密度元素覆蓋整個畫面，通過整體紋理、局部對比與多尺度層級製造最大主義衝擊。
+Cover the canvas densely, using overall texture, local contrast and multiple scales for maximalist impact.
 
-- 視線路徑：先感知整體密度，再由最大尺度或最強色差的元素抓住局部入口。
-- 適合：節日、地下音樂、潮流、復古廣告、陣容很多的活動。
-- 避坑：密集不等於沒有層級；標題、日期與 CTA 仍需至少一個清晰入口。
-- 標籤：`密集全铺` `最大主义` `多尺度` `纹理化信息` `dense all-over` `maximalist poster` `horror vacui` `multi-scale hierarchy`
+- Reading path: Sense overall density first, then find a local entry through the largest scale or strongest color contrast.
+- Suitable for: Festivals, underground music, trends, retro advertising, large event lineups.
+- Pitfall: Density still needs hierarchy and a clear entry for title, date and CTA.
+- Tags: dense all-over composition, maximalist poster, multi-scale hierarchy, controlled visual density
 
-圖像模型提示：
+Image-model prompt:
 
 ```text
-竖版最大主义海报，图形、纹理、短词和信息密集覆盖整个画面，但保留明确多尺度层级：超大标题“[主标题]”为入口，中型主视觉[对象]为第二层，小字与图案形成底层纹理；使用有限色盘统一复杂度。避免所有元素同尺寸、避免关键日期不可读。
+Portrait maximalist poster densely covered with graphics, texture, short words and information. Preserve clear scale hierarchy: oversized "[title]" is the entry, medium [subject] is secondary, and small type/patterns form the base texture. Unify complexity with a limited palette. Avoid equal-sized elements and unreadable key dates.
 Keywords: dense all-over composition, maximalist poster, multi-scale hierarchy, controlled visual density.
 ```
 
-HTML/CSS 提示：
+HTML/CSS prompt:
 
 ```text
-使用多层 CSS Grid/absolute 混合：背景 pattern 层、信息矩阵层、超大标题层；限定 3 个字号级别与 4 色以内；为关键文字设置实色底或 outline，保证 WCAG 对比。
+Combine CSS Grid and absolute layers: background pattern, information matrix and oversized title. Limit to 3 type scales and no more than 4 colors. Use solid backgrounds or outlines for key text to meet WCAG contrast.
 ```

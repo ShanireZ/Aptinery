@@ -1,17 +1,19 @@
 ---
 type: procedure
-title: shanirez-style 語料計數方法
-description: SKILL.md 裡每條統計斷言的復算方法，針對 OJCode 語料。
+title: shanirez-style corpus measurement method
+description: Reproducing the measured claims in SKILL.md against the OJCode corpus.
 tags: [style, corpus, verification]
 status: stable
 ---
 
-# shanirez-style 語料計數方法
+# shanirez-style corpus measurement method
 
-Every statistic in `plugins/shanirez-style/skills/shanirez-style/SKILL.md` is measured against the [`../../OJCode`](../../OJCode) corpus — do not add, soften, or strengthen a claim without re-running the count. Method:
+Every statistic in `plugins/shanirez-style/skills/shanirez-style/SKILL.md` is
+measured against the [OJCode corpus](https://github.com/ShanireZ/OJCode).
+Do not add, soften or strengthen a claim without re-running the count. From
+a local clone of that corpus:
 
 ```bash
-cd <workspace>/OJCode
 git ls-files '*.cpp' > /tmp/all.txt
 git log --diff-filter=A --since="<2 years ago>" --name-only --format="" -- '*.cpp' \
   | grep -v '^$' | sort -u > /tmp/added.txt

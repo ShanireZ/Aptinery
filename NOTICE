@@ -126,8 +126,7 @@ animation-performance was added verbatim with MIT license copies. Existing
 Emil skill bodies and the three invocation adaptations remain unchanged.
 Punk's pin was advanced to c9ad7a3745e07060c50270141efed418a0cd04d6;
 the selected punk-cover and shared style material did not change upstream.
-punk-avatar was removed and punk-ip-video-cover is intentionally not imported,
-as requested by the user on 2026-10-18.
+This distribution excludes punk-avatar and punk-ip-video-cover.
 
 Verification also found an existing provenance/guide mismatch: of 71 remaining
 punk-cover source files compared with upstream, 70 differ locally, including the
@@ -189,3 +188,9 @@ commit recorded above (2.1.4). Only scripts/lib/cdp.mjs changed in the selected
 skill tree: browser-profile cleanup now checks its owner host and process IDs.
 All 38 upstream skill files remain byte-identical; the directory rename and
 the added license copies and client manifests are preserved.
+
+On 2026-10-28, Aptinery translated the punk-poster-layout adaptation's
+explanatory text, selector, detailed composition prompts and review guidance
+into English. The 32 systems, source attribution, structural constraints,
+image/HTML guidance and invocation boundaries are preserved. Original article
+titles in this notice remain in their source language.

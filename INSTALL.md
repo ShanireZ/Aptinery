@@ -1,68 +1,78 @@
-# 安裝 Aptinery Skills
+# Install Aptinery skills
 
+The individual commands below use `animate` as an example. Replace it with any
+skill name in the [catalog](docs/catalog.md).
 
-以下單項安裝命令均以 `animate` 為例，可替換為[技能目錄](docs/catalog.md)中的任一 skill 名稱。
+## skills CLI
 
-### skills CLI：Codex、Claude Code、Cursor、OpenCode 等
-
-全域安裝全部 skill：
-
-```bash
-npx skills add ShanireZ/Aptinery -g
-```
-
-單獨安裝目錄中的任一 skill：
+For Codex, Claude Code, Cursor, OpenCode and other compatible tools:
 
 ```bash
 npx skills add ShanireZ/Aptinery -g --skill animate
 ```
 
-### Claude Code marketplace
+To install all skills globally, omit `--skill animate`.
+
+## Claude Code marketplace
 
 ```bash
 claude plugin marketplace add ShanireZ/Aptinery
 claude plugin install animate@aptinery
 ```
 
-`pick-ui-library`、`prototype` 和 `review-animations` 保留上游的 Claude 顯式呼叫契約；安裝後分別通過 `/pick-ui-library:pick-ui-library`、`/prototype:prototype` 和 `/review-animations:review-animations` 呼叫。
+`pick-ui-library`, `prototype` and `review-animations` retain their upstream
+explicit invocation contract. Invoke them with `/pick-ui-library:pick-ui-library`,
+`/prototype:prototype` and `/review-animations:review-animations`, respectively.
 
-### Codex / ChatGPT marketplace
+## Codex / ChatGPT marketplace
 
 ```bash
 codex plugin marketplace add ShanireZ/Aptinery
 codex plugin add animate@aptinery
 ```
 
-上述 3 個顯式呼叫 skill 在 Codex 中通過各自的 `agents/openai.yaml` 禁止隱式呼叫，可用 `$pick-ui-library`、`$prototype` 和 `$review-animations` 顯式呼叫。
+The same three skills disable implicit invocation through `agents/openai.yaml`.
+Invoke them explicitly with `$pick-ui-library`, `$prototype` and `$review-animations`.
 
-### GitHub Copilot CLI marketplace
+## GitHub Copilot CLI marketplace
 
 ```bash
 copilot plugin marketplace add ShanireZ/Aptinery
 copilot plugin install animate@aptinery
 ```
 
-### Agent Plugins 用戶端
+## Agent Plugins clients
 
-每個 `plugins/<skill-name>/plugin.json` 都是獨立的 Agent Plugins v1 入口；可安裝名稱與[技能目錄](docs/catalog.md)完全一致。
+Each `plugins/<skill-name>/plugin.json` is an independent Agent Plugins v1
+entry. Installable names match the [catalog](docs/catalog.md).
 
+## OneTake runtime requirements
 
-## OneTake 執行需求
+`onetake` uses the same installation entry points. From a repository checkout,
+use `npx skills add . --skill onetake`, or add the local Claude marketplace with
+`claude plugin marketplace add .` and install `onetake@aptinery`.
 
-`onetake` 的安裝入口與其他技能相同，例如在儲存庫根執行 `npx skills add . --skill onetake`；
-Claude Code 則先執行 `claude plugin marketplace add .`，再執行 `claude plugin install onetake@aptinery`。安裝技能不會
-自動安裝其執行相依：需 Python 3、Playwright 與 Chromium、NumPy、SciPy、Pillow、
-Matplotlib、fonttools、brotli、FFmpeg／ffprobe，以及 Node.js。參考片分析另需
-opencv-python；旁白另需 faster-whisper、Kokoro（kokoro-onnx、soundfile），日語另需
-misaki[ja] 與 unidic-lite。具體用法保留在技能及其 references 中。
+Installing a skill does not install its runtime dependencies. OneTake requires
+Python 3, Playwright and Chromium, NumPy, SciPy, Pillow, Matplotlib, fonttools,
+brotli, FFmpeg/ffprobe and Node.js. Reference-film analysis also needs
+opencv-python. Narration also needs faster-whisper and Kokoro
+(`kokoro-onnx`, `soundfile`); Japanese narration additionally needs `misaki[ja]`
+and `unidic-lite`. Usage remains in the skill and its references.
 
-套件包含執行函式庫、腳本、範本、字型及其授權、gallery 和案例拆解；大型範例影片與
-宣傳素材留在[固定上游](https://github.com/feitangyuan/onetake/tree/013a61ac8d98883c73733f59c06e49e9ba444f14/cases)。
-案例拆解提及的成片與歷史工作檔是上游案例資訊，不表示它們隨此套件散布。
+The package includes runtime libraries, scripts, templates, fonts and their
+licenses, the gallery and case breakdowns. Large example films and promotional
+assets remain at the [pinned upstream](https://github.com/feitangyuan/onetake/tree/013a61ac8d98883c73733f59c06e49e9ba444f14/cases).
+Films and historical working files mentioned in a case breakdown are upstream
+case information, and are not necessarily included in this package.
 
-## design-taste-frontend 執行需求
+## design-taste-frontend runtime requirements
 
-`design-taste-frontend` 的腳本不安裝相依，也不需 API 金鑰：需 Node.js 22 以上，以及已安裝的
-Chrome、Edge 或 Chromium（位置特殊時設定 `CHROME_PATH`）；`assets.mjs` 搜尋與下載開放圖庫素材時需要網路。
-工作檔寫入目標專案的 `.taste-skill/`，抽取紀錄寫入 `~/.taste-skill/history.json`（可用 `TASTE_SKILL_HISTORY` 移動）。
-本包只收錄上游預設 skill；上游的 classic 風格 skill 與已遷出的生圖 skill 不在此散布。
+The scripts require Node.js 22 or later and an installed Chrome, Edge or
+Chromium browser. Set `CHROME_PATH` for a nonstandard browser location.
+The scripts do not install dependencies or require API keys; `assets.mjs`
+needs network access to search for and download stock images.
+
+Working files go into the target project's `.taste-skill/`. Draw history goes
+into `~/.taste-skill/history.json`, configurable with `TASTE_SKILL_HISTORY`.
+This distribution includes only the upstream default skill; classic variants
+and moved or retired image-generation stubs are excluded.

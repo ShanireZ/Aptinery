@@ -11,7 +11,7 @@ Contents:
 3. Closed-interval binary search
 4. Fenwick / BIT (`lowbit`)
 5. Lazy segment tree (`lc/rc` node pool)
-6. Graph storage (`to[]` unweighted, `es[]` weighted; 鏈式前向星 as a legacy form to read)
+6. Graph storage (`to[]` unweighted, `es[]` weighted; chained forward star as a legacy form to read)
 7. Dijkstra (priority_queue + `vector<Edge>`)
 8. Binary-lifting LCA (recursive DFS build)
 9. Grid BFS (`struct Node` queue, `ms[4][2]` offsets, `nx`/`ny`)
@@ -67,7 +67,7 @@ int dfn(int x)
 }
 ```
 
-A 帶權並查集 keeps the same shape but grabs the old parent before recursing, so the stored
+A weighted DSU keeps the same shape but grabs the old parent before recursing, so the stored
 weight can be folded on the way back up (file suffix ` PowDfn`):
 
 ```cpp
@@ -288,7 +288,7 @@ for (Edge e : es[now])
 }
 ```
 
-**Legacy — 鏈式前向星 (chained forward star).** 72 old files use this and **none** from the last
+**Legacy — chained forward star.** 72 old files use this and **none** from the last
 two years. Recognize it when reading or editing old code; do not write it into a new file.
 `last[u]` is the head of `u`'s list, `pre[i]` the previous edge, `to[i]`/`w[i]` the endpoint/weight.
 

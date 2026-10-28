@@ -88,7 +88,7 @@ Ask when required factual copy is unavailable, when a generated poster or target
 
 Do not:
 
-- substitute vague style terms such as “高級、極簡、電影感” for a composition;
+- substitute vague style terms such as “premium, minimal, cinematic” for a composition;
 - combine several unrelated composition names without positions or roles;
 - make every corner, panel, card, or anomaly equally strong;
 - expose construction lines in the final artwork unless they are an intentional visual element;

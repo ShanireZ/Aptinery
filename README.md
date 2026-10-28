@@ -3,8 +3,6 @@
 [![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg?style=flat-square)](LICENSE)
 ![Type: Agent Skills marketplace](https://img.shields.io/badge/type-Agent%20Skills%20marketplace-blue.svg?style=flat-square)
 
-[English](README.md) | [简体中文](README.zh-CN.md) | [繁體中文(TW)](README.zh-TW.md) | [日本語](README.ja.md)
-
 Agent Skills for coding, design, animation and teaching.
 
 Install skills individually through compatible skill managers or native plugin
@@ -33,4 +31,4 @@ retains its own terms; see [NOTICE](NOTICE) and the [catalog](docs/catalog.md).
 The `punk-cover` upstream restricts redistribution; no redistribution permission
 is established by this repository's GPL declaration.
 
-[Project documentation](docs/index.md) · [Source and modification notices](NOTICE)
+[Project documentation](docs/index.md) · [Contributing](CONTRIBUTING.md) · [Source and modification notices](NOTICE)

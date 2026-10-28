@@ -1,138 +1,172 @@
-# 構圖提示與驗收
+# Composition prompts and review
 
-## 六個結構變數
+## Six structural variables
 
-在寫風格詞以前，先把以下關係寫清楚：
+Before style words, specify:
 
-- 焦點：觀眾第一眼看哪裡。
-- 層級：標題、主視覺、日期、說明和 CTA 誰先誰後。
-- 分組：哪些內容應被理解為同一組。
-- 平衡：左右、上下的視覺重量如何穩定或有意失衡。
-- 動勢：視線沿直線、斜線、曲線、環形還是模組移動。
-- 空間：哪裡留白，哪裡密集，邊緣安全區在哪裡。
+- Focus: where the viewer looks first.
+- Hierarchy: the order of title, main visual, date, explanation and CTA.
+- Grouping: which content belongs together.
+- Balance: how horizontal and vertical visual weight stabilizes or deliberately shifts.
+- Motion: whether the eye follows a line, diagonal, curve, ring or module.
+- Space: negative space, density and edge safety zones.
 
-尺寸、顏色、對比、對齊和留白影響閱讀順序；相近、相似和連續幫助觀眾自動分組。不要只給模型一個構圖名，把這些變數變成位置、比例和路徑。
+Size, color, contrast, alignment and space affect reading order. Proximity,
+similarity and continuity support grouping. Turn these variables into positions,
+proportions and paths instead of supplying only a composition name.
 
-## 通用結構提示
+## General structural prompt
 
-適合 01–16，或任何以焦點和路徑為主的海報：
-
-```text
-制作一张【比例】海报，主题为【主题】。
-采用【构图名称】；主视觉【对象】位于【位置】，约占画面【比例】；
-视线从【入口】沿【路径】移动到【终点】；
-标题“【主标题】”为一级信息，【副标题 / 日期 / CTA】依次为二、三级；
-使用【留白策略】、【字体语气】、【色彩和材质】；
-保持清晰对齐与边缘安全区；
-避免【多焦点 / 随机文字 / 过度装饰 / 错误裁切】。
-```
-
-第一版只寫一個主構圖，再補一個輔助關係。例如：
+For 01–16 or any poster led by focus and path:
 
 ```text
-主构图使用三分法，辅助使用 S 型曲线；
-产品落在右上三分交点，标题沿左侧三分线对齐，三处辅助信息沿隐性 S 曲线连接。
+Create a [ratio] poster about [theme].
+Use [composition]; place [main subject] at [position], occupying [proportion].
+Move the eye from [entry] along [path] to [destination].
+The title "[headline]" is primary; [subtitle / date / CTA] form levels two and three.
+Use [negative-space strategy], [typographic tone], [color and material].
+Preserve clear alignment and edge safe zones.
+Avoid [multiple focal points / random text / excessive decoration / unsafe crop].
 ```
 
-## 網格與構圖的關係
-
-構圖決定觀眾先看哪裡、沿什麼路徑閱讀；Grid System 負責對齊、比例、間距和重複使用。海報可以同時有兩層控制：觀眾感受到的分屏、滿版、疊字或拼貼，以及設計師用來對齊的縱欄、橫行、模組、基線和溝槽。
-
-不要只寫“使用網格系統”。指定欄數、行數、溝槽、跨度、共享邊線和受控破格，例如：`六栏网格，24px 沟槽，标题跨四栏，图片跨三栏，日期占一栏`。這些數值是可調起點，不是固定規範。
-
-### 給圖像模型的網格範本
+Start with one primary composition and one supporting relationship at most:
 
 ```text
-制作一张【画幅比例】海报，主题为【主题】。
-主构图采用【17–32 中的一种构图】；
-建立【栏数】栏 ×【行数】行的隐形模块网格，沟槽一致；
-主标题“【标题】”跨【几栏 × 几行】，主视觉【对象】跨【几栏 × 几行】；
-日期、说明和 CTA 分别占【模块位置】，共享【左边线 / 基线 / 边距】；
-视线从【入口】沿【路径】移动到【终点】；
-允许【少量相关的受控破格，通常由一个主破格元素或焦点簇承担】，其余内容严格归位；
-使用【色彩】与【字体语气】，保留【留白策略】；
-避免随机跨栏、多个焦点、错误裁切、文字乱码和辅助线全部可见。
+Use Rule of Thirds as the primary structure and S-Curve as support.
+Place the product at the upper-right thirds intersection, align the title to
+ the left thirds line, and connect three supporting details along an implied S.
 ```
 
-圖像模型把欄和模組當軟約束。目標是穩定結構與視覺趨勢，不要聲稱它能像瀏覽器一樣保證像素級落位。
+## Grids and composition
 
-### 給 HTML/CSS 的網格範本
+Composition sets focus and reading path. A grid provides alignment, proportion,
+spacing and repetition. A poster can combine a visible split, full bleed,
+overlaid type or collage with invisible columns, rows, modules, baselines and gutters.
+
+Specify column and row counts, gutters, spans, shared edges and controlled breaks:
+`six columns, 24px gutters, title spans four columns, image spans three, date spans one`.
+These values are adjustable starting points.
+
+### Image-model grid template
 
 ```text
-创建一个 aspect-ratio:【比例】的海报组件。
-外层使用 CSS Grid：
-grid-template-columns: repeat(【栏数】, 1fr);
-grid-template-rows: repeat(【行数】, 1fr);
-gap: clamp(【最小沟槽】, 【响应值】, 【最大沟槽】);
-主标题放在 grid-area:【位置】，主视觉放在 grid-area:【位置】，
-元信息共用一条左对齐线和统一间距 token；
-图片使用 object-fit:cover，并通过 object-position 锁定裁切焦点；
-只允许【指定的主破格元素或相关焦点簇】跨线或错位，其余元素严格对齐网格；
-提供可开关的调试网格覆盖层；
-在移动端保持构图关系，不要直接退化成所有内容单列堆叠。
+Create a [aspect ratio] poster about [theme]. Use [one composition from 17–32].
+Establish an invisible [columns] × [rows] modular grid with consistent gutters.
+The headline "[title]" spans [columns × rows]; [main subject] spans [columns × rows].
+Place date, explanation and CTA at [module locations], sharing [left edge / baseline / margin].
+Move the eye from [entry] along [path] to [destination].
+Allow [a few related, controlled breaks, usually one primary break or focal cluster];
+keep other content strictly aligned. Use [colors] and [typographic tone], with [negative space].
+Avoid random spans, competing focal points, unsafe crops, garbled text and visible construction lines everywhere.
 ```
 
-如果先用圖像提示尋找視覺方向，再用 HTML 重建，兩個輸出必須共享同一份結構描述：相同的欄數、跨度、焦點、層級、邊距和閱讀路徑。
+Image models treat grids as soft constraints. They can suggest structure and
+visual tendencies; do not claim browser-like pixel placement guarantees.
 
-## 圖像提示的完成標準
+### HTML/CSS grid template
 
-把結構詞融入完整提示，而不是在末尾堆關鍵詞。成品提示至少交代：
+```text
+Create a poster component with aspect-ratio:[ratio]. Use an outer CSS Grid:
+grid-template-columns: repeat([columns], 1fr);
+grid-template-rows: repeat([rows], 1fr);
+gap: clamp([minimum gutter], [responsive value], [maximum gutter]);
+Place headline at grid-area:[location] and main visual at grid-area:[location].
+Metadata shares one left alignment line and spacing tokens.
+Use object-fit:cover and object-position to lock the crop focus.
+Only [specified primary break or related focal cluster] may cross or shift grid lines.
+Provide a switchable grid debugging overlay.
+Preserve composition relationships on mobile instead of automatically stacking every item in one column.
+```
 
-1. 畫幅和用途；
-2. 主構圖及輔助關係；
-3. 主視覺的位置、比例和裁切；
-4. 標題、輔文、日期、地點、CTA 的層級；
-5. 入口、路徑和終點；
-6. 對齊、留白、色彩、字體與材質；
-7. 安全區和負面約束。
+When exploring through image prompts and rebuilding in HTML, share the same
+column counts, spans, focus, hierarchy, margins and reading path.
 
-提示中的事實文案必須逐字來自使用者或權威 brief，不得補寫標題、日期、地點、票務或品牌標識。長標題只有在使用者允許時才能提煉；否則保留原文，並避免讓圖像和標題同時爭奪第一焦點。
+## Image-prompt completion criteria
 
-當文字必須逐字準確時，優先讓圖像模型生成無字或少字底圖，再用 HTML/CSS 或後期排版疊加真實文字。如果使用者堅持一次成圖，明確說明模型文字不保證準確；生成後必須把實際產物與原文逐字核驗，發現差異就如實報告，不能把提示詞中的正確文案當作產物已通過。
+Integrate structure into the complete prompt instead of appending keywords.
+Include:
 
-## HTML/CSS 的完成標準
+1. Aspect ratio and purpose.
+2. Primary composition and supporting relationship.
+3. Main visual position, proportion and crop.
+4. Title, supporting copy, date, location and CTA hierarchy.
+5. Entry, path and destination.
+6. Alignment, space, color, type and material.
+7. Safe zones and negative constraints.
 
-- 使用 Grid 或 Flexbox 表達主結構，絕對定位只處理明確的疊層、路徑節點或受控破格。
-- 用 CSS 自訂屬性保存比例、溝槽、邊距、字號、顏色和層級 token。
-- 用 `object-fit:cover` 和 `object-position` 管理跨尺寸裁切焦點。
-- 語義 DOM 順序必須與預期閱讀順序一致；不要用 CSS 視覺排序製造相反的可訪問順序。
-- 每段文字只保留一個可訪問副本；圖上疊字需要顯式的前景文字、圖像、背景文字層，裝飾副本加 `aria-hidden="true"`。
-- 有意義的圖片提供準確 `alt`；純裝飾圖片使用空 `alt` 或 `aria-hidden="true"`。
-- 導覽型 CTA 使用連結，觸發介面動作的 CTA 使用按鈕；兩者都保留清晰的 `:focus-visible` 狀態。
-- 偵錯覆蓋層可開關，發佈狀態預設關閉。
-- 響應式變化保留相同語義關係與層級，但不強制保持同一幾何。只有在最小字號、最小單元寬度、裁切與交互尺寸仍滿足時才保留原列數或並排關係；否則允許有依據地重排。
-- 實際測試窄螢幕與 200% 縮放；確認文字、焦點順序、CTA、裁切和內容關係仍可用。
-- 關鍵文字保持足夠對比；密集與滿版構圖可用局部實色底、局部漸變或 outline，不要把整張圖統一壓暗。
+Factual copy must come verbatim from the user or authoritative brief. Do not
+invent titles, dates, locations, ticketing or brand marks. Condense long titles
+only with permission; otherwise retain them and avoid competing first focal points.
 
-## 交付前預檢：提示與規格
+When text must be exact, prefer a text-free or low-text generated background
+with real text added using HTML/CSS or postproduction. If the user requests a
+single generated image, state that model-rendered text is not guaranteed.
+Compare the actual artifact with the intended copy character by character and
+report discrepancies; correct prompt text does not establish correct image text.
 
-推薦、提示詞或尚未繪製的 HTML/CSS 規格只能做 preflight/spec lint：檢查必需事實是否原樣保留、主構圖與輔助關係是否衝突、位置/比例/路徑/安全區是否具體、負面約束是否完整，以及數值是否被明確標為可調起點。
+## HTML/CSS completion criteria
 
-沒有實際產物時，不得聲稱裁切、響應式、對比或可讀性已經通過；在交付中把這些專案寫為 `not tested`。靜態程式碼檢查通過也不等於瀏覽器 viewport 已驗收。
+- Express the main structure with Grid or Flexbox. Reserve absolute positioning
+  for explicit layers, path nodes or controlled breaks.
+- Store proportions, gutters, margins, type sizes, colors and hierarchy in CSS custom properties.
+- Manage crop focus across sizes with `object-fit:cover` and `object-position`.
+- Match semantic DOM order to reading order; visual reordering must not reverse accessibility order.
+- Keep one accessible copy of each text. Type-over-image work needs explicit
+  foreground-text, image and background-text layers; mark decorative duplicates `aria-hidden="true"`.
+- Provide accurate `alt` for meaningful images and empty `alt` or `aria-hidden="true"` for decoration.
+- Use links for navigation CTAs, buttons for interface actions, and visible `:focus-visible` states.
+- Make debugging overlays switchable and off by default in the finished output.
+- Preserve semantic relationships and hierarchy responsively, without requiring
+  identical geometry. Retain column counts and side-by-side layouts only while
+  minimum type size, unit width, safe crops and interaction targets remain usable;
+  otherwise reflow with a stated reason.
+- Test narrow viewports and 200% zoom, including text, focus order, CTAs, crops and content relationships.
+- Preserve text contrast with local solid backgrounds, gradients or outlines in
+  dense/full-bleed work; avoid uniformly darkening the entire image.
 
-## 產物驗收（必須有實際產物）
+## Preflight: prompts and specifications
 
-只有拿到實際生成圖、繪製頁面或截圖，以及目標畫幅、viewport 或輸出尺寸後，才執行本節。缺少產物或目標 viewport/尺寸時停止 review 並請求補充。review 預設只報告看得到或實際測到的證據，並提出可測量的修正，不修改產物；只有使用者明確要求“審查並修復”時，才在先報告診斷後修改已明確識別的產物並重跑相關檢查。單獨的 review 請求不構成修復授權。
+For recommendations, prompts and unrendered HTML/CSS specifications, perform
+preflight/spec lint only. Check verbatim factual copy, compatible primary and
+supporting structures, concrete positions/proportions/paths/safe zones, complete
+negative constraints and values labeled as adjustable starting points.
 
-按順序檢查，發現問題時先改結構參數，不要繼續追加模糊風格詞。
+Without an actual artifact, mark crop, responsiveness, contrast and readability
+`not tested`. Static code inspection does not verify a browser viewport.
 
-1. 入口存在嗎？縮成手機資訊流大小，第一眼還能找到標題或主視覺。
-2. 三層資訊分得出來嗎？標題、主視覺和輔助資訊具有明顯尺度或對比差。
-3. 主次比例清楚嗎？`60/40`、`70/30` 或跨欄數量能夠解釋視覺重量。
-4. 共同邊線穩定嗎？標題、圖片、日期和說明至少共享一到兩條對齊線。
-5. 留白和溝槽在幫助閱讀嗎？同層間距重複，留白用於隔離或強調，而不是單純空缺。
-6. 破格數量受控嗎？通常由一個主破格元素或相關焦點簇承擔；標題與主視覺若各自破格，必須服務同一層級。
-7. 圖文層級明確嗎？圖上疊字能夠判斷字在前、字在後或與主體穿插。
-8. 裁切焦點安全嗎？臉、手、產品標誌、標題關鍵筆畫、日期和 CTA 未被誤切。
-9. 路徑有效嗎？斜線、曲線、環或分屏把視線帶向有效資訊而非畫外。
-10. HTML 能回應嗎？實際改變容器寬度並測試 200% 縮放後，語義關係、層級、可讀性和焦點順序繼續成立；不要求保持同一幾何。
-11. HTML 可訪問嗎？DOM 閱讀順序正確，文字只有一個可訪問副本，圖片替代文字、CTA 語義與可見焦點都與產物一致。
+## Artifact review: requires an actual artifact
 
-## 可靠預設值
+Review only an actual generated image, rendered page or screenshot with its target
+aspect ratio, viewport or output size. If either is missing, stop review and request
+it. Report observable or measured evidence and measurable corrections by default.
+Only an explicit review-and-fix request permits changes to the identified artifact:
+report the diagnosis first, apply the fix, and rerun relevant checks. Review alone
+does not authorize modification.
 
-- 不確定且內容中等時：先試 03 三分法。
-- 標題、圖片、資料和說明同時存在時：先試 21 模組網格，把 4×6 作為可調起點，讓約 80% 的元素歸位，再選擇一個主破格標題。
-- 對比雙物件時：優先 16 左右分屏，預設從 60/40 而不是 50/50 開始。
-- 圖像 + 說明時：優先 17 上下分屏，預設從 62/38 開始。
-- 安靜、高端、資訊很少時：優先 05 大留白單點，保留 65%–80% 主動留白。
-- 實驗構圖時：先建立一個可識別規則，再使用少量相關的受控破格，通常由一個主破格元素或焦點簇承擔。
+Check in this order. Correct structural parameters before adding vague style words.
+
+1. Entry: at mobile-feed size, can the viewer still find the title or main visual?
+2. Three levels: do title, visual and supporting information differ clearly in scale or contrast?
+3. Proportions: do `60/40`, `70/30` or column spans explain visual weight?
+4. Shared edges: do title, image, date and explanation share one or two alignment lines?
+5. Space and gutters: do peer gaps repeat and does space isolate or emphasize content?
+6. Controlled breaks: is there usually one primary break or related focal cluster?
+   If title and visual each break the grid, do both serve one hierarchy?
+7. Image-text hierarchy: is type clearly in front, behind or interleaved with the subject?
+8. Safe crop: are faces, hands, marks, key title strokes, dates and CTAs intact?
+9. Effective path: do diagonals, curves, rings and splits lead toward useful information?
+10. Responsive HTML: after resizing and 200% zoom, do semantics, hierarchy,
+    readability and focus order remain usable? Identical geometry is not required.
+11. Accessible HTML: does DOM order match reading order, with one accessible text
+    copy, correct image alternatives, CTA semantics and visible focus?
+
+## Reliable starting points
+
+- Uncertain, moderate content: try 03 Rule of Thirds.
+- Title, image, data and explanation together: try 21 Modular Grid with an
+  adjustable 4×6 starting grid, about 80% aligned elements and one primary broken-grid title.
+- Two-object comparison: try 16 Vertical Split at 60/40.
+- Image plus explanation: try 17 Horizontal Split at 62/38.
+- Quiet, premium, sparse content: try 05 Isolated Focal Point with 65%–80% active negative space.
+- Experimental composition: establish a recognizable rule, then a few related,
+  controlled breaks, usually one primary break or focal cluster.

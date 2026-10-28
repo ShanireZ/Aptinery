@@ -1,92 +1,101 @@
-# 32 種構圖速選表
+# Quick selector for 32 compositions
 
-先按內容數量和閱讀任務選構圖，再添加色彩、材質與風格。第一版只選一個主構圖；只有當另一種關係解決不同問題時，才增加一個輔助構圖。
+Choose composition from content quantity and reading task, then add color,
+material and style. Start with one primary composition; add one supporting
+relationship only when it solves a separate problem.
 
-## 源文章權威快速選擇表
+## Source-article task mappings
 
-下面兩張表恢復源文章的完整任務映射，是快速選擇時的權威入口；後面的編號區間只用於繼續分流和瀏覽目錄。
+These tables preserve the source articles' complete task mappings and are the
+primary quick-selection reference. Number ranges below route to the catalogs.
 
-### 上冊：焦點與動勢（01–16）
+### Part one: focus and motion (01–16)
 
-| 你的任務 | 預設先試 | 想讓情緒更強 |
+| Task | Try first | For stronger emotion |
 | --- | --- | --- |
-| 單一產品或人物 | 中軸對稱、三分法、大留白單點 | 邊緣錨定 |
-| 兩個物件或觀點 | 左右分屏 | 倒三角、對角線 |
-| 莊重、穩定、儀式感 | 中軸對稱、三角構圖 | 同心環繞 |
-| 速度、衝突、行動感 | 對角線、Z 型路徑 | 放射爆發 |
-| 柔和、優雅、漸進敘事 | 三分法、S 型曲線 | 黃金螺旋 |
-| 展覽、檔案、建築感 | 框中框、L 型錨定 | 非對稱平衡 |
+| One product or person | Axial Symmetry, Rule of Thirds, Isolated Focal Point | Edge-Anchored |
+| Two objects or viewpoints | Vertical Split | Inverted Triangle, Diagonal Tension |
+| Solemnity, stability, ceremony | Axial Symmetry, Triangular Hierarchy | Concentric |
+| Speed, conflict, action | Diagonal Tension, Z-Path | Radial Burst |
+| Softness, elegance, gradual narrative | Rule of Thirds, S-Curve | Golden Spiral |
+| Exhibitions, archives, architecture | Frame within Frame, L-Shaped Anchor | Asymmetrical Balance |
 
-### 下冊：網格、圖文關係與密度（17–32）
+### Part two: grids, image-text relationships and density (17–32)
 
-| 你的任務 | 預設先試 | 想讓情緒更強 |
+| Task | Try first | For stronger emotion |
 | --- | --- | --- |
-| 圖像與說明上下分開 | 上下分屏 | 水平帶狀 |
-| 一篇短宣言或少量文字 | 單欄手稿網格 | 大字主導 |
-| 會議、目錄、日程等複雜資訊 | 多欄編輯網格 | 模組網格 |
-| 產品功能與資料卡片 | Bento 網格 | 棋盤交替 |
-| 圖片先建立氛圍 | 滿版主視覺 | 圖上疊字 |
-| 標題就是傳播點 | 大字主導 | 破格網格 |
-| 同一主題的多個狀態 | 雙聯／三聯 | 重複節奏 |
-| 文化、音樂、手動和亞文化 | 拼貼層疊 | 密集全鋪 |
-| 需要秩序中出現一個意外 | 重複節奏 | 破格網格 |
+| Separate image and explanation vertically | Horizontal Split | Horizontal Bands |
+| Short manifesto or little text | Single-Column Grid | Typographic Dominant |
+| Complex conference, catalog or schedule information | Multi-Column Grid | Modular Grid |
+| Product features and data cards | Bento | Checkerboard |
+| Image establishes atmosphere first | Full-Bleed Hero | Type over Image |
+| Headline is the message | Typographic Dominant | Broken Grid |
+| Multiple states of one theme | Diptych / Triptych | Repetition & Pattern |
+| Culture, music, handmade work, subculture | Overlapping Collage | Dense All-Over |
+| One surprise within order | Repetition & Pattern | Broken Grid |
 
-## 快速分流
+## Routing
 
-| 任務 | 優先查看 |
+| Task | Start with |
 | --- | --- |
-| 單一人物、產品、標題或品牌發佈 | 01–06 平衡與焦點 |
-| 權威、危險、聚焦、檔案或強符號骨架 | 07–10 幾何骨架 |
-| 體育、音樂、科技、行動號召或流動敘事 | 11–14 動勢路徑 |
-| 兩個物件、兩個觀點、圖像與說明分區 | 15–18 邊緣、分屏與條帶 |
-| 文字、圖片、數字、按鈕等多類資訊 | 19–24 網格系統 |
-| 需要先決定圖片還是文字當主角 | 25–28 圖文關係 |
-| 青年文化、實驗編輯、節奏或最大主義 | 29–32 破格與密度 |
+| One person, product, title or brand launch | 01–06 balance and focus |
+| Authority, danger, focus, archives or a strong symbolic frame | 07–10 geometric structures |
+| Sports, music, technology, CTA or flowing narrative | 11–14 motion paths |
+| Two objects, viewpoints, or image/explanation regions | 15–18 edges, splits and bands |
+| Multiple kinds of text, images, numbers and buttons | 19–24 grid systems |
+| Decide whether image or typography leads | 25–28 image-text relationships |
+| Youth culture, experimental editing, rhythm or maximalism | 29–32 disruption and density |
 
-## 完整目錄
+## Complete catalog
 
-| 編號 | 構圖 | 主要控制 | 適用 | 關鍵約束 |
+| No. | Composition | Primary control | Suitable for | Key constraint |
 | --- | --- | --- | --- | --- |
-| 01 | 中軸對稱 Axial Symmetry | 中軸、鏡像配重、中央焦點 | 品牌發佈、展覽、奢侈品、典禮 | 不要機械鏡像每個小元素 |
-| 02 | 非對稱平衡 Asymmetrical Balance | 大小、明度、密度和距離的配重 | 文化、設計、時尚、科技 | 偏置必須由對側高對比或密度回應 |
-| 03 | 三分法焦點 Rule of Thirds | 三分交點、方向性留白 | 攝影、人像、產品、活動、Hero | 不為卡交點犧牲朝向或裁切 |
-| 04 | 黃金螺旋 Golden Spiral | 逐級比例、弧線收束 | 藝術、自然、電影、敘事產品 | 螺旋是草圖，不是成品裝飾線 |
-| 05 | 大留白單點 Isolated Focal Point | 65%–80% 主動留白、孤立焦點 | 高端品牌、藝術、詩歌、香氛 | 小焦點仍需足夠對比與語義 |
-| 06 | 邊緣錨定 Edge-Anchored | 越界裁切、屏外延伸 | 時尚、人像、產品特寫、社媒 | 保護臉、關節、標誌和文字安全區 |
-| 07 | 三角／金字塔 Triangular Hierarchy | 頂點強調、底邊承重 | 群像、電影、論壇、權威發佈 | 三角外不能出現更強焦點 |
-| 08 | 倒三角懸置 Inverted Triangle | 高重心、向下收束 | 先鋒、音樂、懸疑、警示 | 不用於可靠舒適的品牌語氣 |
-| 09 | 同心環繞 Concentric | 環形重複、向心聚焦 | 音樂、科技、聲波、社群、週年 | 環線避開小字並保持節奏差 |
-| 10 | 框中框 Frame within Frame | 嵌套邊界、觀看視窗 | 藝術、建築、檔案、攝影 | 框線層級不能壓過文字層級 |
-| 11 | 對角線動勢 Diagonal Tension | 強斜軸、速度和衝突 | 體育、音樂、促銷、科技 | 正文保持可讀，斜軸指向有效資訊 |
-| 12 | 放射爆發 Radial Burst | 唯一中心、向外輻射 | 音樂節、促銷、慶典、宣言 | 只保留一個放射中心 |
-| 13 | Z 型路徑 Z-Path | 四角錨點、順序交接 | 活動、產品首屏、課程、發佈會 | Z 是腳手架，不要直接畫字母 Z |
-| 14 | S 型曲線 S-Curve | 三個節點、柔性連續路徑 | 美妝、時尚、舞蹈、自然、飲品 | 每次轉彎都要對應資訊節點 |
-| 15 | L 型錨定 L-Shaped Anchor | 豎欄與橫欄的角部支架 | 建築、展覽、目錄、工業 | 兩臂有長短差，勿封閉成四邊框 |
-| 16 | 左右分屏 Vertical Split | 雙主題並置、60/40 主次 | 產品對比、雙人、前後、聯名 | 兩側必須有關聯且不能完全同權 |
-| 17 | 上下分屏 Horizontal Split | 圖像與文字的 62/38 分區 | 電影、旅行、講座、產品說明 | 分界避開臉部、文字中線和關鍵結構 |
-| 18 | 水平帶狀 Horizontal Bands | 4–6 條不等頻寬、章節節拍 | 音樂、交通、體育、時間表 | 條帶不能等寬等強，正文行長要可讀 |
-| 19 | 單欄手稿網格 Single-Column Grid | 連續主欄、線性閱讀 | 宣言、文學、學術、演講 | 海報不是論文頁，控制行長和段數 |
-| 20 | 多欄編輯網格 Multi-Column Grid | 等寬欄、重複溝槽、跨欄層級 | 會議、課程表、目錄、資料說明 | 不要讓每個元素隨機跨欄 |
-| 21 | 模組網格 Modular Grid | 行列矩陣、跨模組組合 | 瑞士風格、日程、系列視覺 | 網格是底層關係，不必全部畫出來 |
-| 22 | 瑞士非對稱網格 Swiss Grid | 左齊右不齊、功能性層級 | 設計、建築、音樂會、文化機構 | 紅圓與 Helvetica 不能替代結構 |
-| 23 | 層級卡片網格 Bento | 卡片面積表達優先級 | 科技、功能、資料、服務、完成實作頁 | 同層卡片保持相同語義與間距 |
-| 24 | 棋盤交替 Checkerboard | 圖文交替、反轉與一個破例 | 系列產品、陣容、對照、時尚 | 矩陣勿過細，必須有一個主焦點 |
-| 25 | 滿版主視覺 Full-Bleed Hero | 沉浸圖像、局部文字安全區 | 電影、旅行、時尚、攝影、人物 | 不把字壓在臉或複雜紋理上 |
-| 26 | 大字主導 Typographic Dominant | 超尺度標題、字形裁切 | 觀點、宣言、音樂、促銷、議題 | 斷行保留語義，只用少數字體 |
-| 27 | 圖上疊字 Type over Image | 字在前、字在後或明確穿插 | 時尚、雜誌、電影、音樂 | 不用整行半透明文字含混層級 |
-| 28 | 雙聯／三聯 Diptych / Triptych | 共同變數、連續畫幅 | 前後、系列、群像、攝影展 | 無關圖片並排不構成雙聯或三聯 |
-| 29 | 拼貼層疊 Overlapping Collage | 4–7 層、受控旋轉、遮擋 | 音樂、青年文化、雜誌、復古 | 統一材質、配色或敘事線索 |
-| 30 | 破格網格 Broken Grid | 先建網格，再讓少數元素跨線 | 先鋒、科技、實驗編輯、作品集 | 約 80% 元素守規則；通常用一個主破格元素或焦點簇，標題與主視覺可形成兩個相關破格 |
-| 31 | 重複節奏 Repetition & Pattern | 規則陣列、單一異常項 | 系列、群體、音樂、運動、資料 | 只讓一個元素因主題需要而破例 |
-| 32 | 密集全鋪 Dense All-Over | 多尺度層級、有限色盤 | 節日、地下音樂、潮流、復古廣告 | 密集仍要有標題與 CTA 入口 |
+| 01 | Axial Symmetry | Central axis, mirrored weight, central focus | Brand launches, exhibitions, luxury, ceremonies | Avoid mechanically mirroring every detail |
+| 02 | Asymmetrical Balance | Size, brightness, density and distance | Culture, design, fashion, technology | Counter an offset with contrast or density on the other side |
+| 03 | Rule of Thirds | Thirds intersections, directional space | Photography, portraits, products, events, heroes | Preserve subject direction and crop over exact intersections |
+| 04 | Golden Spiral | Progressive proportions, converging arcs | Art, nature, film, narrative products | The spiral is a sketch, not a decorative line |
+| 05 | Isolated Focal Point | 65%–80% active negative space | Premium brands, art, poetry, fragrance | A small focus still needs contrast and meaning |
+| 06 | Edge-Anchored | Cropping beyond edges, off-canvas continuation | Fashion, portraits, product close-ups, social media | Protect faces, joints, marks and text safe zones |
+| 07 | Triangular Hierarchy | Apex emphasis, load-bearing base | Ensembles, film, forums, authoritative launches | Keep stronger focal points outside the triangle out |
+| 08 | Inverted Triangle | High center of gravity, downward convergence | Avant-garde work, music, suspense, warnings | Avoid a reliable, comfortable brand tone |
+| 09 | Concentric | Repeated rings, inward focus | Music, technology, sound, communities, anniversaries | Keep rings away from small type and vary their rhythm |
+| 10 | Frame within Frame | Nested boundaries, viewing windows | Art, architecture, archives, photography | Frame hierarchy must not overpower text hierarchy |
+| 11 | Diagonal Tension | Strong diagonal axis, speed and conflict | Sports, music, promotions, technology | Keep body text readable and aim toward useful information |
+| 12 | Radial Burst | One center, outward radiation | Festivals, promotions, celebrations, manifestos | Retain exactly one radiation center |
+| 13 | Z-Path | Corner anchors, sequential handoffs | Events, product heroes, courses, launches | Use the Z as scaffolding, not a visible letter |
+| 14 | S-Curve | Three nodes, continuous curved path | Beauty, fashion, dance, nature, drinks | Each turn corresponds to an information node |
+| 15 | L-Shaped Anchor | Vertical and horizontal corner rails | Architecture, exhibitions, catalogs, industry | Vary arm lengths; keep it open rather than a four-sided frame |
+| 16 | Vertical Split | Two themes, 60/40 hierarchy | Comparisons, pairs, before/after, collaborations | Relate the two sides and avoid equal emphasis everywhere |
+| 17 | Horizontal Split | 62/38 image-text division | Film, travel, lectures, product explanations | Keep the division clear of faces, text midlines and key structures |
+| 18 | Horizontal Bands | 4–6 unequal bands, chapter rhythm | Music, transport, sports, timetables | Vary band size and emphasis; preserve readable line length |
+| 19 | Single-Column Grid | Continuous column, linear reading | Manifestos, literature, scholarship, talks | Control line length and paragraph count for a poster |
+| 20 | Multi-Column Grid | Equal columns, repeated gutters, spanning hierarchy | Conferences, timetables, catalogs, data explanations | Use deliberate, repeated spans |
+| 21 | Modular Grid | Row-column matrix, spanning modules | Swiss design, schedules, visual series | The grid is a relationship; every line need not be visible |
+| 22 | Swiss Grid | Flush-left text, functional hierarchy | Design, architecture, concerts, cultural institutions | Red circles and Helvetica do not replace structure |
+| 23 | Bento | Card area expresses priority | Technology, features, data, services, implemented pages | Keep peer cards consistent in meaning and spacing |
+| 24 | Checkerboard | Alternating image/text, reversals, one exception | Product series, lineups, comparisons, fashion | Avoid tiny cells and retain one primary focus |
+| 25 | Full-Bleed Hero | Immersive image, local text safe zone | Film, travel, fashion, photography, portraits | Keep type off faces and complex textures |
+| 26 | Typographic Dominant | Oversized headline, cropped letterforms | Opinions, manifestos, music, promotions, causes | Preserve meaning in line breaks and limit typefaces |
+| 27 | Type over Image | Foreground, background or explicit interleaving | Fashion, magazines, film, music | Avoid vague hierarchy from entire translucent text lines |
+| 28 | Diptych / Triptych | Shared variable, sequential panels | Before/after, series, ensembles, photo exhibitions | Unrelated adjacent images do not create a diptych or triptych |
+| 29 | Overlapping Collage | 4–7 layers, controlled rotation, occlusion | Music, youth culture, magazines, retro work | Unify material, color or narrative cues |
+| 30 | Broken Grid | Establish a grid, then cross a few lines | Avant-garde work, technology, experimental editing, portfolios | About 80% follows the rule; usually one primary break or focal cluster; headline and visual may make two related breaks |
+| 31 | Repetition & Pattern | Regular array, one anomaly | Series, groups, music, sports, data | Only one thematic exception |
+| 32 | Dense All-Over | Multiple scales, limited palette | Festivals, underground music, trends, retro advertising | Preserve a headline and CTA entry point |
 
-## 組合規則
+## Combining systems
 
-把主構圖寫成全域骨架，把輔助構圖寫成局部閱讀關係，不要讓兩個構圖爭奪同一職責。
+Write the primary composition as the overall structure and the supporting one
+as a local reading relationship. Give them separate responsibilities.
 
-- **源文章範例** `三分法 + S 型曲线`：主視覺落在三分交點，三個輔助節點沿曲線連接。
-- **源文章範例** `模块网格 + 一个破格标题`：內容塊遵守可調的模組網格，標題作為主破格元素跨出一條邊界。
-- **Skill-added synthesis** `满版主视觉 + 图上叠字`：圖像決定整體場域，文字穿插只解決前後層級。
-- **Skill-added synthesis** `左右分屏 + 非对称平衡`：分屏建立對比，對側的小型高對比資訊塊負責配重。
+- **Source-article example:** `Rule of Thirds + S-Curve`: place the main visual
+  at a thirds intersection and connect three supporting nodes along the curve.
+- **Source-article example:** `Modular Grid + one broken-grid title`: keep content
+  in an adjustable modular grid and let the headline cross one boundary.
+- **Skill-added synthesis:** `Full-Bleed Hero + Type over Image`: the image sets
+  the field; interleaving only resolves foreground/background hierarchy.
+- **Skill-added synthesis:** `Vertical Split + Asymmetrical Balance`: the split
+  establishes comparison; a smaller, high-contrast block provides counterweight.
 
-如果兩個名稱都試圖決定全畫面的焦點、網格或閱讀路徑，刪除一個。
+If both names compete to define the whole canvas's focus, grid or reading path,
+remove one.

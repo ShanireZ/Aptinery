@@ -15,46 +15,58 @@ sources:
 
 # Skills catalog
 
-每個項目都可獨立安裝。安裝命令見 [INSTALL.md](../INSTALL.md)；來源、固定上游與改編說明見 [NOTICE](../NOTICE)。
+Each entry can be installed independently. See [INSTALL.md](../INSTALL.md) for
+commands and [NOTICE](../NOTICE) for pinned sources and adaptations.
 
-| Skill | 用途 | 來源與授權 |
+| Skill | Purpose | Source and license |
 | --- | --- | --- |
-| [`shanirez-style`](../plugins/shanirez-style/skills/shanirez-style/SKILL.md) | 結構清晰的演算法競賽 C++14 程式碼風格 | Aptinery 原創，GPL-3.0 |
-| [`k12-lesson-plan-creation`](../plugins/k12-lesson-plan-creation/skills/k12-lesson-plan-creation/SKILL.md) | 建立符合教學標準的 K-12 課程方案、課堂材料與評估 | Anthropic / Learning Commons，Apache-2.0 |
-| [`k12-lesson-differentiation`](../plugins/k12-lesson-differentiation/skills/k12-lesson-differentiation/SKILL.md) | 將已有課程分層適配不同熟練度與學生需求 | Anthropic / Learning Commons，Apache-2.0 |
-| [`k12-lesson-prep`](../plugins/k12-lesson-prep/skills/k12-lesson-prep/SKILL.md) | 幫助教師內化已有課程的關鍵任務並生成課前準備筆記 | Anthropic / Learning Commons，Apache-2.0 |
-| [`k12-check-for-understanding`](../plugins/k12-check-for-understanding/skills/k12-check-for-understanding/SKILL.md) | 為數學主題建立基於常見誤解的形成性理解檢查 | Anthropic / Learning Commons，Apache-2.0 |
-| [`emil-design-eng`](../plugins/emil-design-eng/skills/emil-design-eng/SKILL.md) | 打磨 UI、元件設計和動畫決策 | Emil Kowalski，MIT |
-| [`animate`](../plugins/animate/skills/animate/SKILL.md) | 從零實作有目的、可中斷的 Web 動畫 | Emil Kowalski，MIT |
-| [`animate-expo`](../plugins/animate-expo/skills/animate-expo/SKILL.md) | 實作高效能 React Native / Expo 動畫、手勢與觸覺回饋 | Emil Kowalski，MIT |
-| [`review-animations`](../plugins/review-animations/skills/review-animations/SKILL.md) | 按嚴格工藝標準審查動畫程式碼 | Emil Kowalski，MIT |
-| [`improve-animations`](../plugins/improve-animations/skills/improve-animations/SKILL.md) | 稽核程式碼庫動畫效果並生成可執行改進計畫 | Emil Kowalski，MIT |
-| [`find-animation-opportunities`](../plugins/find-animation-opportunities/skills/find-animation-opportunities/SKILL.md) | 找出真正值得加入動畫效果的介面位置 | Emil Kowalski，MIT |
-| [`animation-performance`](../plugins/animation-performance/skills/animation-performance/SKILL.md) | 診斷 Web 動畫掉幀、繪製成本、主執行緒競爭與 React 動畫瓶頸 | Emil Kowalski，MIT |
-| [`animation-vocabulary`](../plugins/animation-vocabulary/skills/animation-vocabulary/SKILL.md) | 將模糊的動畫效果描述定位到準確術語 | Emil Kowalski，MIT |
-| [`apple-design`](../plugins/apple-design/skills/apple-design/SKILL.md) | 將 Apple 的介面與流暢動畫效果原則應用到 Web | Emil Kowalski，MIT |
-| [`write-swift`](../plugins/write-swift/skills/write-swift/SKILL.md) | 編寫和審查現代 Swift、並行、效能與測試程式碼 | Emil Kowalski，MIT |
-| [`break-ui`](../plugins/break-ui/skills/break-ui/SKILL.md) | 用真實感最壞資料壓力測試 UI，報告斷裂點並給出修復 | Emil Kowalski，MIT |
-| [`mobile-native`](../plugins/mobile-native/skills/mobile-native/SKILL.md) | 用平台層 CSS/中繼資料修復讓 Web App 在手機上更像原生 | Emil Kowalski，MIT |
-| [`pick-ui-library`](../plugins/pick-ui-library/skills/pick-ui-library/SKILL.md) | 從精選清單中為前端任務選擇合適的庫 | Emil Kowalski，MIT |
-| [`prototype`](../plugins/prototype/skills/prototype/SKILL.md) | 建立多個差異化 UI 方案並通過可視選擇器比較 | Emil Kowalski，MIT |
-| [`ask-sonner`](../plugins/ask-sonner/skills/ask-sonner/SKILL.md) | 安裝、設定、樣式化和排查 Sonner toast | Emil Kowalski，MIT |
-| [`punk-cover`](../plugins/punk-cover/skills/punk-cover/SKILL.md) | 將文章、貼文和主題生成平台適配的封面圖或重複使用提示詞 | AdrianPunk 與貢獻者；個人非商用 |
-| [`punk-poster-layout`](../plugins/punk-poster-layout/skills/punk-poster-layout/SKILL.md) | 僅在明確要求結構構圖控制時，為獨立海報、傳單、主視覺或單畫布編輯版塊選擇 32 種構圖；普通網站/UI、通用 Hero 與未明確要求構圖控制的平台封面不預設觸發 | 根據 AdrianPunk 文章，Skill 由 Aptinery 改編與封裝；GPL-3.0 |
-| [`onetake`](../plugins/onetake/skills/onetake/SKILL.md) | 製作一鏡到底的產品發布片、預告與旁白功能演示，包含鏡頭連續性檢查 | Patrick / feitangyuan，PolyForm Noncommercial 1.0.0；非商用，商用須另取得授權 |
-| [`design-taste-frontend`](../plugins/design-taste-frontend/skills/design-taste-frontend/SKILL.md) | 為網站、產品頁、儀表板與 App 畫面提供藝術指導：抽取研究過的設計方向、取用開放圖庫真實圖片，並以真實瀏覽器檢查擺脫千篇一律的 AI 頁面 | Leonxlnx，MIT |
+| [`shanirez-style`](../plugins/shanirez-style/skills/shanirez-style/SKILL.md) | C++14 coding style for competitive-programming and online-judge solutions | Original Aptinery work; GPL-3.0 |
+| [`k12-lesson-plan-creation`](../plugins/k12-lesson-plan-creation/skills/k12-lesson-plan-creation/SKILL.md) | Create standards-aligned K-12 lesson plans, materials and assessments | Anthropic / Learning Commons; Apache-2.0 |
+| [`k12-lesson-differentiation`](../plugins/k12-lesson-differentiation/skills/k12-lesson-differentiation/SKILL.md) | Adapt existing lessons for different proficiency levels and student needs | Anthropic / Learning Commons; Apache-2.0 |
+| [`k12-lesson-prep`](../plugins/k12-lesson-prep/skills/k12-lesson-prep/SKILL.md) | Work through a lesson and produce teacher preparation notes | Anthropic / Learning Commons; Apache-2.0 |
+| [`k12-check-for-understanding`](../plugins/k12-check-for-understanding/skills/k12-check-for-understanding/SKILL.md) | Create misconception-based formative math checks | Anthropic / Learning Commons; Apache-2.0 |
+| [`emil-design-eng`](../plugins/emil-design-eng/skills/emil-design-eng/SKILL.md) | Polish UI, component design and animation decisions | Emil Kowalski; MIT |
+| [`animate`](../plugins/animate/skills/animate/SKILL.md) | Build purposeful, interruptible web animations | Emil Kowalski; MIT |
+| [`animate-expo`](../plugins/animate-expo/skills/animate-expo/SKILL.md) | Build performant React Native / Expo animations, gestures and haptics | Emil Kowalski; MIT |
+| [`review-animations`](../plugins/review-animations/skills/review-animations/SKILL.md) | Review animation code against a strict craft standard | Emil Kowalski; MIT |
+| [`improve-animations`](../plugins/improve-animations/skills/improve-animations/SKILL.md) | Audit codebase animations and produce an actionable improvement plan | Emil Kowalski; MIT |
+| [`find-animation-opportunities`](../plugins/find-animation-opportunities/skills/find-animation-opportunities/SKILL.md) | Find interface areas that benefit from motion | Emil Kowalski; MIT |
+| [`animation-performance`](../plugins/animation-performance/skills/animation-performance/SKILL.md) | Diagnose frame drops, rendering costs, main-thread contention and React animation bottlenecks | Emil Kowalski; MIT |
+| [`animation-vocabulary`](../plugins/animation-vocabulary/skills/animation-vocabulary/SKILL.md) | Identify precise terms for vaguely described animation effects | Emil Kowalski; MIT |
+| [`apple-design`](../plugins/apple-design/skills/apple-design/SKILL.md) | Apply Apple interface and fluid-motion principles to the web | Emil Kowalski; MIT |
+| [`write-swift`](../plugins/write-swift/skills/write-swift/SKILL.md) | Write and review modern Swift, concurrency, performance and tests | Emil Kowalski; MIT |
+| [`break-ui`](../plugins/break-ui/skills/break-ui/SKILL.md) | Stress-test UI with realistic worst-case data and report fixes | Emil Kowalski; MIT |
+| [`mobile-native`](../plugins/mobile-native/skills/mobile-native/SKILL.md) | Improve mobile web behavior through platform CSS and metadata | Emil Kowalski; MIT |
+| [`pick-ui-library`](../plugins/pick-ui-library/skills/pick-ui-library/SKILL.md) | Choose a suitable frontend library from a curated list | Emil Kowalski; MIT |
+| [`prototype`](../plugins/prototype/skills/prototype/SKILL.md) | Build distinct UI variants and compare them in a visual picker | Emil Kowalski; MIT |
+| [`ask-sonner`](../plugins/ask-sonner/skills/ask-sonner/SKILL.md) | Install, configure, style and troubleshoot Sonner toasts | Emil Kowalski; MIT |
+| [`punk-cover`](../plugins/punk-cover/skills/punk-cover/SKILL.md) | Create platform-sized article, social and editorial covers or reusable prompts | AdrianPunk and contributors; personal noncommercial terms, redistribution restricted |
+| [`punk-poster-layout`](../plugins/punk-poster-layout/skills/punk-poster-layout/SKILL.md) | Choose among 32 compositions for standalone posters, flyers, key visuals or single-canvas editorial sections when structural control is explicitly requested; ordinary websites/UI, generic heroes and platform covers do not trigger it by default | Based on AdrianPunk articles; adapted and packaged by Aptinery; GPL-3.0 |
+| [`onetake`](../plugins/onetake/skills/onetake/SKILL.md) | Create continuous launch films, trailers and narrated feature demos with continuity checks | Patrick / feitangyuan; PolyForm Noncommercial 1.0.0; commercial use requires a separate license |
+| [`design-taste-frontend`](../plugins/design-taste-frontend/skills/design-taste-frontend/SKILL.md) | Art direction for websites, product pages, dashboards and app screens, using researched directions, real stock images and browser checks | Leonxlnx; MIT |
 
-## 來源與授權
+## Sources and licenses
 
+Original repository material uses [GNU GPL v3.0](../LICENSE). Third-party
+material retains its own licenses and attribution:
 
-本儲存庫原創內容採用 [GNU General Public License v3.0](../LICENSE) 發佈。
+- The four Anthropic / Learning Commons K-12 skills use Apache-2.0.
+- Emil Kowalski's design and engineering skills use MIT.
+- Leonxlnx's `design-taste-frontend` (tasteskill v2) uses MIT. Pictures, footage
+  and fonts fetched at runtime retain their own licenses.
+- OneTake uses [PolyForm Noncommercial 1.0.0](../plugins/onetake/LICENSE), with
+  separate font licenses. Commercial use requires an upstream commercial license;
+  the repository GPL does not apply to this imported material.
+- The current `punk-cover` upstream uses Punk Skill v2.0.0 dual-track terms:
+  free personal noncommercial use, with commercial use requiring prior written
+  authorization and a paid fee. `LICENSE-PERSONAL.md` §5 prohibits distributing
+  the work or modifications to another person. Aptinery does not label this
+  material MIT or infer redistribution rights. `punk-poster-layout` is a
+  separately attributed adaptation with an existing GPL-3.0 declaration; its
+  notice does not establish a GPL adaptation grant for the source articles.
 
-第三方內容繼續採用各自的 `LICENSE` 和歸屬聲明：
-
-- Anthropic / Learning Commons 的四個 K-12 skill 使用 Apache-2.0，固定來源 commit 記錄在 [`NOTICE`](../NOTICE)。
-- Emil Kowalski 的 15 個設計與工程 skill 使用 MIT，固定來源 commit 記錄在 [`NOTICE`](../NOTICE)。
-- Leonxlnx 的 `design-taste-frontend`（tasteskill v2，上游 [`Leonxlnx/taste-skill`](https://github.com/Leonxlnx/taste-skill)）使用 MIT，固定來源 commit 記錄在 [`NOTICE`](../NOTICE)；技能執行時下載的圖片、影片與字型保留各自授權。
-- `onetake` 固定來源 commit 與打包適配記錄在 [`NOTICE`](../NOTICE)，上游材料使用 [PolyForm Noncommercial 1.0.0](../plugins/onetake/LICENSE)，不適用本儲存庫原創內容的 GPL；字型保留各自授權。商業用途須另取得上游商業授權。
-- `punk-cover` 的固定來源 commit 記錄在 [`NOTICE`](../NOTICE)。當前上游為 Punk Skill v2.0.0 雙軌授權：個人非商用免費，商業用途須事先書面授權並付費；其 `LICENSE-PERSONAL.md` §5 禁止向他人散布本體或修改版。Aptinery 不把該材料標為 MIT，也不推定或補充轉散布授權。`punk-poster-layout` 是另行歸屬的 Aptinery 改編包，使用 GPL-3.0。
-
-已有明確授權的主外掛根目錄及其 skill 目錄包含適用的授權條款副本；`punk-cover` 因上游 v2.0.0 禁止轉散布且未取得商業授權，不附加或推定任何授權，也不宣稱可公開再散布。Claude 專用鏡像僅用於保留 3 個 skill 的 `disable-model-invocation: true` 語義，不增加新的市場條目或授權條件。
+Exact source commits and local adaptations are recorded in [NOTICE](../NOTICE).
+Applicable license copies are included at plugin and skill roots where a clear
+license exists. `punk-cover` has no added or inferred license and no claim of
+public redistribution permission. The three Claude-only mirrors preserve
+explicit invocation semantics; they add no marketplace entries or license terms.

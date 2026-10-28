@@ -1,4 +1,4 @@
-# 跨平台一致：儲存庫內與工作區均為 LF
+# Use LF across platforms in the repository and working tree.
 * text=auto eol=lf
 
 # Vendored verbatim from anthropics/k12-teacher-skills; preserve upstream blobs.
