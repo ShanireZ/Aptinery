@@ -1,2 +1,19 @@
 __pycache__/
 *.py[cod]
+
+# Maintainer-local state; plugin catalogs and upstream sources remain public.
+/.local/
+/.scratch/
+/handoff/
+/vardata/
+/credentials/
+/node_modules/
+/.cache/
+/.codex/
+/.claude/
+/.env
+/.env.*
+!/.env.example
+/*.bundle
+.DS_Store
+Thumbs.db
