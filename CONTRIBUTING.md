@@ -5,22 +5,28 @@ proposed changes. Keep changes scoped to the requested skill or packaging task.
 
 ## Package contract
 
-- Each plugin contains exactly one skill with the same name. The manifests,
-  rather than a separately maintained count, define the installable catalog.
+- A plugin contains one skill with the same name, or a family of skills from one
+  source that are used together (`k12-teacher-skills`, `emil-skills`,
+  `brave-search`). Each skill directory name matches its `name` frontmatter and
+  is unique across the repository. The manifests, rather than a separately
+  maintained count, define the installable catalog. Changing plugin IDs or
+  grouping is a breaking change: document the migration in INSTALL.md and
+  advance the synchronized version.
 - `plugins/*/plugin.json` provides Agent Plugins v1 metadata;
   `plugins/*/.codex-plugin/plugin.json` and `.agents/plugins/marketplace.json`
   serve Codex/ChatGPT; `plugins/*/skills/` supports direct skill discovery.
-- Claude uses `plugins/*/.claude-plugin/plugin.json`, the three
-  `.claude-plugins/*/.claude-plugin/plugin.json` adapters, and
+- Claude uses `plugins/*/.claude-plugin/plugin.json`, the
+  `.claude-plugins/emil-skills/.claude-plugin/plugin.json` adapter, and
   `.claude-plugin/marketplace.json`. Keep names, versions, source paths and
   skill entry points synchronized across these manifests.
 - `pick-ui-library`, `prototype` and `review-animations` require
   `policy.allow_implicit_invocation: false` in `agents/openai.yaml`. Preserve
   their upstream Markdown bodies and documented frontmatter adaptations,
   including the explicit-only sentence in the review description.
-- Their `.claude-plugins/` skill mirrors retain upstream
-  `disable-model-invocation: true` and remain byte-identical to the pinned
-  source trees. The Claude marketplace must point to these mirrors.
+- `.claude-plugins/emil-skills/skills/` holds all Emil skills byte-identical to
+  the pinned source trees, so those three keep upstream
+  `disable-model-invocation: true`. The Claude marketplace must point to this
+  mirror, and its skill set must match `plugins/emil-skills/skills/`.
 
 ## Preserve sources and licenses
 
@@ -32,8 +38,14 @@ Do not infer redistribution permission from a manifest or the repository GPL.
   license frontmatter, SPDX references and NOTICE files. Any future local change
   needs a prominent modification notice and a NOTICE update. Optional upstream
   `.mcp.json` configuration is excluded; preserve the connector-free fallback.
-- Emil Kowalski's skills retain both MIT license copies and original frontmatter
-  except for the three documented invocation adaptations.
+- Emil Kowalski's skills retain MIT license copies at the plugin root and in each
+  skill directory, and original frontmatter except for the three documented
+  invocation adaptations.
+- `landing-page-design` and the `brave-search` skills are verbatim MIT imports:
+  each SKILL.md is byte-identical to the pinned upstream, with LICENSE copies at
+  the plugin root and in each skill directory. Upstream READMEs, setup guides,
+  tests, workflows, the `search` alias of `bx` and the ClawHub variant are not
+  imported.
 - `design-taste-frontend` preserves every upstream `skills/taste-skill/` file
   byte-for-byte under the renamed directory, with MIT licenses added at plugin
   and skill roots. Only the default skill is included.
@@ -77,7 +89,8 @@ tools, adopt dependencies or invoke a model as a side effect of a static review.
 For C++ template changes, compile the changed example with an available C++14
 compiler and run hand-checked input; keep binaries outside the package.
 
-`.gitattributes` fixes LF. The four K-12 trees alone disable trailing-space and
-blank-at-EOF diagnostics to preserve upstream bytes; keep that exception narrow.
+`.gitattributes` fixes LF. The four K-12 trees disable trailing-space and
+blank-at-EOF diagnostics, and the two copies of Emil's `write-swift/SKILL.md`
+disable blank-at-EOF, to preserve upstream bytes; keep these exceptions narrow.
 The no-blank-line/no-final-newline rule applies to generated OJ C++ solutions,
 not to Markdown.

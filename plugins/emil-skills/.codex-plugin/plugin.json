@@ -1,0 +1,41 @@
+{
+  "name": "emil-skills",
+  "version": "0.6.0",
+  "description": "Emil Kowalski's design engineering skills: web and native animation, UI polish, review and audit, performance, platform design, Swift, and library choices.",
+  "author": {
+    "name": "Emil Kowalski",
+    "url": "https://github.com/emilkowalski"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "animation",
+    "design-engineering",
+    "ui",
+    "react",
+    "swift"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Emil Kowalski Skills",
+    "shortDescription": "Design engineering and animation skills",
+    "longDescription": "Sixteen skills from Emil Kowalski for building, reviewing and auditing polished interfaces: web and React Native animation, motion removal and performance, UI polish, stress testing, mobile web behavior, Apple-style design, Swift, Sonner toasts and frontend library choices.",
+    "developerName": "Emil Kowalski",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ShanireZ/Aptinery",
+    "defaultPrompt": [
+      "Review the animations in this component.",
+      "Find the places in this interface that should animate.",
+      "Remove the animations this app does not need."
+    ],
+    "brandColor": "#7C3AED",
+    "screenshots": []
+  }
+}

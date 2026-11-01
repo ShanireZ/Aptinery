@@ -1,0 +1,20 @@
+{
+  "name": "k12-teacher-skills",
+  "version": "0.6.0",
+  "description": "K-12 teacher skills: standards-aligned lesson plans, lesson differentiation, lesson prep, and misconception-based checks for understanding.",
+  "author": {
+    "name": "Anthropic / Learning Commons",
+    "url": "https://github.com/anthropics/k12-teacher-skills"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "education",
+    "k12",
+    "lesson-planning",
+    "formative-assessment"
+  ],
+  "skills": "./skills/"
+}

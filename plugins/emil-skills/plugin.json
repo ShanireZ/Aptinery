@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "emil-skills",
+  "version": "0.6.0",
+  "description": "Emil Kowalski's design engineering skills: web and native animation, UI polish, review and audit, performance, platform design, Swift, and library choices.",
+  "author": {
+    "name": "Emil Kowalski",
+    "url": "https://github.com/emilkowalski"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "animation",
+    "design-engineering",
+    "ui",
+    "react",
+    "swift"
+  ],
+  "skills": "./skills/"
+}

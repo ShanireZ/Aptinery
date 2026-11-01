@@ -1,0 +1,39 @@
+{
+  "name": "landing-page-design",
+  "version": "0.6.0",
+  "description": "Build high-converting landing pages: intake questions, page structure, conversion copy, SEO and a strict visual system for type, spacing and motion.",
+  "author": {
+    "name": "Elaya",
+    "url": "https://github.com/elayadesign"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "landing-page",
+    "copywriting",
+    "seo",
+    "design"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Landing Page Design",
+    "shortDescription": "Design high-converting landing pages",
+    "longDescription": "Plan and build a landing page from intake questions through page structure, layout, conversion copy and SEO, applying a strict visual system for typography, spacing, corner radius, backgrounds, hero layout, icons and motion.",
+    "developerName": "Elaya",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ShanireZ/Aptinery",
+    "defaultPrompt": [
+      "Build a high-converting landing page for my product.",
+      "Review this landing page's structure, copy and visual system."
+    ],
+    "brandColor": "#CA8A04",
+    "screenshots": []
+  }
+}

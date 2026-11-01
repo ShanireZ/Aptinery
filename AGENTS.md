@@ -21,8 +21,8 @@ development authority; the machine identifier is `aptinery`.
 
 Keep plugin IDs, synchronized manifest versions, skill paths and invocation
 policies consistent. Preserve fixed upstream copies and licenses byte-for-byte
-except for adaptations explicitly documented in NOTICE. The three Claude source
-mirrors are distribution adapters, not additional products.
+except for adaptations explicitly documented in NOTICE. The Claude source
+mirror under `.claude-plugins/` is a distribution adapter, not an additional product.
 
 Keep each document's prose consistent with its intended language: English
 editions use English, and localized editions use their respective languages.

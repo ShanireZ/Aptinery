@@ -1,0 +1,38 @@
+{
+  "name": "brave-search",
+  "version": "0.6.0",
+  "description": "Brave Search API skills for web, news, image and video search, LLM context, AI answers, local places and query helpers.",
+  "author": {
+    "name": "Brave Software",
+    "url": "https://github.com/brave"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "search",
+    "web-search",
+    "rag",
+    "brave"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Brave Search",
+    "shortDescription": "Search the web with the Brave Search API",
+    "longDescription": "Twelve Brave Search API skills: an all-in-one bx command, web, news, image and video search, LLM grounding context, AI answers, local place search and details, spellcheck and query suggestions. They require a Brave Search API key.",
+    "developerName": "Brave Software",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "websiteURL": "https://github.com/ShanireZ/Aptinery",
+    "defaultPrompt": [
+      "Search the web for the latest documentation on this error.",
+      "Find recent news about this topic and summarize it with sources."
+    ],
+    "brandColor": "#FB542B",
+    "screenshots": []
+  }
+}

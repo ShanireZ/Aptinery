@@ -27,15 +27,17 @@ upstream commit a81dbca07f2217b7103e510c0f13f8d5b017afc9
 Copyright (c) 2026 Emil Kowalski
 
 The 16 imported design and engineering skills remain licensed under the MIT
-License. Each plugin root and skill directory contains the applicable LICENSE.
+License. The `emil-skills` plugin root and each skill directory contain the
+applicable LICENSE.
 
 For cross-client compatibility, the primary copies of `pick-ui-library`,
 `prototype`, and `review-animations` translate Claude's
 `disable-model-invocation: true` frontmatter into Codex's
 `agents/openai.yaml` invocation policy; `review-animations` also adds the same
 explicit-only boundary to its description. Their Markdown bodies are otherwise
-unchanged. Exact upstream copies are retained under `.claude-plugins/` and are
-the sources used by the Claude marketplace.
+unchanged. Exact upstream copies of all 16 skills are retained under
+`.claude-plugins/emil-skills/` and are the sources used by the Claude
+marketplace.
 
 This distribution also includes material copied from:
 https://github.com/adrianpunk/Punk-Skill
@@ -228,3 +230,51 @@ and placeholders are unchanged. The META.md reference link to the upstream
 screenshot is replaced by a plain-text note because that file is not imported.
 The upstream README files and screenshot are not imported. These localized and
 adapted files are not verbatim upstream copies.
+
+This distribution also includes material copied from:
+https://github.com/elayadesign/ai-design-skills
+upstream commit 4fdcdd52f15eda09da1257c303c860c13e0c879f
+
+Copyright (c) 2026 Elaya
+
+The `landing-page-design` skill remains licensed under the MIT License. Its
+plugin root and skill directory contain the applicable LICENSE.
+
+On 2026-11-01, Aptinery imported only this skill. Its SKILL.md is byte-identical
+at the pinned commit, and the LICENSE copies are identical to the upstream
+LICENSE. Client manifests are added locally. The upstream README, validation
+script, tests and workflow files are not imported.
+
+This distribution also includes material copied from:
+https://github.com/brave/brave-search-skills
+upstream commit 62793e0c49ed2fc7c8f0c99a8ab8898abdf32a1d
+
+Copyright (c) 2026 Brave Software
+
+The 12 imported Brave Search API skills (answers, bx, images-search, llm-context,
+local-descriptions, local-place-search, local-pois, news-search, spellcheck,
+suggest, videos-search and web-search) remain licensed under the MIT License.
+The `brave-search` plugin root and each skill directory contain the applicable
+LICENSE.
+
+On 2026-11-01, Aptinery imported the 12 skills as one plugin. Every SKILL.md is
+byte-identical at the pinned commit, and the LICENSE copies are identical to the
+upstream LICENSE. Client manifests are added locally. Upstream's `search`
+symlink, which is an alias of `bx`, the ClawHub `bx-search` variant, the README,
+the API key setup guide and the workflow files are not imported. The skills
+call the Brave Search API with the user's own key; the `bx` skill also tells the
+user how to install the separate `bx` command-line tool, which is not part of
+this distribution.
+
+On 2026-11-01, the 16 Emil Kowalski plugins were merged into one `emil-skills`
+plugin, and the Claude mirror was rebuilt as one `.claude-plugins/emil-skills/`
+tree holding all 16 skills at the pinned commit. No skill file changed in the
+merge: apart from the added license copies, the three documented invocation
+adaptations and their `agents/openai.yaml` files, every file matches the pinned
+upstream.
+
+On 2026-11-01, the four K-12 plugins were merged into one `k12-teacher-skills`
+plugin, matching how the upstream repository packages them as one plugin with
+four skills. The plugin root carries the upstream LICENSE and NOTICE, which are
+byte-identical to the files at the pinned commit. No skill file changed in the
+merge: all 48 files of the four skill trees match the pinned upstream.
