@@ -22,11 +22,11 @@ directories contain the applicable LICENSE and reference NOTICE files.
 
 This distribution also includes material copied from:
 https://github.com/emilkowalski/skills
-upstream commit 2d228630ba1446365f614a108cb8252f1feda202
+upstream commit a81dbca07f2217b7103e510c0f13f8d5b017afc9
 
 Copyright (c) 2026 Emil Kowalski
 
-The 15 imported design and engineering skills remain licensed under the MIT
+The 16 imported design and engineering skills remain licensed under the MIT
 License. Each plugin root and skill directory contains the applicable LICENSE.
 
 For cross-client compatibility, the primary copies of `pick-ui-library`,
@@ -39,7 +39,10 @@ the sources used by the Claude marketplace.
 
 This distribution also includes material copied from:
 https://github.com/adrianpunk/Punk-Skill
-upstream commit c9ad7a3745e07060c50270141efed418a0cd04d6
+upstream commit 593ec9065b33e0a8ec8b86070622f63a7d9d9e44
+
+Previous import pin (superseded by the 2026-11-01 refresh):
+c9ad7a3745e07060c50270141efed418a0cd04d6
 
 Earlier import pin (superseded by the 2026-09-29 refresh):
 a52e4456b8a4ccd4312069d6bc3755e2894dbc93
@@ -165,7 +168,7 @@ in place; no additional runtime or license adaptations are made.
 
 This distribution also includes material copied from:
 https://github.com/Leonxlnx/taste-skill
-upstream commit 6010f91a9935f1c167dfc500fb1a475681892e6b (tasteskill 2.1.4)
+upstream commit 12af471f627f866411b4bd785b19646d3672784c (tasteskill 2.1.5)
 
 Copyright (c) 2026 Leonxlnx
 
@@ -183,8 +186,8 @@ images are not imported. As stated upstream, library photographs are served
 by Lorem Picsum from Unsplash; pictures, footage and fonts the skill fetches
 at run time keep their own licenses.
 
-On 2026-10-24, the default taste-skill import was refreshed to the upstream
-commit recorded above (2.1.4). Only scripts/lib/cdp.mjs changed in the selected
+On 2026-10-24, the default taste-skill import was refreshed to upstream
+commit 6010f91a9935f1c167dfc500fb1a475681892e6b (2.1.4). Only scripts/lib/cdp.mjs changed in the selected
 skill tree: browser-profile cleanup now checks its owner host and process IDs.
 All 38 upstream skill files remain byte-identical; the directory rename and
 the added license copies and client manifests are preserved.
@@ -194,3 +197,34 @@ explanatory text, selector, detailed composition prompts and review guidance
 into English. The 32 systems, source attribution, structural constraints,
 image/HTML guidance and invocation boundaries are preserved. Original article
 titles in this notice remain in their source language.
+
+On 2026-11-01, three upstream pins were advanced. Emil's moved to
+a81dbca07f2217b7103e510c0f13f8d5b017afc9, adding remove-animations verbatim
+with MIT license copies; existing Emil skill bodies and the three invocation
+adaptations are unchanged, and the upstream README and ui-cheatsheet.md are not
+imported. taste-skill moved to 12af471f627f866411b4bd785b19646d3672784c
+(2.1.5): seven files in the selected skill tree changed and
+scripts/lib/inspection-files.mjs was added, so all 39 upstream skill files
+remain byte-identical under the renamed directory with the local license copies
+and client manifests preserved. Punk's moved to
+593ec9065b33e0a8ec8b86070622f63a7d9d9e44, which adds the text-free
+classical-oil-minimal-metaphor cover style and the text_policy: none handling in
+the punk-cover workflow. No license file changed upstream between the two Punk
+pins, so the license status recorded above is unchanged. K-12
+(31fd6dbb0c07cb50bb3ce7f62a4135a393bd0e8c) and OneTake
+(013a61ac8d98883c73733f59c06e49e9ba444f14) did not change upstream.
+
+The Punk refresh was merged onto the existing local punk-cover adaptation. The
+upstream SKILL.md, cover-prompt-blueprint.md and style-catalog.md additions are
+preserved. Locally, the text-free exception in SKILL.md adds one sentence that
+the approved-visible-copy manifest is none, no text-rendering path applies, and
+the generated-text status is passed only when the final artifact shows no
+letters, pseudo-text, logos or watermarks. SKILL.md also accepts the Taiwan
+Traditional Chinese display name of the new style, and its catalog entries use
+the same Taiwan Traditional Chinese display names as neighboring entries. The
+new style's META.md and STYLE.md prose is localized to Taiwan Traditional
+Chinese like the existing styles; the YAML metadata, English anchors, style ID
+and placeholders are unchanged. The META.md reference link to the upstream
+screenshot is replaced by a plain-text note because that file is not imported.
+The upstream README files and screenshot are not imported. These localized and
+adapted files are not verbatim upstream copies.

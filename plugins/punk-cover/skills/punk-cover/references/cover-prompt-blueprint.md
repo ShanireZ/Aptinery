@@ -13,6 +13,10 @@ proper nouns unless translation was explicitly requested.
 
 An image prompt cannot guarantee exact rendered text. When exact copy is required, this blueprint describes a no-text base artwork plus a deterministic typography layer. The workflow must validate the actual final pixels separately.
 
+## Text-free compilation
+
+If the selected `META.md` declares `text_policy: none`, the structure below is conditional: omit title hierarchy, title legibility requirements, image-text fusion, typography rules, supporting labels, and the "missing title" negative constraint. Replace them with an explicit prohibition on all visible text, letters, logos, and watermarks. Treat the topic and core meaning as semantic input only, and judge the final cover by its visual metaphor. Do not leave contradictory title instructions anywhere in the compiled prompt. Retain composition, ratio resolution, material, color, and single-image output rules.
+
 ## Required Final Prompt Structure
 
 ```text

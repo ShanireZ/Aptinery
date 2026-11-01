@@ -2,9 +2,10 @@ punk-cover
 
 This package includes material copied from:
 https://github.com/adrianpunk/Punk-Skill
-upstream commit 3fe93635e8842ca4f77ae472b8bb1c5a35b4a7d8
+upstream commit 593ec9065b33e0a8ec8b86070622f63a7d9d9e44
 
-Earlier import pin (superseded): a52e4456b8a4ccd4312069d6bc3755e2894dbc93
+Previous import pins (superseded): c9ad7a3745e07060c50270141efed418a0cd04d6,
+3fe93635e8842ca4f77ae472b8bb1c5a35b4a7d8, a52e4456b8a4ccd4312069d6bc3755e2894dbc93
 
 The upstream README credits AdrianPunk for prompt design and style direction
 and jinchenma94 for repository maintenance.
@@ -39,6 +40,17 @@ On 2026-09-29, this distribution updated the vendored material to
 adaptation onto that base. Upstream localization, platform-catalog.md, ratio
 resolution, and the new cover styles (black-white-etching-editorial-cover,
 minimal-light-tech, retro-futurism) are preserved.
+
+On 2026-11-01, this distribution updated the vendored material to
+593ec9065b33e0a8ec8b86070622f63a7d9d9e44 and re-merged the same local
+adaptation onto that base. Upstream's text-free style handling
+(text_policy: none) and the new classical-oil-minimal-metaphor style are
+preserved. The local text-free exception also states that the approved
+visible-copy manifest is none and that the generated-text status is passed
+only when the final artifact shows no letters, pseudo-text, logos or watermarks.
+The new style's prose is localized to Taiwan Traditional Chinese like the other
+styles, and its reference link to a screenshot that is not imported is replaced
+by a plain-text note.
 
 These changes address the risk that an image model may misspell, omit, invent,
 or crop visible text even when the intended wording is correct in the prompt.

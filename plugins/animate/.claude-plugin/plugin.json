@@ -1,6 +1,6 @@
 {
   "name": "animate",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Build polished web animations with deliberate motion, easing, duration, interruption, and exit behavior.",
   "author": {
     "name": "Emil Kowalski",

@@ -32,6 +32,7 @@ commands and [NOTICE](../NOTICE) for pinned sources and adaptations.
 | [`improve-animations`](../plugins/improve-animations/skills/improve-animations/SKILL.md) | Audit codebase animations and produce an actionable improvement plan | Emil Kowalski; MIT |
 | [`find-animation-opportunities`](../plugins/find-animation-opportunities/skills/find-animation-opportunities/SKILL.md) | Find interface areas that benefit from motion | Emil Kowalski; MIT |
 | [`animation-performance`](../plugins/animation-performance/skills/animation-performance/SKILL.md) | Diagnose frame drops, rendering costs, main-thread contention and React animation bottlenecks | Emil Kowalski; MIT |
+| [`remove-animations`](../plugins/remove-animations/skills/remove-animations/SKILL.md) | Find animations an interface does not need and remove them, then clean up what they leave behind | Emil Kowalski; MIT |
 | [`animation-vocabulary`](../plugins/animation-vocabulary/skills/animation-vocabulary/SKILL.md) | Identify precise terms for vaguely described animation effects | Emil Kowalski; MIT |
 | [`apple-design`](../plugins/apple-design/skills/apple-design/SKILL.md) | Apply Apple interface and fluid-motion principles to the web | Emil Kowalski; MIT |
 | [`write-swift`](../plugins/write-swift/skills/write-swift/SKILL.md) | Write and review modern Swift, concurrency, performance and tests | Emil Kowalski; MIT |

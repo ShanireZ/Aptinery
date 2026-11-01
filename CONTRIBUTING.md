@@ -42,7 +42,7 @@ Do not infer redistribution permission from a manifest or the repository GPL.
   eight whitespace transformations. Runtime libraries, scripts, references,
   templates, fonts, gallery and case README files are included; large example
   films and promotional media remain upstream.
-- `punk-cover` retains its existing selected content and 33 style directories.
+- `punk-cover` retains its existing selected content and 34 style directories.
   `../../styles/{style-id}` is a live dependency. Its Taiwan Traditional Chinese
   localization and documented cover adaptations are not a verbatim upstream
   import. Keep their provenance distinction. The current upstream restricts

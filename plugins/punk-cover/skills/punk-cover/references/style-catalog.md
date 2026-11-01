@@ -14,6 +14,7 @@ style atom.
 | --- | --- | --- | --- | --- |
 | 黑白極簡概念 | `black-white-minimal-concept` | `styles/black-white-minimal-concept/META.md` | `styles/black-white-minimal-concept/STYLE.md` | Abstract, editorial, philosophical, strategic, restrained covers with strong typography and visual metaphor. |
 | 黑白復古蝕刻版畫封面 | `black-white-etching-editorial-cover` | `styles/black-white-etching-editorial-cover/META.md` | `styles/black-white-etching-editorial-cover/STYLE.md` | Monochrome engraving, etching, antique scientific-illustration, surreal editorial, and philosophical covers built around one strong metaphor. |
+| 古典油畫 · 極簡視覺隱喻 | `classical-oil-minimal-metaphor` | `styles/classical-oil-minimal-metaphor/META.md` | `styles/classical-oil-minimal-metaphor/STYLE.md` | Purely visual editorial covers translating contemporary ideas into one poetic Old Master oil-painting collage on pure white, without text. |
 | 語義轉譯極簡 | `semantic-minimal-translation` | `styles/semantic-minimal-translation/META.md` | `styles/semantic-minimal-translation/STYLE.md` | One word, short phrase, slogan, or concept that needs a clever minimal visual translation. |
 | 復古手撕拼貼 | `retro-torn-collage` | `styles/retro-torn-collage/META.md` | `styles/retro-torn-collage/STYLE.md` | Social posts, cultural topics, controversy, growth, street energy, retro editorial covers. |
 | 方塊世界 | `block-world` | `styles/block-world/META.md` | `styles/block-world/STYLE.md` | Playful tutorials, tools, systems, building, upgrade, learning, game-like or constructive themes. |
@@ -83,6 +84,7 @@ style atom.
 | `kimi-stlye` | Kimi Style | AI、研究、產品、材料、系統和創意專案的俯視檔案桌。 |
 | `minimal-light-tech` | Minimal Light Tech | 輕科技、工具、產品和教學的純白留白與漸變錨點。 |
 | `minimal-visual-metaphor` | Minimal Visual Metaphor | 商業科技、AI、產品、組織、工作流和系統變化。 |
+| `classical-oil-minimal-metaphor` | Classical Oil Painting Minimal Metaphor | 純白留白、彩色古典油畫、單一巧妙隱喻的無字概念封面。 |
 
 ## Non-Cover Style Atoms
 
@@ -119,3 +121,5 @@ These reusable style atoms exist in `styles/`, but are not part of the default `
 - For a single abstract term, prefer `语义转译极简`, `复古油墨点阵隐喻`, `黑白极简概念`, or `法式极简墨线海报`.
 - For architecture, landmarks, cities, travel posters, or place-focused essays, prefer `先锋复古建筑海报`.
 - For events, sports, launches, city-scale topics, or covers needing maximum first-glance impact, prefer `彩色新构成主义巨构海报`.
+
+- For text-free philosophical, cultural, or contemporary-idea covers with classical oil-painting cutouts and one poetic relationship, prefer `古典油画 · 极简视觉隐喻`.
