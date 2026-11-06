@@ -1,7 +1,7 @@
 {
   "name": "design-taste-frontend",
-  "version": "0.6.0",
-  "description": "Art direction for websites, product pages, dashboards and app screens, with researched directions, real pictures and a real-browser check against generic AI pages.",
+  "version": "0.7.0",
+  "description": "tasteskill 2.5.0 from Leonxlnx: a page system and art direction for professional company websites, with real product UI, vetted photographs, brand icons and real-browser consistency checks.",
   "author": {
     "name": "Leonxlnx",
     "url": "https://github.com/Leonxlnx"
@@ -20,7 +20,7 @@
   "interface": {
     "displayName": "Taste Skill",
     "shortDescription": "Art direction for pages and app screens",
-    "longDescription": "tasteskill v2 from Leonxlnx/taste-skill: researched art directions, real pictures from open collections and a real-browser inspector for landing pages, product pages, dashboards and app screens. Requires Node 22+ and Chrome, Edge or Chromium; finding pictures needs network access.",
+    "longDescription": "tasteskill 2.5.0 from Leonxlnx/taste-skill: one page system for professional company websites, with bundled photographs, brand icons, product UI fragments, layout and effect packs, and a real-browser consistency checker. Requires Node 22+ and Chrome, Edge or Chromium; the package bundles its photographs and icons.",
     "developerName": "Leonxlnx",
     "category": "Design",
     "capabilities": [

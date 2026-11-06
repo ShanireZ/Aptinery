@@ -22,11 +22,11 @@ directories contain the applicable LICENSE and reference NOTICE files.
 
 This distribution also includes material copied from:
 https://github.com/emilkowalski/skills
-upstream commit a81dbca07f2217b7103e510c0f13f8d5b017afc9
+upstream commit c8a79627b59d72d764d6ab6f2c87c09a48169833
 
 Copyright (c) 2026 Emil Kowalski
 
-The 16 imported design and engineering skills remain licensed under the MIT
+The 17 imported design and engineering skills remain licensed under the MIT
 License. The `emil-skills` plugin root and each skill directory contain the
 applicable LICENSE.
 
@@ -41,7 +41,10 @@ marketplace.
 
 This distribution also includes material copied from:
 https://github.com/adrianpunk/Punk-Skill
-upstream commit 593ec9065b33e0a8ec8b86070622f63a7d9d9e44
+upstream commit 15b816cea5dcc7a3b028561d34604246369939b0
+
+Previous import pin (superseded by the 2026-11-06 refresh):
+593ec9065b33e0a8ec8b86070622f63a7d9d9e44
 
 Previous import pin (superseded by the 2026-11-01 refresh):
 c9ad7a3745e07060c50270141efed418a0cd04d6
@@ -143,7 +146,10 @@ It does not claim that the whole current Punk import is verbatim upstream.
 
 This distribution also includes material copied from:
 https://github.com/feitangyuan/onetake
-upstream commit 013a61ac8d98883c73733f59c06e49e9ba444f14
+upstream commit abb6d17279cdc749e27e99aa534a062d8fd01ced
+
+Previous import pin (superseded by the 2026-11-06 refresh):
+013a61ac8d98883c73733f59c06e49e9ba444f14
 
 Required Notice: Copyright (c) 2026 Patrick. onetake is free for noncommercial use only.
 
@@ -170,7 +176,7 @@ in place; no additional runtime or license adaptations are made.
 
 This distribution also includes material copied from:
 https://github.com/Leonxlnx/taste-skill
-upstream commit 12af471f627f866411b4bd785b19646d3672784c (tasteskill 2.1.5)
+upstream commit 9b4bf937a1f69348126959c15d2f99a73e65699b (tasteskill 2.5.0)
 
 Copyright (c) 2026 Leonxlnx
 
@@ -233,12 +239,13 @@ adapted files are not verbatim upstream copies.
 
 This distribution also includes material copied from:
 https://github.com/elayadesign/ai-design-skills
-upstream commit 4fdcdd52f15eda09da1257c303c860c13e0c879f
+upstream commit 456d9e0d3e2d84c748bb143c6ca3d90c45e16213
 
 Copyright (c) 2026 Elaya
 
-The `landing-page-design` skill remains licensed under the MIT License. Its
-plugin root and skill directory contain the applicable LICENSE.
+The `landing-page-design` and `figma-designer` skills remain licensed under the
+MIT License. Their plugin roots and skill directories contain the applicable
+LICENSE.
 
 On 2026-11-01, Aptinery imported only this skill. Its SKILL.md is byte-identical
 at the pinned commit, and the LICENSE copies are identical to the upstream
@@ -278,3 +285,67 @@ plugin, matching how the upstream repository packages them as one plugin with
 four skills. The plugin root carries the upstream LICENSE and NOTICE, which are
 byte-identical to the files at the pinned commit. No skill file changed in the
 merge: all 48 files of the four skill trees match the pinned upstream.
+
+On 2026-11-06, five upstream pins were advanced and two new skills were
+imported. K-12 (31fd6dbb0c07cb50bb3ce7f62a4135a393bd0e8c) and Brave
+(62793e0c49ed2fc7c8f0c99a8ab8898abdf32a1d) did not change upstream.
+
+Emil's pin moved to c8a79627b59d72d764d6ab6f2c87c09a48169833 (two commits).
+Six imported skill files changed: `animate/SKILL.md`,
+`animation-performance/SKILL.md`, `emil-design-eng/SKILL.md`,
+`improve-animations/AUDIT.md`, `review-animations/SKILL.md` and
+`review-animations/STANDARDS.md`. They now state that from `motion` 14.2 the
+`x`, `y`, `scale` and `rotate` shorthands are hardware-accelerated on HTML
+elements, that layout animations still run on the main thread, and that earlier
+versions need the full `transform` string; no other editorial change is
+involved. The new upstream `choreograph` skill was imported verbatim as the
+seventeenth skill with an MIT license copy, and the local explicit-invocation
+description adaptation on `review-animations` was re-applied to its new
+upstream base. The `.claude-plugins/emil-skills/` mirror holds every upstream
+skill file byte-for-byte at the new pin and now includes `choreograph`.
+Upstream's README and `performance-cheatsheet.md` are still not imported.
+
+taste-skill moved from 2.1.5 (12af471) to 2.5.0
+(9b4bf937a1f69348126959c15d2f99a73e65699b, 65 commits). 2.5.0 is a complete
+rebuild of `design-taste-frontend`: the 2.1.x direction-sheet, app-screen and
+scene pipeline was replaced by a one-page system (`SKILL.md`,
+`assets/starter.html`, `assets/system.css`, `assets/system.js` and
+`assets/{layout,components,diagrams,effects,moments,objects,photos,icons,ui,scenes,backgrounds,motion}/`),
+with new references, library data and scripts. All 1,617 upstream
+`skills/taste-skill/` files are byte-identical at the new pin under the renamed
+directory; the 33 files of the 2.1.5 tree that upstream removed, including
+`scripts/draw.mjs`, `assets.mjs`, `lint.mjs`, `inspect.mjs`, `scenes.mjs`
+and the old `library/` JSON files, are gone. The license copies and client
+manifests added locally are unchanged. The skill now also bundles media:
+photographs whose licences are recorded in `assets/photos/photos.json` and the
+`assets/*/credits.json` files (Unsplash License and CC0-1.0), and brand,
+interface and file-type icons from gilbarbara/logos and Simple Icons (CC0-1.0)
+and Lucide (MIT), whose per-file source, licence and trademark flag are
+recorded in `assets/icons/**/icons-credits.json`. Bundled media keep their own
+terms: neither the repository GPL nor the skill's MIT licence relicenses them,
+and brand marks remain trademarks of their owners. Fonts are not bundled; pages
+load Google Fonts at run time.
+
+Elaya's repository moved to 456d9e0d3e2d84c748bb143c6ca3d90c45e16213 (three
+commits). The imported `landing-page-design` SKILL.md is unchanged. The new
+upstream `figma-designer` skill is imported verbatim as its own plugin, with
+MIT license copies and client manifests. It adds design rules on top of the
+Figma MCP and the official Figma skills (`figma-use`, `figma-generate-design`,
+`figma-generate-library`), which are not part of this distribution. The
+upstream README and SlopScan banner are not imported.
+
+Punk's pin moved to 15b816cea5dcc7a3b028561d34604246369939b0 (four commits that
+only update the author biography in `README.md` and `README.en.md`); the
+selected `punk-cover`, style and shared material did not change. OneTake's pin
+moved to abb6d17279cdc749e27e99aa534a062d8fd01ced (one commit that only rewrites
+the README to state that the free version is noncommercial and that onetake Pro
+adds a commercial licence and the films' sources); its imported runtime,
+templates, fonts and licenses did not change, and the recorded commercial-use
+limitation above is unchanged.
+
+Verification for this refresh compared every imported file with the upstream
+Git objects at the new pins by committed blob ID, including the line-ending
+and whitespace rules in `.gitattributes`; the only differences from upstream
+are the documented local additions and the `review-animations` invocation
+adaptation. `git diff --check`, JSON manifest parsing, YAML metadata parsing,
+skill name/path checks and version synchronization were also run.

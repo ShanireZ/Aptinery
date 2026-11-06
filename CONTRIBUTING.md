@@ -48,7 +48,13 @@ Do not infer redistribution permission from a manifest or the repository GPL.
   imported.
 - `design-taste-frontend` preserves every upstream `skills/taste-skill/` file
   byte-for-byte under the renamed directory, with MIT licenses added at plugin
-  and skill roots. Only the default skill is included.
+  and skill roots. Only the default skill is included. Its bundled photographs
+  and brand/interface icons keep the licenses recorded in its own credits JSON
+  files; do not relabel them.
+- `figma-designer` is a verbatim MIT import of Elaya's upstream skill, with
+  LICENSE copies and client manifests added locally. It depends on the Figma
+  MCP and the official Figma skills, which are not bundled; keep that
+  requirement documented in INSTALL.md.
 - OneTake retains its PolyForm Noncommercial license at both roots, its Required
   Notice, and font licenses. Preserve the documented description/path note and
   eight whitespace transformations. Runtime libraries, scripts, references,

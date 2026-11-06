@@ -26,7 +26,7 @@ are used together are grouped into one plugin:
 | Plugin | Skills |
 | --- | --- |
 | `k12-teacher-skills` | The four K-12 skills below |
-| `emil-skills` | The 16 Emil Kowalski skills below |
+| `emil-skills` | The 17 Emil Kowalski skills below |
 | `brave-search` | The 12 Brave Search API skills below |
 
 Marketplace commands take the plugin name; the skills CLI takes the skill name
@@ -57,11 +57,13 @@ and installs any single skill from a group.
 | [`pick-ui-library`](../plugins/emil-skills/skills/pick-ui-library/SKILL.md) | Choose a suitable frontend library from a curated list | Emil Kowalski; MIT |
 | [`prototype`](../plugins/emil-skills/skills/prototype/SKILL.md) | Build distinct UI variants and compare them in a visual picker | Emil Kowalski; MIT |
 | [`ask-sonner`](../plugins/emil-skills/skills/ask-sonner/SKILL.md) | Install, configure, style and troubleshoot Sonner toasts | Emil Kowalski; MIT |
+| [`choreograph`](../plugins/emil-skills/skills/choreograph/SKILL.md) | Coordinate several animating elements into one intentional motion: order, overlap and what stays still | Emil Kowalski; MIT |
 | [`punk-cover`](../plugins/punk-cover/skills/punk-cover/SKILL.md) | Create platform-sized article, social and editorial covers or reusable prompts | AdrianPunk and contributors; personal noncommercial terms, redistribution restricted |
 | [`punk-poster-layout`](../plugins/punk-poster-layout/skills/punk-poster-layout/SKILL.md) | Choose among 32 compositions for standalone posters, flyers, key visuals or single-canvas editorial sections when structural control is explicitly requested; ordinary websites/UI, generic heroes and platform covers do not trigger it by default | Based on AdrianPunk articles; adapted and packaged by Aptinery; GPL-3.0 |
 | [`onetake`](../plugins/onetake/skills/onetake/SKILL.md) | Create continuous launch films, trailers and narrated feature demos with continuity checks | Patrick / feitangyuan; PolyForm Noncommercial 1.0.0; commercial use requires a separate license |
-| [`design-taste-frontend`](../plugins/design-taste-frontend/skills/design-taste-frontend/SKILL.md) | Art direction for websites, product pages, dashboards and app screens, using researched directions, real stock images and browser checks | Leonxlnx; MIT |
+| [`design-taste-frontend`](../plugins/design-taste-frontend/skills/design-taste-frontend/SKILL.md) | Build professional company websites with one page system, real product UI, vetted photographs, brand icons and real-browser consistency checks | Leonxlnx; MIT |
 | [`landing-page-design`](../plugins/landing-page-design/skills/landing-page-design/SKILL.md) | Build high-converting landing pages with intake questions, page structure, conversion copy, SEO and a strict visual system | Elaya; MIT |
+| [`figma-designer`](../plugins/figma-designer/skills/figma-designer/SKILL.md) | Design screens, components and design systems in Figma through the Figma MCP with real tokens and a fixed visual system | Elaya; MIT; needs the Figma MCP and the official Figma skills |
 | [`answers`](../plugins/brave-search/skills/answers/SKILL.md) | Get AI-grounded answers with citations, from a single search to deep research | Brave Software; MIT; needs a Brave Search API key |
 | [`bx`](../plugins/brave-search/skills/bx/SKILL.md) | Search the web with the Brave Search CLI: grounded context, answers, news, images, videos and places | Brave Software; MIT; needs a Brave Search API key |
 | [`images-search`](../plugins/brave-search/skills/images-search/SKILL.md) | Search images with SafeSearch and up to 200 results | Brave Software; MIT; needs a Brave Search API key |
@@ -84,9 +86,14 @@ material retains its own licenses and attribution:
 - Emil Kowalski's design and engineering skills use MIT.
 - Brave Software's Brave Search API skills use MIT. They call the Brave Search API
   and need your own API key; the `bx` skill also needs the `bx` command-line tool.
-- Leonxlnx's `design-taste-frontend` (tasteskill v2) uses MIT. Pictures, footage
-  and fonts fetched at runtime retain their own licenses.
-- Elaya's `landing-page-design` uses MIT.
+- Leonxlnx's `design-taste-frontend` (tasteskill 2.5.0) uses MIT. The
+  photographs it bundles (Unsplash License, CC0-1.0) and its brand, interface
+  and file-type icons (CC0-1.0, MIT) keep the licenses recorded in its own
+  credits JSON files; brand marks remain trademarks. Pictures and fonts fetched
+  at runtime retain their own licenses.
+- Elaya's `landing-page-design` uses MIT. `figma-designer` also uses MIT; it
+  designs through the Figma MCP and the official Figma skills, which this
+  package does not include.
 - OneTake uses [PolyForm Noncommercial 1.0.0](../plugins/onetake/LICENSE), with
   separate font licenses. Commercial use requires an upstream commercial license;
   the repository GPL does not apply to this imported material.

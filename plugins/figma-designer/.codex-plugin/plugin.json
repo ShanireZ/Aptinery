@@ -1,0 +1,40 @@
+{
+  "name": "figma-designer",
+  "version": "0.7.0",
+  "description": "Design in Figma through the Figma MCP: real variables, text styles, auto layout and components on a fixed visual system.",
+  "author": {
+    "name": "Elaya",
+    "url": "https://github.com/elayadesign"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "figma",
+    "design-system",
+    "components",
+    "ui"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Figma Designer",
+    "shortDescription": "Design in Figma with real tokens and components",
+    "longDescription": "Design screens, components and design systems inside Figma through the Figma MCP, with real variable collections, text styles, auto layout and a fixed visual system (Tailwind type and radius scale, spacing tokens, two-layer colour tokens, button and state rules). Requires the Figma MCP and the official Figma skills that this skill builds on.",
+    "developerName": "Elaya",
+    "category": "Design",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ShanireZ/Aptinery",
+    "defaultPrompt": [
+      "Design this page in Figma with real variables and text styles.",
+      "Turn this mockup into Figma components in the project's design system.",
+      "Review this Figma file against a consistent token system."
+    ],
+    "brandColor": "#0D99FF",
+    "screenshots": []
+  }
+}

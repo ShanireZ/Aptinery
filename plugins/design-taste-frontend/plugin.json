@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "design-taste-frontend",
-  "version": "0.6.0",
-  "description": "Art direction for websites, product pages, dashboards and app screens, with researched directions, real pictures and a real-browser check against generic AI pages.",
+  "version": "0.7.0",
+  "description": "tasteskill 2.5.0 from Leonxlnx: a page system and art direction for professional company websites, with real product UI, vetted photographs, brand icons and real-browser consistency checks.",
   "author": {
     "name": "Leonxlnx",
     "url": "https://github.com/Leonxlnx"

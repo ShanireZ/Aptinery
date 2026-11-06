@@ -60,7 +60,7 @@ Emil Kowalski skill was also its own plugin: `emil-design-eng`,
 `apple-design`, `write-swift`, `break-ui`, `mobile-native`, `pick-ui-library`,
 `prototype` and `ask-sonner`. Those plugin IDs no longer exist. Remove them and
 install `k12-teacher-skills` or `emil-skills`, which contain all of these skills
-(`emil-skills` also adds `remove-animations`).
+(`emil-skills` also adds `remove-animations`, and 0.7.0 adds `choreograph`).
 Installing through the skills CLI by skill name is unaffected.
 
 ## OneTake runtime requirements
@@ -78,21 +78,33 @@ and `unidic-lite`. Usage remains in the skill and its references.
 
 The package includes runtime libraries, scripts, templates, fonts and their
 licenses, the gallery and case breakdowns. Large example films and promotional
-assets remain at the [pinned upstream](https://github.com/feitangyuan/onetake/tree/013a61ac8d98883c73733f59c06e49e9ba444f14/cases).
+assets remain at the [pinned upstream](https://github.com/feitangyuan/onetake/tree/abb6d17279cdc749e27e99aa534a062d8fd01ced/cases).
 Films and historical working files mentioned in a case breakdown are upstream
 case information, and are not necessarily included in this package.
 
 ## design-taste-frontend runtime requirements
 
-The scripts require Node.js 22 or later and an installed Chrome, Edge or
-Chromium browser. Set `CHROME_PATH` for a nonstandard browser location.
-The scripts do not install dependencies or require API keys; `assets.mjs`
-needs network access to search for and download stock images.
+tasteskill 2.5.0 requires Node.js 22 or later and an installed Chrome, Edge or
+Chromium browser; an existing `CHROME_PATH` selects a nonstandard browser
+location. The scripts drive the browser over the DevTools protocol and install
+nothing, and `ffmpeg` enables the photograph crops and WebP conversion. Pages
+load their fonts from Google Fonts at run time.
 
-Working files go into the target project's `.taste-skill/`. Draw history goes
-into `~/.taste-skill/history.json`, configurable with `TASTE_SKILL_HISTORY`.
+The skill ships its assets: a starter page, the system CSS and JS, and the
+layout, effect, component, diagram, photograph, icon, moment, scene and
+product-render packs. Dealt working files and the deal history go into the
+target project's `.taste-skill/` folder. Bundled photographs and icons keep the
+licences recorded in the skill's own credits JSON files.
+
 This distribution includes only the upstream default skill; classic variants
 and moved or retired image-generation stubs are excluded.
+
+## figma-designer requirements
+
+`figma-designer` works through the Figma MCP and adds design rules on top of
+the official Figma skills (`figma-use`, `figma-generate-design`,
+`figma-generate-library`), which are not bundled here. It installs nothing; a
+Figma MCP session and those skills must be available before it can edit a file.
 
 ## brave-search runtime requirements
 

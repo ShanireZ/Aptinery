@@ -1,7 +1,7 @@
 {
   "name": "emil-skills",
-  "version": "0.6.0",
-  "description": "Emil Kowalski's design engineering skills: web and native animation, UI polish, review and audit, performance, platform design, Swift, and library choices.",
+  "version": "0.7.0",
+  "description": "Emil Kowalski's design engineering skills: web and native animation, motion choreography, UI polish, review and audit, performance, platform design, Swift, and library choices.",
   "author": {
     "name": "Emil Kowalski",
     "url": "https://github.com/emilkowalski"
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "Emil Kowalski Skills",
     "shortDescription": "Design engineering and animation skills",
-    "longDescription": "Sixteen skills from Emil Kowalski for building, reviewing and auditing polished interfaces: web and React Native animation, motion removal and performance, UI polish, stress testing, mobile web behavior, Apple-style design, Swift, Sonner toasts and frontend library choices.",
+    "longDescription": "Seventeen skills from Emil Kowalski for building, reviewing and auditing polished interfaces: web and React Native animation, motion choreography, motion removal and performance, UI polish, stress testing, mobile web behavior, Apple-style design, Swift, Sonner toasts and frontend library choices.",
     "developerName": "Emil Kowalski",
     "category": "Design",
     "capabilities": [

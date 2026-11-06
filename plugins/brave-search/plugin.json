@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "brave-search",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Brave Search API skills for web, news, image and video search, LLM context, AI answers, local places and query helpers.",
   "author": {
     "name": "Brave Software",
