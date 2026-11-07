@@ -35,7 +35,7 @@ For cross-client compatibility, the primary copies of `pick-ui-library`,
 `disable-model-invocation: true` frontmatter into Codex's
 `agents/openai.yaml` invocation policy; `review-animations` also adds the same
 explicit-only boundary to its description. Their Markdown bodies are otherwise
-unchanged. Exact upstream copies of all 16 skills are retained under
+unchanged. Exact upstream copies of all 17 skills are retained under
 `.claude-plugins/emil-skills/` and are the sources used by the Claude
 marketplace.
 

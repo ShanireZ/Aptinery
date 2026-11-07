@@ -63,6 +63,10 @@ install `k12-teacher-skills` or `emil-skills`, which contain all of these skills
 (`emil-skills` also adds `remove-animations`, and 0.7.0 adds `choreograph`).
 Installing through the skills CLI by skill name is unaffected.
 
+`punk-avatar` left the distribution in 0.4.0, and Aptinery no longer updates
+it. If `punk-avatar@aptinery` is still installed, uninstall it; `punk-cover` and
+`punk-poster-layout` remain available.
+
 ## OneTake runtime requirements
 
 `onetake` uses the same installation entry points. From a repository checkout,
