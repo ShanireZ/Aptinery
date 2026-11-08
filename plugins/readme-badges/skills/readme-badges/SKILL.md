@@ -125,8 +125,8 @@ badges.
 
 ## 5. Wording
 
-- **Labels:** generic labels are lowercase — `license`, `version`, `ci`, `coverage`, `docs`,
-  `demo`, `status`, `platform`. Technology names keep their official casing — `Node.js`,
+- **Labels:** generic labels are lowercase — `license`, `distribution`, `version`, `ci`,
+  `coverage`, `docs`, `site`, `demo`, `status`, `platform`. Technology names keep their official casing — `Node.js`,
   `TypeScript`, `C++`, `PostgreSQL`. Labels stay under about 12 characters.
 - **Messages:** under about 20 characters. A runtime badge shows the major version or the
   enforced minimum (`19`, `22+`, `3.11+`, `14` for C++14) — never a full patch version unless the
@@ -140,8 +140,8 @@ badges.
 
 | Meaning | Color |
 |---|---|
-| License, version, docs, demo, platform and other neutral facts | `blue` |
-| Experimental, beta, maintenance | `yellow` or `orange` |
+| License, version, docs, site, demo, platform and other neutral facts | `blue` |
+| Restricted distribution, experimental, beta, maintenance | `yellow` or `orange` |
 | Deprecated, archived | `lightgrey` |
 | Runtime and framework badges | the brand hex from Simple Icons |
 
@@ -164,6 +164,9 @@ badges.
    that file. Non-SPDX distribution terms link to the README section that states them.
 4. No license file and no stated terms → no license badge. Never infer MIT, proprietary,
    restricted or third-party terms from a template.
+5. A project that deliberately has no license (for example, one built on third-party IP) may
+   show its stated terms with a `distribution` label in `orange` linked to that README section —
+   never a `license` label, which would read as a grant.
 
 ```md
 [![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg?style=flat-square)](LICENSE)
@@ -184,7 +187,7 @@ Badges with a verifiable target are links; runtime and platform badges are not.
 | CI | the workflow's runs page |
 | Coverage | the coverage report |
 | Security score | the scorecard viewer |
-| Docs / demo | the docs home or live URL |
+| Docs / site / demo | the docs home or live URL |
 | Status | the README section that explains it, if any |
 
 ---

@@ -46,6 +46,7 @@ with the workflow **file name**. Pin `branch=` so pull-request runs do not color
 |---|---|---|
 | docs.rs build | `https://img.shields.io/docsrs/CRATE?style=flat-square` | `https://docs.rs/CRATE` |
 | Docs site | `https://img.shields.io/badge/docs-site-blue.svg?style=flat-square` | docs home |
+| Live site | `https://img.shields.io/badge/site-HOST-blue.svg?style=flat-square` | live URL |
 | Live demo | `https://img.shields.io/badge/demo-HOST-blue.svg?style=flat-square` | live URL |
 
 ## Status
