@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "figma-designer",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Design in Figma through the Figma MCP: real variables, text styles, auto layout and components on a fixed visual system.",
   "author": {
     "name": "Elaya",

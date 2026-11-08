@@ -37,6 +37,7 @@ and installs any single skill from a group.
 | Skill | Purpose | Source and license |
 | --- | --- | --- |
 | [`shanirez-style`](../plugins/shanirez-style/skills/shanirez-style/SKILL.md) | C++14 coding style for competitive-programming and online-judge solutions | Original Aptinery work; GPL-3.0 |
+| [`readme-badges`](../plugins/readme-badges/skills/readme-badges/SKILL.md) | Choose, build, order and clean up README badges with Shields.io | Original Aptinery work; GPL-3.0 |
 | [`k12-lesson-plan-creation`](../plugins/k12-teacher-skills/skills/k12-lesson-plan-creation/SKILL.md) | Create standards-aligned K-12 lesson plans, materials and assessments | Anthropic / Learning Commons; Apache-2.0 |
 | [`k12-lesson-differentiation`](../plugins/k12-teacher-skills/skills/k12-lesson-differentiation/SKILL.md) | Adapt existing lessons for different proficiency levels and student needs | Anthropic / Learning Commons; Apache-2.0 |
 | [`k12-lesson-prep`](../plugins/k12-teacher-skills/skills/k12-lesson-prep/SKILL.md) | Work through a lesson and produce teacher preparation notes | Anthropic / Learning Commons; Apache-2.0 |

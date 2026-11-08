@@ -24,6 +24,7 @@ npx skills add ShanireZ/Aptinery -g --skill animate
 | Skill | 署名与许可 |
 | --- | --- |
 | [`shanirez-style`](plugins/shanirez-style/skills/shanirez-style/SKILL.md) | Aptinery 原创，GPL-3.0。 |
+| [`readme-badges`](plugins/readme-badges/skills/readme-badges/SKILL.md) | Aptinery 原创，GPL-3.0。 |
 | [`punk-poster-layout`](plugins/punk-poster-layout/skills/punk-poster-layout/SKILL.md) | 根据 AdrianPunk 文章，Skill 由 Aptinery 改编包装；GPL-3.0。 |
 
 仓库原创内容采用 [GNU GPL v3.0](LICENSE)。第三方内容保留各自条款，见 [NOTICE](NOTICE) 与[技能目录](docs/catalog.md)。

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "landing-page-design",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Build high-converting landing pages: intake questions, page structure, conversion copy, SEO and a strict visual system for type, spacing and motion.",
   "author": {
     "name": "Elaya",

@@ -6,13 +6,13 @@
     "url": "https://github.com/ShanireZ"
   },
   "description": "Aptinery — A curated foundry for Agent Skills.",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "plugins": [
     {
       "name": "shanirez-style",
       "source": "./plugins/shanirez-style",
       "description": "ShanireZ's personal C++14 style for competitive-programming and online-judge solutions.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "author": {
         "name": "ShanireZ"
       },
@@ -24,10 +24,26 @@
       ]
     },
     {
+      "name": "readme-badges",
+      "source": "./plugins/readme-badges",
+      "description": "Standard README badges: what to include, Shields.io URLs, order, wording, colors and links, and which badges to delete.",
+      "version": "0.8.0",
+      "author": {
+        "name": "ShanireZ"
+      },
+      "category": "development",
+      "keywords": [
+        "agent-skills",
+        "readme",
+        "badges",
+        "documentation"
+      ]
+    },
+    {
       "name": "k12-teacher-skills",
       "source": "./plugins/k12-teacher-skills",
       "description": "K-12 teacher skills: standards-aligned lesson plans, lesson differentiation, lesson prep, and misconception-based checks for understanding.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "author": {
         "name": "Anthropic / Learning Commons"
       },
@@ -44,7 +60,7 @@
       "name": "emil-skills",
       "source": "./.claude-plugins/emil-skills",
       "description": "Emil Kowalski's design engineering skills: web and native animation, motion choreography, UI polish, review and audit, performance, platform design, Swift, and library choices.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "author": {
         "name": "Emil Kowalski"
       },
@@ -62,7 +78,7 @@
       "name": "punk-cover",
       "source": "./plugins/punk-cover",
       "description": "Generate social and editorial cover images from articles, posts, and topics using curated Punk visual styles.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "author": {
         "name": "AdrianPunk and contributors"
       },
@@ -79,7 +95,7 @@
       "name": "punk-poster-layout",
       "source": "./plugins/punk-poster-layout",
       "description": "Structure standalone posters, flyers, key visuals, and single-canvas editorial sections with a 32-layout catalog only when explicit composition control is requested; not a default for ordinary websites/UI, generic heroes, or platform covers.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "author": {
         "name": "AdrianPunk; adapted by Aptinery contributors"
       },
@@ -96,7 +112,7 @@
       "name": "onetake",
       "source": "./plugins/onetake",
       "description": "Create continuous motion films and feature demos with HTML, motion blur, sound, and continuity checks. Noncommercial use only.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "author": {
         "name": "Patrick"
       },
@@ -113,7 +129,7 @@
       "name": "design-taste-frontend",
       "source": "./plugins/design-taste-frontend",
       "description": "tasteskill 2.5.0 from Leonxlnx: a page system and art direction for professional company websites, with real product UI, vetted photographs, brand icons and real-browser consistency checks.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "author": {
         "name": "Leonxlnx"
       },
@@ -130,7 +146,7 @@
       "name": "landing-page-design",
       "source": "./plugins/landing-page-design",
       "description": "Build high-converting landing pages: intake questions, page structure, conversion copy, SEO and a strict visual system for type, spacing and motion.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "author": {
         "name": "Elaya"
       },
@@ -147,7 +163,7 @@
       "name": "figma-designer",
       "source": "./plugins/figma-designer",
       "description": "Design in Figma through the Figma MCP: real variables, text styles, auto layout and components on a fixed visual system.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "author": {
         "name": "Elaya"
       },
@@ -164,7 +180,7 @@
       "name": "brave-search",
       "source": "./plugins/brave-search",
       "description": "Brave Search API skills for web, news, image and video search, LLM context, AI answers, local places and query helpers.",
-      "version": "0.7.0",
+      "version": "0.8.0",
       "author": {
         "name": "Brave Software"
       },

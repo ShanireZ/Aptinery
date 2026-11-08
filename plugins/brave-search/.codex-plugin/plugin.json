@@ -1,6 +1,6 @@
 {
   "name": "brave-search",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Brave Search API skills for web, news, image and video search, LLM context, AI answers, local places and query helpers.",
   "author": {
     "name": "Brave Software",

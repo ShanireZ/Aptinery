@@ -26,6 +26,7 @@ other compatible tools and skill-specific runtime requirements.
 | Skill | Attribution and license |
 | --- | --- |
 | [`shanirez-style`](plugins/shanirez-style/skills/shanirez-style/SKILL.md) | Original Aptinery work; GPL-3.0. |
+| [`readme-badges`](plugins/readme-badges/skills/readme-badges/SKILL.md) | Original Aptinery work; GPL-3.0. |
 | [`punk-poster-layout`](plugins/punk-poster-layout/skills/punk-poster-layout/SKILL.md) | Based on AdrianPunk articles; skill adapted and packaged by Aptinery; GPL-3.0. |
 
 Original repository material uses [GNU GPL v3.0](LICENSE). Third-party material

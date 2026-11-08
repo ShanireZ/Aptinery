@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "readme-badges",
+  "version": "0.8.0",
+  "description": "Standard README badges: what to include, Shields.io URLs, order, wording, colors and links, and which badges to delete.",
+  "author": {
+    "name": "ShanireZ",
+    "url": "https://github.com/ShanireZ"
+  },
+  "homepage": "https://github.com/ShanireZ/Aptinery",
+  "repository": "https://github.com/ShanireZ/Aptinery",
+  "license": "GPL-3.0",
+  "keywords": [
+    "agent-skills",
+    "readme",
+    "badges",
+    "shields-io",
+    "documentation"
+  ],
+  "skills": "./skills/"
+}

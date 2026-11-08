@@ -75,6 +75,9 @@ Do not infer redistribution permission from a manifest or the repository GPL.
   `name` and `description`, its name matches its directory, and SKILL.md stays
   under 500 lines. Follow the [corpus method](docs/style-corpus-method.md) before
   adding, weakening or strengthening any measured claim.
+- `readme-badges` is original GPL-3.0 material with the same frontmatter rule.
+  Before changing a badge route or brand color in its catalog, check it against
+  the Shields.io service source or Simple Icons data and update the check date.
 
 ## Verification
 

@@ -5,6 +5,11 @@ The `shanirez-style` Agent Skill is original Aptinery work, distributed under
 GNU GPL v3.0. Its style corpus and measured claims remain documented in
 `docs/style-corpus-method.md`.
 
+The `readme-badges` Agent Skill is original Aptinery work, distributed under
+GNU GPL v3.0. Its Shields.io routes and Simple Icons colors were checked
+against those projects' public sources on 2026-11-08; no third-party text is
+copied.
+
 This distribution includes material copied from:
 https://github.com/anthropics/k12-teacher-skills
 upstream commit 31fd6dbb0c07cb50bb3ce7f62a4135a393bd0e8c
